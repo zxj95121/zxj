@@ -13,19 +13,19 @@
 	.playvideo{padding-top: auto;z-index: 9999;position: relative;}
 	.zy_media{z-index: 999999999}
 	</style>
-<link rel="stylesheet" href="/plugin/mediaPlay/zy.media.min.css">
+<link rel="stylesheet" href="/mediaPlay/zy.media.min.css">
 	</head>
 	<body onmousewheel="return false;">
 	
 	<div class="playvideo">
 	<div class="zy_media">
-    	<video poster="https://r1.ykimg.com/05420408584A363C6A0A47047DD24931" data-config='{"mediaTitle": "测试视频--视频"}'>
+    	<video poster="/images/videoShow.png" data-config='{"mediaTitle": "标题另算--视频"}'>
         	<source src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4" type="video/mp4">
       	  您的浏览器不支持HTML5视频
    	 </video>
 
 	</div>
-<div id="modelView">&nbsp;</div>
+	<div id="modelView">&nbsp;</div>
 	</div>
 
 <script src="/plugin/mediaPlay/zy.media.min.js"></script>
