@@ -13,7 +13,7 @@
 	.playvideo{padding-top: auto;z-index: 9999;position: relative;}
 	.zy_media{z-index: 999999999}
 	</style>
-<link rel="stylesheet" href="/mediaPlay/zy.media.min.css">
+<link rel="stylesheet" href="/plugin/mediaPlay/zy.media.min.css">
 	</head>
 	<body onmousewheel="return false;">
 	
@@ -28,7 +28,7 @@
 <div id="modelView">&nbsp;</div>
 	</div>
 
-<script src="/mediaPlay/zy.media.min.js"></script>
+<script src="/plugin/mediaPlay/zy.media.min.js"></script>
 <script>
 //document.documentElement.style.overflow='hidden';
  document.body.style.overflow='hidden';
