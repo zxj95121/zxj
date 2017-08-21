@@ -11,4 +11,9 @@ class ShareVideoController extends Controller
     {
     	return view('father.shareVideo');
     }
+
+    public function upload()
+    {
+    	return view('father.uploadVideo');
+    }
 }
