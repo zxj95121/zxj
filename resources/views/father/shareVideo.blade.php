@@ -13,7 +13,7 @@
 	.playvideo{padding-top: auto;z-index: 9999;position: relative;}
 	.zy_media{z-index: 999999999}
 	</style>
-<link rel="stylesheet" href="/mediaPlay/zy.media.min.css">
+<link rel="stylesheet" href="/plugin/mediaPlay/zy.media.min.css">
 	</head>
 	<body onmousewheel="return false;">
 	
