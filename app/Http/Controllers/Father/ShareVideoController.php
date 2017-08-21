@@ -23,7 +23,7 @@ class ShareVideoController extends Controller
 		   $file = $request->file('file');
 		   $name = date('YmdHis').rand(100,999);
 		   $suffix = $file->getClientOriginalExtension();
-		   $request->file('file')->move('/var/www/html/home/public/father/'.$name.'.'.$suffix);
+		   $request->file('file')->move('/var/www/html/home/public/father', $name.'.'.$suffix);
 		   $url = 'http://www.zhangxianjian.com/father/'.$name.'.'.$suffix;
 		   echo $url;
 		}
