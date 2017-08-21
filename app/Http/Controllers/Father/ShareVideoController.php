@@ -16,4 +16,14 @@ class ShareVideoController extends Controller
     {
     	return view('father.uploadVideo');
     }
+
+    public function fileupload(Request $request)
+    {
+    	if ($request->hasFile('file')) {
+		   $path = $request->file('file')->store('father');
+
+        	echo $path;
+		}
+		dd(1);
+    }
 }

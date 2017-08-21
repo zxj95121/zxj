@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>demo</title>
+		<title>星级畅游的视频分享</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="/js/jquery-1.10.2.js"></script>
 		<link href="" rel="stylesheet">
 	<style type="text/css">
 	#modelView{background-color:#DDDDDD;z-index:0;opacity:0.7;height: 100%;width: 100%;position: relative;}
