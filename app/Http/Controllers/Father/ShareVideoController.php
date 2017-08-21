@@ -20,7 +20,7 @@ class ShareVideoController extends Controller
     public function fileupload(Request $request)
     {
     	if ($request->hasFile('file')) {
-		   $path = $request->file('file')->store('father');
+		   $path = $request->file('file')->store('public/father');
 
         	echo $path;
 		}
