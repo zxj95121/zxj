@@ -19,7 +19,7 @@
 	
 	<div class="playvideo">
 	<div class="zy_media">
-    	<video poster="/images/videoShow.png" data-config='{"mediaTitle": "标题另算--视频"}'>
+    	<video poster="/father/images/videoShow.png" data-config='{"mediaTitle": "标题另算--视频"}'>
         	<source src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4" type="video/mp4">
       	  您的浏览器不支持HTML5视频
    	 </video>
