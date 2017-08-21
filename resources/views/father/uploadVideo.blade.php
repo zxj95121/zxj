@@ -35,10 +35,6 @@
   <link rel="stylesheet" href="/plugin/AmazeUI/assets/css/app.css">
 </head>
 <body>
-<p>
-  Hello Amaze UI.
-</p>
-
 <!--在这里编写你的代码-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -50,5 +46,22 @@
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 <script src="/plugin/AmazeUI/assets/js/amazeui.min.js"></script>
+<div class="am-form-group am-form-file">
+  <button type="button" class="am-btn am-btn-danger am-btn-sm">
+    <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+  <input id="doc-form-file" type="file" multiple>
+</div>
+<div id="file-list"></div>
+<script>
+    $(function() {
+        $('#doc-form-file').on('change', function() {
+            var fileNames = '';
+            $.each(this.files, function() {
+                fileNames += '<span class="am-badge">' + this.name + '</span> ';
+            });
+            $('#file-list').html(fileNames);
+        });
+    });
+</script>
 </body>
 </html>
