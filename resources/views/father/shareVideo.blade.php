@@ -33,9 +33,10 @@
 //document.documentElement.style.overflow='hidden';
  document.body.style.overflow='hidden';
     zymedia('video',{autoplay: true});
+    var height = document.documentElement.clientHeight;
     var screenheight = window.screen.height/2;
     $("#modelView").width(window.screen.width);
-    $("#modelView").height(window.screen.height);
+    $("#modelView").height(height);
     var videoheight = $(".zy_media").height()/2;
     var padding_top = screenheight-videoheight;
     var padding_top = '90px';
