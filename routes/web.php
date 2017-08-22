@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/a', function () {
+    echo phpinfo();
+});
 
 Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) {
     $router->get('/uploadVideo','ShareVideoController@upload');
