@@ -38,6 +38,7 @@
     $("#modelView").height(window.screen.height);
     var videoheight = $(".zy_media").height()/2;
     var padding_top = screenheight-videoheight;
+    var padding_top = '90px';
     $(".playvideo").css({"top":padding_top});
     $("#modelView").css({"margin-top":-1*(padding_top+$(".zy_media").height())});
 
