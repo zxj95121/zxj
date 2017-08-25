@@ -23,7 +23,7 @@
 
 	<!-- header Section -->
 	<header>
-		<div class="container">
+		<div class="">
 			
 			<!-- Logo  -->
 			<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
@@ -70,7 +70,7 @@
 	</section><!-- end slider -->
 
 	<!-- Services Section -->
-	<section class="services container clearfix">
+	<section class="services clearfix">
 			
 			<!-- Services Title  -->
 			<div class="section_title animated wow fadeInUp">
@@ -101,7 +101,7 @@
 	</section><!-- end services -->
 
 	<!-- Projects Section -->
-	<!-- <section class="projects container clearfix"> -->
+	<!-- <section class="projects  clearfix"> -->
 			
 			<!-- Projects Title  -->
 			<!-- <div class="section_title animated wow fadeInUp">
@@ -124,7 +124,7 @@
 	<!-- </section>end projects -->
 
 	<!-- Clients Section -->
-	<section class="clients container">
+	<section class="clients">
 
 			<!-- Clients section Title  -->
 			<div class="section_title animated wow fadeInUp">
@@ -153,7 +153,7 @@
 
 	<!-- Call To Action Section -->
 	<section class="cta">
-		<div class="container animated wow fadeInUp">
+		<div class="animated wow fadeInUp">
 
 			<h3 class="cta_title">凌驾一切的战力。 </h3>
 			<a href="javascript:void(0);" onclick="alert('L(\'ω\')┘三└(\'ω\')｣');" class="cta_button">开始崛起 &rarr;</a>
@@ -163,7 +163,7 @@
 
 	<!-- Footer Section -->
 	<footer class="clearfix">
-		<div class="container">
+		<div class="">
 			
 			<!-- Copyrights  -->
 			<div class="copyright animated wow fadeInUp">
