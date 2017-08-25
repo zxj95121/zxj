@@ -168,7 +168,7 @@
 			<!-- Copyrights  -->
 			
 			
-			<div class="footer_links" style="float: left;">
+			<div class="footer_links">
 
 				<!-- Social Media Links  -->
 <!-- 				<div class="sm columns animated wow fadeInRight" data-wow-delay=".2s">
