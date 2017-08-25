@@ -23,7 +23,7 @@
 
 	<!-- header Section -->
 	<header>
-		<div class="" style="padding-left:10px;padding-right: 10px;">
+		<div class="container">
 			
 			<!-- Logo  -->
 			<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
@@ -70,7 +70,7 @@
 	</section><!-- end slider -->
 
 	<!-- Services Section -->
-	<section class="services clearfix" style="padding-left:10px;">
+	<section class="services container clearfix">
 			
 			<!-- Services Title  -->
 			<div class="section_title animated wow fadeInUp">
@@ -101,7 +101,7 @@
 	</section><!-- end services -->
 
 	<!-- Projects Section -->
-	<!-- <section class="projects  clearfix"> -->
+	<!-- <section class="projects container clearfix"> -->
 			
 			<!-- Projects Title  -->
 			<!-- <div class="section_title animated wow fadeInUp">
@@ -124,7 +124,7 @@
 	<!-- </section>end projects -->
 
 	<!-- Clients Section -->
-	<section class="clients" style="padding-left:10px;">
+	<section class="clients container">
 
 			<!-- Clients section Title  -->
 			<div class="section_title animated wow fadeInUp">
@@ -153,7 +153,7 @@
 
 	<!-- Call To Action Section -->
 	<section class="cta">
-		<div class="animated wow fadeInUp">
+		<div class="container animated wow fadeInUp">
 
 			<h3 class="cta_title">凌驾一切的战力。 </h3>
 			<a href="javascript:void(0);" onclick="alert('L(\'ω\')┘三└(\'ω\')｣');" class="cta_button">开始崛起 &rarr;</a>
@@ -162,11 +162,19 @@
 	</section><!-- end cta(call to action) -->
 
 	<!-- Footer Section -->
-	<footer class="clearfix" style="padding-left:10px;">
-		<div class="">
+	<footer class="clearfix">
+		<div class="container">
 			
 			<!-- Copyrights  -->
-			
+			<div class="copyright animated wow fadeInUp">
+				<!-- <img src="/all/home/img/footer_logo.png" alt="Heros." class="footer_logo"> -->
+				<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
+					Young
+				</a>
+				<br><br>
+				<p>© 2017 copyright zhangxianjian - All rights reserved</p>
+				<p>More information @ <a href="/">zhangxianjian.com</a></p>
+			</div>
 			
 			<div class="footer_links">
 
@@ -209,16 +217,6 @@
 					<p>2013-2017</p>
 					<p class="phone">13095533632</p>
 				</div> -->
-
-				<div class="copyright animated wow fadeInUp" data-wow-delay=".3s">
-				<!-- <img src="/all/home/img/footer_logo.png" alt="Heros." class="footer_logo"> -->
-					<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
-						Young
-					</a>
-					<br><br>
-					<p>© 2017 copyright zhangxianjian - All rights reserved</p>
-					<p>More information @ <a href="/">zhangxianjian.com</a></p>
-				</div>
 
 			</div>
 
