@@ -166,15 +166,7 @@
 		<div class="">
 			
 			<!-- Copyrights  -->
-			<div class="copyright animated wow fadeInUp">
-				<!-- <img src="/all/home/img/footer_logo.png" alt="Heros." class="footer_logo"> -->
-				<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
-					Young
-				</a>
-				<br><br>
-				<p>© 2017 copyright zhangxianjian - All rights reserved</p>
-				<p>More information @ <a href="/">zhangxianjian.com</a></p>
-			</div>
+			
 			
 			<div class="footer_links" style="float: left;">
 
@@ -217,6 +209,16 @@
 					<p>2013-2017</p>
 					<p class="phone">13095533632</p>
 				</div> -->
+
+				<div class="copyright animated wow fadeInUp" data-wow-delay=".3s">
+				<!-- <img src="/all/home/img/footer_logo.png" alt="Heros." class="footer_logo"> -->
+					<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
+						Young
+					</a>
+					<br><br>
+					<p>© 2017 copyright zhangxianjian - All rights reserved</p>
+					<p>More information @ <a href="/">zhangxianjian.com</a></p>
+				</div>
 
 			</div>
 
