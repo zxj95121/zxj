@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@home')->name('home');
+
 Route::get('/a', function () {
     echo phpinfo();
 });
