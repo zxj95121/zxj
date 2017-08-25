@@ -23,7 +23,7 @@
 
 	<!-- header Section -->
 	<header>
-		<div class="">
+		<div class="" style="padding-left:10px;padding-right: 10px;">
 			
 			<!-- Logo  -->
 			<a href="/" style="text-decoration: none;font-size: 32px;" class="logo">
@@ -70,7 +70,7 @@
 	</section><!-- end slider -->
 
 	<!-- Services Section -->
-	<section class="services clearfix">
+	<section class="services clearfix" style="padding-left:10px;">
 			
 			<!-- Services Title  -->
 			<div class="section_title animated wow fadeInUp">
@@ -124,7 +124,7 @@
 	<!-- </section>end projects -->
 
 	<!-- Clients Section -->
-	<section class="clients">
+	<section class="clients" style="padding-left:10px;">
 
 			<!-- Clients section Title  -->
 			<div class="section_title animated wow fadeInUp">
@@ -162,7 +162,7 @@
 	</section><!-- end cta(call to action) -->
 
 	<!-- Footer Section -->
-	<footer class="clearfix">
+	<footer class="clearfix" style="padding-left:10px;">
 		<div class="">
 			
 			<!-- Copyrights  -->
@@ -176,7 +176,7 @@
 				<p>More information @ <a href="/">zhangxianjian.com</a></p>
 			</div>
 			
-			<div class="footer_links">
+			<div class="footer_links" style="float: left;">
 
 				<!-- Social Media Links  -->
 <!-- 				<div class="sm columns animated wow fadeInRight" data-wow-delay=".2s">
