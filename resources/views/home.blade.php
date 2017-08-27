@@ -4,11 +4,12 @@
 	<title>张贤健（young）的首页</title>
 	<meta charset="utf-8">
 	<meta name="author" content="张贤健">
-	<meta name="description" content="网站开发, 张贤健, young, php, PHP, 小贱, zhangxianjian"/>
+	<meta name="keywords" content="网站开发, 张贤健, young, php, PHP, laravel"/>
+	<meta name="description" content="自己选择的不平凡，所有坎坷都得去挑战。"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
 
-	<!-- CSS Files -->
+	<!-- CSS Files --> 
 	<link rel="stylesheet" type="text/css" href="/all/home/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/all/home/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="/all/home/css/main.css">
