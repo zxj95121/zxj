@@ -7,7 +7,7 @@ $('.contactUl li').each(function(e){
 
 	$(this).mouseover(function(e){
 		$(this).parents('ul').find('.code').hide();
-		$(this).find('.code').toggle();
+		$(this).find('.code').show();
 	});
 
 	$(this).mouseout(function(e){
@@ -17,7 +17,7 @@ $('.contactUl li').each(function(e){
 	if (!IsPC()) {
 		$(document).on('touchstart', this, function(e){
 			$(this).parents('ul').find('.code').hide();
-			$(this).find('.code').toggle();
+			$(this).find('.code').show();
 		});
 
 		$(document).on('touchend', this, function(e){
