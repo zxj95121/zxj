@@ -36,25 +36,25 @@ $('.contactUl li').each(function(e){
 
 function touch(event) {
 	var event = event || window.event;
-	alert(event.target);
+	var target = event.target;
 	switch(event.type){
 
         case "touchstart":
 
-        // $(this).parents('ul').find('.code').hide();
-		// $(this).find('.code').show();
+        	$('.code').hide();
+        	$(target).find('.code').show();
 
         break;
 
-            case "touchend":
+        case "touchend":
 
-                
+            $('.code').hide();
 
-                break;
+        break;
 
-            case "touchmove":
+        case "touchmove":
 
-                
+        	       
 
         break;
     }
