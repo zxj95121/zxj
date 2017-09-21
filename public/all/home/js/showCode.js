@@ -43,7 +43,8 @@ function touch(event) {
 
         	$('.code').hide();
         	// alert($(target).html());
-        	$(event.target).find('.code').show();
+        	$(target).find('.code').show();
+        	event.stopPropagation();
 
         break;
 
@@ -55,7 +56,7 @@ function touch(event) {
 
         case "touchmove":
 
-        	       
+        	return false;
 
         break;
     }
