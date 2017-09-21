@@ -1,22 +1,23 @@
 $('.contactUl li').each(function(e){
-	// $(document).on(this, 'click', function(){
-	// 	$(this).parents('ul').find('.code').hide();
-	// 	$(this).find('.code').toggle();
-	// 	e.stopPropagation();
-	// });
-
-	
 
 	if (!IsPC()) {
-		$(document).on('touchstart', this, function(e){
-			$(this).parents('ul').find('.code').hide();
-			$(this).find('.code').show();
-		});
 
-		$(document).on('touchend', this, function(e){
-			$(this).parents('ul').find('.code').hide();
-		});
+		$(this)[0].addEventListener('touchstart',touch,false);
+
+    	$(this)[0].addEventListener('touchmove',touch,false);
+
+    	$(this)[0].addEventListener('touchend',touch,false);
+		// $(document).on('touchstart', this, function(e){
+		// 	$(this).parents('ul').find('.code').hide();
+		// 	$(this).find('.code').show();
+		// });
+
+		// $(document).on('touchend', this, function(e){
+		// 	$(this).parents('ul').find('.code').hide();
+		// });
+
 	} else {
+
 		$(this).mouseover(function(e){
 			$(this).parents('ul').find('.code').hide();
 			$(this).find('.code').show();
@@ -25,12 +26,39 @@ $('.contactUl li').each(function(e){
 		$(this).mouseout(function(e){
 			$(this).parents('ul').find('.code').hide();
 		});
+
 	}
 
 	// $(document).click(function(){
 	// 	$('.code').hide();
 	// })
 })
+
+function touch(event) {
+	var event = event || window.event;
+	alert(event.target);
+	switch(event.type){
+
+        case "touchstart":
+
+        // $(this).parents('ul').find('.code').hide();
+		// $(this).find('.code').show();
+
+        break;
+
+            case "touchend":
+
+                
+
+                break;
+
+            case "touchmove":
+
+                
+
+        break;
+    }
+}
 
 function IsPC() {
     var userAgentInfo = navigator.userAgent;
