@@ -15,12 +15,12 @@ $('.contactUl li').each(function(e){
 	});
 
 	if (!IsPC()) {
-		$(this).touchstart(function(e){
+		$(document).on('touchstart', this, function(e){
 			$(this).parents('ul').find('.code').hide();
 			$(this).find('.code').toggle();
 		});
 
-		$(this).touchend(function(e){
+		$(document).on('touchend', this, function(e){
 			$(this).parents('ul').find('.code').hide();
 		});
 	}
