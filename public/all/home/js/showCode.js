@@ -36,13 +36,13 @@ $('.contactUl li').each(function(e){
 
 function touch(event) {
 	var event = event || window.event;
-	var target = event.target;
+	var target = '#'+event.target.id;
 	switch(event.type){
 
         case "touchstart":
 
         	$('.code').hide();
-        	alert($(target).html());
+        	// alert($(target).html());
         	$(target).find('.code').show();
 
         break;

@@ -68,15 +68,15 @@
 							<br>
 							<p>
 								<ul class="fh5co-social-icons contactUl">
-									<li style="width: 50px;height: 68px;margin-right: 40px;position: relative;cursor: pointer;">
+									<li id="codeLi1" style="width: 50px;height: 68px;margin-right: 40px;position: relative;cursor: pointer;">
 										<div class="qqCode code"><img src="/all/home/images/qqCode.jpg" style="width: 100%;height: 100%;"></div>
 										<div class="icon-qqChat"></div>
 									</li>
-									<li style="width: 58px;height: 68px;margin-right: 28px;position: relative;cursor: pointer;">
+									<li id="codeLi2" style="width: 58px;height: 68px;margin-right: 28px;position: relative;cursor: pointer;">
 										<div class="icon-weChat"></div>
 										<div class="wechatCode code"><img src="/all/home/images/wechatCode.jpg" style="width: 100%;height: 100%;"></div>
 									</li>
-									<li style="width: 58px;height: 68px;margin-right: 10px;position: relative;cursor: pointer;">
+									<li id="codeLi3" style="width: 58px;height: 68px;margin-right: 10px;position: relative;cursor: pointer;">
 										<div class="icon-weiboChat"></div>
 										<div class="weiboCode code"><img src="/all/home/images/weiboCode.png" style="width: 100%;height: 100%;"></div>
 									</li>
