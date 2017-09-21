@@ -42,6 +42,7 @@ function touch(event) {
         case "touchstart":
 
         	$('.code').hide();
+        	alert($(target).html());
         	$(target).find('.code').show();
 
         break;
