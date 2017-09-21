@@ -5,14 +5,7 @@ $('.contactUl li').each(function(e){
 	// 	e.stopPropagation();
 	// });
 
-	$(this).mouseover(function(e){
-		$(this).parents('ul').find('.code').hide();
-		$(this).find('.code').show();
-	});
-
-	$(this).mouseout(function(e){
-		$(this).parents('ul').find('.code').hide();
-	});
+	
 
 	if (!IsPC()) {
 		$(document).on('touchstart', this, function(e){
@@ -21,6 +14,15 @@ $('.contactUl li').each(function(e){
 		});
 
 		$(document).on('touchend', this, function(e){
+			$(this).parents('ul').find('.code').hide();
+		});
+	} else {
+		$(this).mouseover(function(e){
+			$(this).parents('ul').find('.code').hide();
+			$(this).find('.code').show();
+		});
+
+		$(this).mouseout(function(e){
 			$(this).parents('ul').find('.code').hide();
 		});
 	}
