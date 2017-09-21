@@ -43,7 +43,7 @@ function touch(event) {
 
         	$('.code').hide();
         	// alert($(target).html());
-        	$(target).find('.code').show();
+        	$(event.target).find('.code').show();
 
         break;
 
