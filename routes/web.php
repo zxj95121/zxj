@@ -22,3 +22,10 @@ Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) 
     $router->get('/shareVideo','ShareVideoController@show');
     $router->post('/fileupload','ShareVideoController@fileupload');
 });
+
+
+Route::get('/zxj/login', 'Zxj\DashBoardController@login');
+
+Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']], function ($router) {
+    $router->get('/dashboard','DashBoardController@dashboard');
+});
