@@ -25,6 +25,7 @@ Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) 
 
 
 Route::get('/zxj/login', 'Zxj\DashBoardController@login');
+Route::post('/zxj/leavePost', 'Zxj\DashBoardController@leavePost');
 
 Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']], function ($router) {
     $router->get('/dashboard','DashBoardController@dashboard');

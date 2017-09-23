@@ -28,6 +28,9 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="/all/home/css/style.css">
 
+	<!-- alert -->
+	<link href="/all/admin/assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+
 	<!-- Modernizr JS -->
 	<script src="/all/home/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -275,29 +278,29 @@
 		</div>
 		<div class="choose animate-box" style="background: #FF9000;">
 			<h2 style="color: #FFF;">Contact</h2>
-			<form id="contactForm" action="#" onsubmit="return false;">
+			<form id="contactForm" onsubmit="return leaveMessage();">
 
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="name" class="form-control" placeholder="您的姓名">
+						<input type="text" id="name" class="form-control" placeholder="您的姓名" pattern="^.{2,10}$" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="number" id="qq" class="form-control" placeholder="您的QQ号">
+						<input type="number" id="qq" class="form-control" placeholder="您的QQ号" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="tel" class="form-control" placeholder="您的手机号">
+						<input type="text" id="tel" class="form-control" placeholder="您的手机号" pattern="^1\d{10}$" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="您的自我介绍"></textarea>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="您的自我介绍" required></textarea pattern="^.+$">
 					</div>
 				</div>
 				<div class="form-group">
@@ -330,10 +333,18 @@
 	<!-- Google Map -->
 
 	<!-- <script src="/all/home/js/google_map.js"></script> -->
-	
+	<script src="/all/admin/assets/sweet-alert/sweet-alert.min.js"></script>
 	<!-- Main -->
 	<script src="/all/home/js/main.js"></script>
-	<!-- 展示二维码 -->
+
+	<script type="text/javascript">
+		$.ajaxSetup({
+			'headers': {
+				'X-CSRF-TOKEN': '{{csrf_token()}}'
+			}
+		})
+	</script>
+	<!-- 展示二维码 + 留言功能-->
 	<script type="text/javascript" src="/all/home/js/showCode.js"></script>
 
 	</body>
