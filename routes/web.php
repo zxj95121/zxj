@@ -25,8 +25,12 @@ Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) 
 
 
 Route::get('/zxj/login', 'Zxj\DashBoardController@login');
-Route::post('/zxj/leavePost', 'Zxj\DashBoardController@leavePost');
+/*用户端留言*/
+Route::post('/zxj/leavePost', 'Zxj\Message\leaveMessageController@leavePost');
 
 Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']], function ($router) {
     $router->get('/dashboard','DashBoardController@dashboard');
+    /*关于留言部分*/
+    $router->get('/leaveMessage/notRead','Message\leaveMessageController@notRead');
+    $router->get('/leaveMessage/all','Message\leaveMessageController@all');
 });

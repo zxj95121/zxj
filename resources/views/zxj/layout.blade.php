@@ -62,10 +62,19 @@
                 <ul class="list-unstyled">
                     <!--  -->
 
-                    <li class="has-submenu"><a href="#"><i class="ion-email"></i> <span class="nav-label">留言</span><span class="badge bg-info" style="float: right;">7</span></a>
+                    <li class="has-submenu {!!(Request::is('zxj/leaveMessage/notRead', 'zxj/leaveMessage/all')? 'active' : '') !!}">
+                        <a href="#">
+                            <i class="ion-email"></i> 
+                            <span class="nav-label">留言</span>
+                            <span class="badge bg-info" style="float: right;">7</span>
+                        </a>
                         <ul class="list-unstyled">
-                            <li><a href="inbox.html">未读留言<span class="badge bg-success" style="float: right;">7</span></a></li>
-                            <li><a href="email-compose.html">所有留言</a></li>
+                            <li class="{!!(Request::is('zxj/leaveMessage/notRead')? 'active' : '') !!}">
+                                <a href="/zxj/leaveMessage/notRead">未读留言<span class="badge bg-success" style="float: right;">7</span></a>
+                            </li>
+                            <li class="{!!(Request::is('zxj/leaveMessage/all')? 'active' : '') !!}">
+                                <a href="/zxj/leaveMessage/all">所有留言</a>
+                            </li>
                         </ul>
                     </li>
 
