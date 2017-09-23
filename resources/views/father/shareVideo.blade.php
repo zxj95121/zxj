@@ -21,7 +21,7 @@
 	<div class="playvideo">
 	<div class="zy_media">
     	<video poster="/images/father/videoShow.png" data-config='{"mediaTitle": "{{$obj->desc}}"}'>
-        	<source src="https://v.qq.com/iframe/preview.html?vid=g0516zex7j8&amp;width=500&amp;height=375&amp;auto=0" type="video/mp4">
+        	<source src='https://v.qq.com/iframe/preview.html?vid=g0516zex7j8&amp;width=500&amp;height=375&amp;auto=0' type="video/mp4">
       	  您的浏览器不支持HTML5视频
    	 </video>
 
