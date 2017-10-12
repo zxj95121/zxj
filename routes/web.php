@@ -23,6 +23,12 @@ Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) 
     $router->post('/fileupload','ShareVideoController@fileupload');
 });
 
+Route::group(['prefix' => 'algorithm','namespace' => 'Algorithm'], function ($router) {
+    $router->get('/','AlgorIndexController@index');//php首页，即题库页
+    $router->get('/login','AlgorIndexController@login');//php登录页
+    $router->get('/question/{id}','AlgorIndexController@question');//题目详情页
+});
+
 
 Route::get('/zxj/login', 'Zxj\DashBoardController@login');
 /*用户端留言*/
