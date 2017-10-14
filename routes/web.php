@@ -33,4 +33,6 @@ Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']],
     /*关于留言部分*/
     $router->get('/leaveMessage/notRead','Message\leaveMessageController@notRead');
     $router->get('/leaveMessage/all','Message\leaveMessageController@all');
+    $router->post('/leaveMessage/all/ajax','Message\leaveMessageController@allAjax');
+    $router->get('/leaveMessage/detail/{id}/{type}','Message\leaveMessageController@detail');/*type为1表示上一级为未读留言，2表示所有留言*/
 });

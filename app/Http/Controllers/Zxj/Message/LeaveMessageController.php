@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\LeaveMessage;
 
 use Session;
+use Wechat;
 
 class LeaveMessageController extends Controller
 {
@@ -49,16 +50,35 @@ class LeaveMessageController extends Controller
 	/*未读留言*/
 	public function notRead(Request $request)
 	{
-		$message = LeaveMessage::where('status', 1)
-			//1表示未读，2表示已读，0表示已删除
-			->select('id', 'name', 'created_at', 'qq', 'tel', 'message', 'ip')
-			->paginate(10);
+		$message = LeaveMessage::getAll();
+
 		return view('zxj.message.leaveMessageNotRead', ['message'=>$message]);
 	}
 
 	/*所有留言*/
 	public function all(Request $request)
 	{
-		return view('zxj.message.leaveMessageAll');
+		$message = LeaveMessage::getAll('0', '>');
+		$post = $request->all();
+		unset($post['page']);
+		return view('zxj.message.leaveMessageAll', ['message'=>json_encode($message), 'param'=>json_encode($post)]);
+	}
+
+	public function allAjax(Request $request)
+	{
+		$post = $request->all();
+		unset($post['page']);
+		$message = LeaveMessage::getAll('0', '>', $post);
+		$param = array('sti'=>23, 'ifk'=>'vote');
+		return response()->json(json_encode($message->appends($post)));
+	}
+
+	/*某个留言详情*/
+	public function detail(Request $request, $id, $type)
+	{
+		LeaveMessage::setStatus2($id, 2);/*设置为已读*/
+		$message = LeaveMessage::getSingle($id);
+
+		return view('zxj.message.leaveMessageDetail', ['message'=>$message,'type'=>$type]);
 	}
 }

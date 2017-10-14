@@ -68,7 +68,7 @@
                             <span class="nav-label">留言</span>
                             <span class="badge bg-info" style="float: right;">7</span>
                         </a>
-                        <ul class="list-unstyled">
+                        <ul class="list-unstyled lyUl">
                             <li class="{!!(Request::is('zxj/leaveMessage/notRead')? 'active' : '') !!}">
                                 <a href="/zxj/leaveMessage/notRead">未读留言<span class="badge bg-success" style="float: right;">7</span></a>
                             </li>
@@ -225,7 +225,7 @@
 
             <!-- Footer Start -->
             <footer class="footer">
-                2015 © Velonic.
+                2017 © wells.
             </footer>
             <!-- Footer Ends -->
 

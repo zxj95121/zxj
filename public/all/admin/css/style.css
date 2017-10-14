@@ -1975,3 +1975,18 @@ ul.p-social-link li a {
 #legend .line {
   color: #333; 
 }
+
+/*自加*/
+table td button{
+  margin-right: 7px;
+}
+.tableSearchDiv section:nth-child(n+5){
+  margin-top: 10px;
+  display: inline-block;
+}
+.table_listDetail td{
+  text-align: left;
+}
+.table_listDetail tr{
+  border: 0px solid transparent;
+}
