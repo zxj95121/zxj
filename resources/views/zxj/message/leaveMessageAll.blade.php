@@ -5,7 +5,6 @@
 @section('style')
 <script type="text/javascript">
 	var result = '{!!$message!!}';
-	var param = '{!!$param!!}';
 	var token = '{{csrf_token()}}';
 </script>
 @endsection

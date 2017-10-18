@@ -59,9 +59,9 @@ class LeaveMessageController extends Controller
 	public function all(Request $request)
 	{
 		$message = LeaveMessage::getAll('0', '>');
-		$post = $request->all();
-		unset($post['page']);
-		return view('zxj.message.leaveMessageAll', ['message'=>json_encode($message), 'param'=>json_encode($post)]);
+		// $post = $request->all();
+		// unset($post['page']);
+		return view('zxj.message.leaveMessageAll', ['message'=>json_encode($message)]);
 	}
 
 	public function allAjax(Request $request)
@@ -69,7 +69,7 @@ class LeaveMessageController extends Controller
 		$post = $request->all();
 		unset($post['page']);
 		$message = LeaveMessage::getAll('0', '>', $post);
-		$param = array('sti'=>23, 'ifk'=>'vote');
+		// $param = array('sti'=>23, 'ifk'=>'vote');
 		return response()->json(json_encode($message->appends($post)));
 	}
 

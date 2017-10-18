@@ -998,7 +998,7 @@ var searchs = [{
 }];
 
 /*搜索条件带下一页的没有把搜索条件带进去*/
-_reactDom2.default.render(_react2.default.createElement(_bodytable2.default, { searchs: searchs, token: token, param: param, htitle: htitle, result: result, headers: headers, indexs: indexs, operates: operates }), document.getElementById('bodytable'));
+_reactDom2.default.render(_react2.default.createElement(_bodytable2.default, { searchs: searchs, token: token, htitle: htitle, result: result, headers: headers, indexs: indexs, operates: operates }), document.getElementById('bodytable'));
 
 /***/ }),
 /* 16 */
@@ -21241,7 +21241,7 @@ var Bodytable = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (Bodytable.__proto__ || Object.getPrototypeOf(Bodytable)).call(this, props));
 
 		var result = window.JSON.parse(_this.props.result);
-		var param = window.JSON.parse(_this.props.param);
+		var param = new Object();
 		result.path = result.path + '/ajax';
 		if (result.next_page_url) result.next_page_url = result.next_page_url.replace('?', '/ajax?');
 		if (result.prev_page_url) result.prev_page_url = result.prev_page_url.replace('?', '/ajax?');

@@ -6,7 +6,7 @@ class Bodytable extends React.Component {
 	constructor(props) {
 		super(props);
 		var result = window.JSON.parse(this.props.result);
-		var param = window.JSON.parse(this.props.param);
+		var param = new Object();
 		result.path = result.path+'/ajax';
 		if (result.next_page_url)
 			result.next_page_url = result.next_page_url.replace('?', '/ajax?');
