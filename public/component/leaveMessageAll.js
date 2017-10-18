@@ -41,6 +41,8 @@ var searchs = [
 		// }
 	];
 
+
+/*搜索条件带下一页的没有把搜索条件带进去*/
 ReactDOM.render(
 		<Bodytable searchs={searchs} token={token} param={param} htitle={htitle} result={result} headers={headers} indexs={indexs} operates={operates}/>,
 		document.getElementById('bodytable')

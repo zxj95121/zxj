@@ -12,6 +12,8 @@
 
 @section('content')
             <div class="wraper container-fluid" id="bodytable">
+                  <div class="page-title"> 
+                </div>
             </div>
 
 

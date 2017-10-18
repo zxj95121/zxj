@@ -32,13 +32,13 @@ Route::group(['prefix' => 'algorithm','namespace' => 'Algorithm'], function ($ro
 
 Route::get('/zxj/login', 'Zxj\DashBoardController@login');
 /*用户端留言*/
-Route::post('/zxj/leavePost', 'Zxj\Message\leaveMessageController@leavePost');
+Route::post('/zxj/leavePost', 'Zxj\Message\LeaveMessageController@leavePost');
 
 Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']], function ($router) {
     $router->get('/dashboard','DashBoardController@dashboard');
     /*关于留言部分*/
-    $router->get('/leaveMessage/notRead','Message\leaveMessageController@notRead');
-    $router->get('/leaveMessage/all','Message\leaveMessageController@all');
-    $router->post('/leaveMessage/all/ajax','Message\leaveMessageController@allAjax');
-    $router->get('/leaveMessage/detail/{id}/{type}','Message\leaveMessageController@detail');/*type为1表示上一级为未读留言，2表示所有留言*/
+    $router->get('/leaveMessage/notRead','Message\LeaveMessageController@notRead');
+    $router->get('/leaveMessage/all','Message\LeaveMessageController@all');
+    $router->post('/leaveMessage/all/ajax','Message\LeaveMessageController@allAjax');
+    $router->get('/leaveMessage/detail/{id}/{type}','Message\LeaveMessageController@detail');/*type为1表示上一级为未读留言，2表示所有留言*/
 });
