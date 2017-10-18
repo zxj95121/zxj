@@ -1,6 +1,5 @@
 module.exports = {
     entry: {
-        main: './component/main.js',
         leaveMessageAll: './component/leaveMessageAll.js',
     }, // 入口文件路径
     output: {

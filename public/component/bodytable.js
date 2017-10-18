@@ -6,15 +6,17 @@ class Bodytable extends React.Component {
 	constructor(props) {
 		super(props);
 		var result = window.JSON.parse(this.props.result);
+		var param = window.JSON.parse(this.props.param);
 		result.path = result.path+'/ajax';
 		if (result.next_page_url)
 			result.next_page_url = result.next_page_url.replace('?', '/ajax?');
 		if (result.prev_page_url)
 			result.prev_page_url = result.prev_page_url.replace('?', '/ajax?');
 		this.state = {
-			result: window.JSON.stringify(result)
+			result: window.JSON.stringify(result),
+			param: window.JSON.stringify(param)
 		}
-		console.log(result);
+		// console.log(result);
 	}
 
 	_handleClick(e) {
@@ -90,6 +92,7 @@ class Bodytable extends React.Component {
 		var result = window.JSON.parse(this.state.result);
 		var searchs = this.props.searchs;
 
+		var param = new Object();
 		var seas = searchs.map((name,index) => {
 			var dom = document.getElementsByName(name.name);
 			switch (name.type) {
@@ -97,14 +100,21 @@ class Bodytable extends React.Component {
 					if (dom.length > 1) {
 						throw('您的input元素的name属性存在冲突！请更换');
 					}
+					if (dom[0].value) {
+						param[name.name] = dom[0].value;
+					}
 					return name.name+'='+dom[0].value;
 					break;
 				case 'select':
+					if (dom[0].options[dom[0].selectedIndex].value) {
+						param[name.name] = dom[0].options[dom[0].selectedIndex].value;
+					}
 					return name.name+'='+dom[0].options[dom[0].selectedIndex].value;
 					break;
 			}
 		});
 		var url = result.path+'?'+seas.join('&');
+		console.log(window.JSON.stringify(param));
 		// console.log(search_str);
 		var reactThis = this;
 		$.ajax({
@@ -118,15 +128,17 @@ class Bodytable extends React.Component {
 				var obj = window.JSON.parse(data);
 				// obj.path = obj.path.substring(0, obj.path.lastIndexOf('/ajax'));
 				reactThis.setState({
-					result: window.JSON.stringify(obj)
+					result: window.JSON.stringify(obj),
+					param: window.JSON.stringify(param)
 				});
 			} 
 		})
 	}
 
 	render(){
+		// console.log(this.state.param);
 		var result = window.JSON.parse(this.state.result);
-		var param = window.JSON.parse(this.props.param);/*查询字符串，便于搜索用*/
+		var param = window.JSON.parse(this.state.param);/*查询字符串，便于搜索用*/
 		var total = result.total;
 		var pagesize = result.per_page;
 		var current_page = result.current_page;
