@@ -38,7 +38,7 @@
 </section>
 
 {{--引入bootstrap和jquery--}}
-<script src="/js/jquery-1.10.2.js"></script>
+<script src="/all/admin/js/jquery-1.10.2.min.js"></script>
 <script src="/all/admin/js/bootstrap.min.js"></script>
 <script>
     $(function(){

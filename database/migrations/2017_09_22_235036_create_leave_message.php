@@ -18,7 +18,7 @@ class CreateLeaveMessage extends Migration
             $table->string('name')->comment('姓名');
             $table->string('qq')->comment('qq号码');
             $table->string('tel')->comment('电话号码');
-            $table->string('message')->comment('留言内容');
+            $table->text('message')->comment('留言内容');
             $table->string('ip')->comment('ip地址');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

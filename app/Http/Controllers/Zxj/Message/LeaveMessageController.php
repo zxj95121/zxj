@@ -76,8 +76,11 @@ class LeaveMessageController extends Controller
 	/*某个留言详情*/
 	public function detail(Request $request, $id, $type)
 	{
-		LeaveMessage::setStatus2($id, 2);/*设置为已读*/
-		$message = LeaveMessage::getSingle($id);
+		$message = LeaveMessage::setStatus2($id, 2);/*设置为已读*/
+		// $message = LeaveMessage::getSingle($id);
+
+		// var_dump($message);
+		// exit;
 
 		return view('zxj.message.leaveMessageDetail', ['message'=>$message,'type'=>$type]);
 	}
