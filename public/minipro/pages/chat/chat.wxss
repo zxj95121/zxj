@@ -1,0 +1,129 @@
+@import "../../wxParse/wxParse.wxss";
+/**index.wxss**/
+.master{
+  display: flex;
+  padding-top: 10rpx;
+  padding-bottom: 8rpx;
+  flex-direction: row;
+  width: 750rpx;
+  justify-content: center;
+}
+
+.master-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.master-nickname {
+  color: #aaa;
+  display: flex;
+  font-size: 14px;
+  margin-left: 20rpx;
+  align-items: center;
+}
+
+.message{
+  width: 100%;
+  display: flex;
+  margin-top: 10rpx;
+  margin-bottom: 12rpx;
+  align-items: flex-start;
+}
+.message-left{
+  flex-direction: row;
+  margin-left: 10rpx;
+}
+
+.message-right{
+  flex-direction: row-reverse;
+  margin-right: 10rpx;
+}
+
+.message-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.message-word{
+  display: flex;
+  flex-direction: column;
+  padding:0px 20rpx;
+}
+
+.message-nickname {
+  color: #aaa;
+  /* display: flex; */
+  font-size: 12px;
+  /* align-items: center; */
+}
+
+
+.message-right .message-nickname{
+  text-align: right;
+}
+.message-content{
+  font-size:14px;
+  max-width: 500rpx;
+}
+
+/*消息时间显示  */
+.message-time{
+  font-size:12px;
+  color: #aaa;
+  padding: 30rpx 0;
+}
+
+.message-last{
+  width: 750rpx;
+  height: 100rpx;
+  border: 0px solid transparent;
+}
+
+
+/*----------------聊天框------------------  */
+.inputView{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 99999;
+  background: #FFF;
+  bottom: 0rpx;
+}
+.messageInput{
+  width: 610rpx;
+  /* height: 43rpx; */
+  border: 2rpx solid #ccc;
+  border-radius: 6rpx;
+  margin-left: 12rpx;
+  /* padding-left: 8rpx; */
+  font-size: 36rpx;
+  padding: 18rpx 0rpx 12rpx;
+    /* min-height: 86rpx;  */
+   /* margin-bottom: 20rpx; */
+}
+.sendMessage{
+  width: 100rpx;
+  border-radius: 0px;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  letter-spacing: 4rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.sendDefault{
+  background: #aaa;
+}
+.sendDone{
+  background: #51C332;
+}
+
+.messagePlaceHolder{
+  font-size: 30rpx;
+}

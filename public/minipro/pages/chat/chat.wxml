@@ -1,0 +1,41 @@
+<!--index.wxml--><import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <view class="master" style="position:fixed;top: 0;background:#FFF;">
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+      <image class="master-avatar" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0" background-size="cover"></image>
+      <text class="master-nickname">聊天 just for 装逼</text>
+  </view>
+
+  <view class="master" style="opacity:0;">
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+      <image class="master-avatar" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0" background-size="cover"></image>
+      <text class="master-nickname">聊天 just for 装逼</text>
+  </view>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  <view class="message-time">
+    <text>13:23</text>
+  </view>
+  <view wx:if="{{length > 5}}"> 1 </view>
+  <block wx:for="{{chatMessage}}" wx:key="{{index}}">
+    <view wx:if="{{item.type == 1}}" class="message message-{{item.direction}}">
+        <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+        <image bindtap="bindViewTap" class="message-avatar" src="{{item.avatar}}" background-size="cover"></image>
+        <view class="message-word">
+          <text class="message-nickname">{{item.nickname}}</text>
+          <text class="message-content">{{item.content}}</text>
+        </view>
+    </view>
+    <block wx:else>
+          <view class="message-time">
+            <text>{{item.time}}</text>
+          </view>
+        </block>
+  </block>
+
+  <view class="message-last"></view>
+
+  <view class="inputView" style='padding-bottom:{{inputViewBottom}};'>
+    <input class="messageInput" placeholder-class='messagePlaceHolder' bindfocus="inputFocus" bindblur="inputBlur" bindinput="inputInput" type='text' placeholder='请输入内容' cursor-spacing="9" bindlinechange="inputLineChange"></input>
+    <view class="sendMessage {{sendClass}}">发送</view>
+  </view>
+</view>

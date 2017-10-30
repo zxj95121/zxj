@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/chat/main",
+    "pages/chat/chat"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#51C332",
+    "navigationBarTitleText": "小贱群聊",
+    "navigationBarTextStyle":"#FFF",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

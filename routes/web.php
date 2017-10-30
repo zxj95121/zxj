@@ -42,3 +42,8 @@ Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']],
     $router->post('/leaveMessage/all/ajax','Message\LeaveMessageController@allAjax');
     $router->get('/leaveMessage/detail/{id}/{type}','Message\LeaveMessageController@detail');/*type为1表示上一级为未读留言，2表示所有留言*/
 });
+
+/*-------------------api-----------------pro---------------------*/
+Route::group(['prefix' => 'pro', 'namespace' => 'Pro'], function($router) {
+	$router->get('/chat/checkMember', 'ChatController@checkMember');
+});
