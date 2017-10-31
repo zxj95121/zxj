@@ -28,7 +28,7 @@ onLoad: function () {
                         data: {
                             code: res.code
                         },
-                        type: 'post',
+                        dataType: 'json',
                         success: function(data) {
                             wx.setStorageSync({
                                 openid: data.data.openid

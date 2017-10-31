@@ -46,7 +46,7 @@ Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']],
 /*-------------------api-----------------pro---------------------*/
 Route::group(['prefix' => 'pro', 'namespace' => 'Pro'], function($router) {
 	/*wx.login*/
-	$router->post('/login/getkey', 'LoginController@getkey');
+	$router->get('/login/getkey', 'LoginController@getkey');
 
 	$router->post('/chat/checkMember', 'ChatController@checkMember');
 	$router->post('/chat/newWechatUser', 'ChatController@newWechatUser');
