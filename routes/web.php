@@ -45,5 +45,5 @@ Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']],
 
 /*-------------------api-----------------pro---------------------*/
 Route::group(['prefix' => 'pro', 'namespace' => 'Pro'], function($router) {
-	$router->get('/chat/checkMember', 'ChatController@checkMember');
+	$router->post('/chat/checkMember', 'ChatController@checkMember');
 });

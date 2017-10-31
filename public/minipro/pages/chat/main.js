@@ -22,8 +22,10 @@ Page({
       })
 
       wx.request({
-        url: 'https://www.zhangxianjian.com/pro/chat/checkMember',
-        data: app.globalData.userInfo.openid,
+        url: 'https://api.zhangxianjian.com/pro/chat/checkMember',
+        data: {
+            openid: app.globalData.userInfo.openid
+        },
         method: 'post',
         dataType: 'json',
         success: function(data, code) {
@@ -40,8 +42,10 @@ Page({
         })
 
         wx.request({
-            url: 'http://www.zhangxianjian.com/pro/chat/checkMember',
-            data: res.userInfo.openid,
+            url: 'https://api.zhangxianjian.com/pro/chat/checkMember',
+            data: {
+                openid: res.userInfo.openid
+            },
             method: 'post',
             dataType: 'json',
             success: function (data, code) {
@@ -60,8 +64,10 @@ Page({
           })
 
           wx.request({
-              url: 'http://www.zhangxianjian.com/pro/chat/checkMember',
-              data: res.userInfo.openid,
+              url: 'https://api.zhangxianjian.com/pro/chat/checkMember',
+              data: {
+                  openid: res.userInfo.openid
+              },
               method: 'post',
               dataType: 'json',
               success: function (data, code) {
@@ -72,5 +78,8 @@ Page({
       })
     }
 
+    wx.redirectTo({
+        url: 'invite',
+    })
   }
 })

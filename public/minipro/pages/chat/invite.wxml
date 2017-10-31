@@ -1,0 +1,10 @@
+<!--pages/chat/invite.wxml-->
+<view class="title">
+    <view class="remind">入群提示</view>
+</view>
+<view class="content">
+    <rich-text nodes="{{nodes}}">
+         <!-- <rich-text nodes="{{uls}}"></rich-text> -->
+    </rich-text>
+    <button class="invite" open-type='share' type="primary">立即邀请</button>
+</view>
