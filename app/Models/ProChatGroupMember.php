@@ -19,11 +19,12 @@ class ProChatGroupMember extends Model
 
     	$first = WechatUser::where('wechat_user.openid', $openid)
     		->leftJoin('pro_chat_group_member as pcgm', 'pcgm.user_id', 'wechat_user.id')
+    		->select('pcgm.group_id as group_id')
     		->first();
 
     	dd($first->toArray());
-    	
-    	if ($first)
+
+    	if ($first->group_id)
     		return 1;
     	else
     		return 0;
