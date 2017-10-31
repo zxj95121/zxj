@@ -17,11 +17,14 @@ class ProChatGroupMember extends Model
     		return '404';//表示不存在该用户
     	}
 
-    	$count = WechatUser::where('wechat_user.openid', $openid)
+    	$first = WechatUser::where('wechat_user.openid', $openid)
     		->leftJoin('pro_chat_group_member as pcgm', 'pcgm.user_id', 'wechat_user.id')
-    		->select('pcgm.id')
-    		->count();
+    		->first();
 
+    	if ($first)
+    		return 1;
+    	else
+    		return 0;
     	return $count;
 
     }
