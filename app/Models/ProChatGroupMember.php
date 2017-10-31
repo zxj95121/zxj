@@ -14,7 +14,7 @@ class ProChatGroupMember extends Model
     	$num =  WechatUser::where('openid', $openid)
     		->count();
     	if ($num == 0) {
-    		return response()->json['errcode'=>'404'];//表示不存在该用户
+    		return response()->json(['errcode'=>'404']);//表示不存在该用户
     	}
 
     	$count = WechatUser::where('wechat_user.openid', $openid)

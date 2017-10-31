@@ -17,4 +17,12 @@ class ChatController extends Controller
 
     	return response()->json(['result' => $result]);
     }
+
+    // 添加新的user用户
+    public function newWechatUser(Request $request)
+    {
+    	$userInfo = $request->input('userInfo');
+    	echo $userInfo->openid;
+    	var_dump($userInfo);
+    }
 }
