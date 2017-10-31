@@ -43,7 +43,7 @@ Page({
                   method: 'post',
                   dataType: 'json',
                   success: function(data, code) {
-                      if (data.result) {
+                      if (data.data.result == 0) {
                           wx.redirectTo({
                               url: 'invite',
                           })
@@ -84,7 +84,7 @@ Page({
                         method: 'post',
                         dataType: 'json',
                         success: function (data, code) {
-                            if (data.result) {
+                            if (data.data.result == 0) {
                                 wx.redirectTo({
                                     url: 'invite',
                                 })
@@ -127,7 +127,7 @@ Page({
                           method: 'post',
                           dataType: 'json',
                           success: function (data, code) {
-                              if (data.result) {
+                              if (data.data.result == 0) {
                                   wx.redirectTo({
                                       url: 'invite',
                                   })
