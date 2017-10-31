@@ -19,6 +19,7 @@ class ProChatGroupMember extends Model
 
     	$count = WechatUser::where('wechat_user.openid', $openid)
     		->leftJoin('pro_chat_group_member as pcgm', 'pcgm.user_id', 'wechat_user.id')
+    		->select('pcgm.id')
     		->count();
 
     	return $count;
