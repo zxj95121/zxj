@@ -22,7 +22,7 @@ class ProChatGroupMember extends Model
     		->select('pcgm.group_id as group_id')
     		->first();
 
-    	dd($first->toArray());
+    	// dd($first->toArray());
 
     	if ($first->group_id)
     		return 1;
