@@ -24,7 +24,7 @@ class ChatController extends Controller
     {
     	$openid = $request->input('openid');
     	$nickName = $request->input('nickName');
-    	$gender = $request->input('openid');
+    	$gender = $request->input('gender');
     	$avatarUrl = $request->input('avatarUrl');
     	
     	if (ProChatGroupMember::checkMember($openid) == '404') {
