@@ -30,6 +30,24 @@ Page({
         dataType: 'json',
         success: function(data, code) {
           console.log(data);
+          if (data.data.result === '404') {
+              console.log(23);
+              wx.request({
+                  url: 'https://api.zhangxianjian.com/pro/chat/newWechatUser',
+                  data: {
+                      userInfo: app.globalData.userInfo
+                  },
+                  method: 'post',
+                  dataType: 'json',
+                  success: function(data, code) {
+                      if (data.result) {
+                          wx.redirectTo({
+                              url: 'invite',
+                          })
+                      }
+                  }
+              })
+          }
         }
       })
     } else if (this.data.canIUse) {
@@ -78,8 +96,6 @@ Page({
       })
     }
 
-    wx.redirectTo({
-        url: 'invite',
-    })
+    
   }
 })
