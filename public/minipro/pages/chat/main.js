@@ -30,12 +30,15 @@ Page({
         dataType: 'json',
         success: function(data, code) {
           console.log(data);
-          if (data.data.result === '404') {
+          if (data.data.result == '404') {
               console.log(23);
               wx.request({
                   url: 'https://api.zhangxianjian.com/pro/chat/newWechatUser',
                   data: {
-                      userInfo: app.globalData.userInfo
+                      openid: app.globalData.userInfo.openid,
+                      nickName: app.globalData.userInfo.nickName,
+                      gender: app.globalData.userInfo.gender,
+                      avatarUrl: app.globalData.userInfo.avatarUrl
                   },
                   method: 'post',
                   dataType: 'json',
@@ -68,6 +71,27 @@ Page({
             dataType: 'json',
             success: function (data, code) {
                 console.log(data);
+                if (data.data.result == '404') {
+                    console.log(23);
+                    wx.request({
+                        url: 'https://api.zhangxianjian.com/pro/chat/newWechatUser',
+                        data: {
+                            openid: res.userInfo.openid,
+                            nickName: res.userInfo.nickName,
+                            gender: res.userInfo.gender,
+                            avatarUrl: res.userInfo.avatarUrl
+                        },
+                        method: 'post',
+                        dataType: 'json',
+                        success: function (data, code) {
+                            if (data.result) {
+                                wx.redirectTo({
+                                    url: 'invite',
+                                })
+                            }
+                        }
+                    })
+                }
             }
         })
       }
@@ -84,12 +108,33 @@ Page({
           wx.request({
               url: 'https://api.zhangxianjian.com/pro/chat/checkMember',
               data: {
-                  openid: res.userInfo.openid
+                  openid: res.userInfo.openid,
+                  nickName: res.userInfo.nickName,
+                  gender: res.userInfo.gender,
+                  avatarUrl: res.userInfo.avatarUrl
               },
               method: 'post',
               dataType: 'json',
               success: function (data, code) {
                   console.log(data);
+                  if (data.data.result == '404') {
+                      console.log(23);
+                      wx.request({
+                          url: 'https://api.zhangxianjian.com/pro/chat/newWechatUser',
+                          data: {
+                              userInfo: app.globalData.userInfo
+                          },
+                          method: 'post',
+                          dataType: 'json',
+                          success: function (data, code) {
+                              if (data.result) {
+                                  wx.redirectTo({
+                                      url: 'invite',
+                                  })
+                              }
+                          }
+                      })
+                  }
               }
           })
         }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Models\ProChatGroupMember;
+use App\Models\WechatUser;
 
 class ChatController extends Controller
 {
@@ -21,8 +22,15 @@ class ChatController extends Controller
     // 添加新的user用户
     public function newWechatUser(Request $request)
     {
-    	$userInfo = $request->input('userInfo');
-    	echo $userInfo->openid;
-    	var_dump($userInfo);
+    	$openid = $request->input('openid');
+    	$nickName = $request->input('nickName');
+    	$gender = $request->input('openid');
+    	$avatarUrl = $request->input('avatarUrl');
+    	
+    	if (ProChatGroupMember::checkMember($openid) == '404') {
+    		//验证是否确实不存在该用户
+    		WechatUser::newUser($openid, $nickName, $gender, $avatarUrl);
+    		return response()->json(['result' => '0']);
+    	}
     }
 }
