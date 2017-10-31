@@ -21,6 +21,8 @@ class ProChatGroupMember extends Model
     		->leftJoin('pro_chat_group_member as pcgm', 'pcgm.user_id', 'wechat_user.id')
     		->first();
 
+    	dd($first->toArray());
+    	
     	if ($first)
     		return 1;
     	else
