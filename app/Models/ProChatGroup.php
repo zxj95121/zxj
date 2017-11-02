@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\ProChatGroup;
+
 class ProChatGroup extends Model
 {
     //

@@ -38,7 +38,7 @@ class ChatController extends Controller
     /*获取所有群聊*/
     public function getGroup(Request $request)
     {
-    	$groupArr = ProChatGroupProChatGroup::getGroup();
+    	$groupArr = ProChatGroup::getGroup();
     	return response()->json($groupArr);
 
     }
