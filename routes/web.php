@@ -48,6 +48,7 @@ Route::group(['prefix' => 'pro', 'namespace' => 'Pro'], function($router) {
 	/*wx.login*/
 	$router->get('/login/getkey', 'LoginController@getkey');
 
+	$router->post('/chat/getGroup', 'ChatController@getGroup');//获取所有群聊
 	$router->post('/chat/checkMember', 'ChatController@checkMember');
 	$router->post('/chat/newWechatUser', 'ChatController@newWechatUser');
 });

@@ -104,6 +104,9 @@ Page({
           path: '/page/user?id=123',
           success: function (res) {
               // 转发成功
+              wx.redirectTo({
+                  url: 'main',
+              })
           },
           fail: function (res) {
               // 转发失败

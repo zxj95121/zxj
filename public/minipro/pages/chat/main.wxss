@@ -1,8 +1,41 @@
-.log-list {
+ /* .log-list {
   display: flex;
   flex-direction: column;
   padding: 40rpx;
 }
 .log-item {
-  margin: 10rpx;
+  margin: 10rpx; 
+ }  */
+.group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 15rpx;
+    border-bottom: 2rpx solid #aaa;
+}
+.group-active{
+    background: #EAEAEA;
+}
+
+.group-image{
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 26rpx;
+}
+
+.group-word{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.group-name{
+    font-size: 32rpx;
+}
+
+.group-message{
+    font-size: 24rpx;
+    color: #aaa;
+    margin-top: 10rpx;
 }
