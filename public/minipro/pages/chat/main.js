@@ -19,6 +19,7 @@ onLoad: function () {
     var that = this;
     wx.request({
         url: 'https://api.zhangxianjian.com/pro/chat/getGroup',
+        method: 'post',
         dataType: 'json',
         success: function(data) {
             that.setData({
