@@ -5,11 +5,11 @@
   </block> -->
 <!-- </view> -->
 <view class='container'>
-    <view class="group" hover-class="group-active" bindtap='groupClick'>
-            <image class="group-image" src='https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0'></image>
+    <view wx:for="{{groupObj}}" class="group" hover-class="group-active" bindtap='groupClick'>
+            <image class="group-image" src='{{item.group_imgurl}}'></image>
 
             <view class="group-word">
-                <text  class="group-name">地方咖啡</text>
+                <text  class="group-name">{{item.group_name}}</text>
                 <text class="group-message">地方咖啡</text>
             </view>
     </view>
