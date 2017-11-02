@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\ProChatGroupMember;
 use App\Models\WechatUser;
+use App\Models\ProChatGroup;
 
 class ChatController extends Controller
 {
@@ -32,5 +33,13 @@ class ChatController extends Controller
     		WechatUser::newUser($openid, $nickName, $gender, $avatarUrl);
     		return response()->json(['result' => '0']);
     	}
+    }
+
+    /*获取所有群聊*/
+    public function getGroup(Request $request)
+    {
+    	$groupArr = ProChatGroupProChatGroup::getGroup();
+    	return response()->json($groupArr);
+
     }
 }
