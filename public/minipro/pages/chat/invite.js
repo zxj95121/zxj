@@ -39,14 +39,14 @@ Page({
           ]
       }],
       uls: [],
-      text: 'dfa'
+      id: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      
+      console.log(options);
   },
 
   /**
@@ -101,7 +101,7 @@ Page({
       }
       return {
           title: '邀请你一起加入群聊',
-          path: '/page/user?id=123',
+          path: '/page/chat/resInvite?id=2',
           success: function (res) {
               // 转发成功
               wx.redirectTo({

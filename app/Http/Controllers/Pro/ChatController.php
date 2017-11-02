@@ -17,7 +17,7 @@ class ChatController extends Controller
     	$openid = $request->input('openid');
     	$result = ProChatGroupMember::checkMember($openid);
 
-    	return response()->json(['result' => $result]);
+    	return response()->json($result);
     }
 
     // 添加新的user用户
@@ -30,8 +30,8 @@ class ChatController extends Controller
     	
     	if (ProChatGroupMember::checkMember($openid) == '404') {
     		//验证是否确实不存在该用户
-    		WechatUser::newUser($openid, $nickName, $gender, $avatarUrl);
-    		return response()->json(['result' => '0']);
+    		$id = WechatUser::newUser($openid, $nickName, $gender, $avatarUrl);
+    		return response()->json(['result' => '0', 'id'=>$id]);
     	}
     }
 

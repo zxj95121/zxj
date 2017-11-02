@@ -27,9 +27,11 @@ onLoad: function () {
             })
         }
     })
+
+    this.inits();
     
 },
-groupClick: function() {
+inits: function() {
     if (!wx.getStorageSync('openid')) {
         wx.login({
             success: function (res) {
@@ -44,7 +46,7 @@ groupClick: function() {
                         success: function (data) {
                             wx.setStorageSync('openid', data.data.openid);
 
-                            this.exeRequest();
+                            // this.exeRequest();
                         }
                     })
                 } else {
@@ -68,7 +70,7 @@ groupClick: function() {
                 wx.setStorageSync('gender', res.userInfo.gender);
                 wx.setStorageSync('avatarUrl', res.userInfo.avatarUrl);
 
-                this.exeRequest();
+                // this.exeRequest();
             }
         } else {
             // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -84,12 +86,12 @@ groupClick: function() {
                     wx.setStorageSync('gender', res.userInfo.gender);
                     wx.setStorageSync('avatarUrl', res.userInfo.avatarUrl);
 
-                    this.exeRequest();
+                    // this.exeRequest();
                 }
             })
         }
     } else {
-        this.exeRequest();
+        // this.exeRequest();
     }
 
 },
@@ -100,6 +102,9 @@ getUserInfo: function (e) {
         userInfo: e.detail.userInfo,
         hasUserInfo: true
     })
+},
+groupClick: function() {
+    this.exeRequest();
 },
 exeRequest: function () {
     var openid = wx.getStorageSync('openid');
@@ -130,19 +135,19 @@ exeRequest: function () {
                     dataType: 'json',
                     success: function (data, code) {
                         if (data.data.result == 0) {
-                            wx.redirectTo({
-                                url: 'invite',
+                            wx.navigateTo({
+                                url: 'invite?id='+data.data.id,
                             })
                         }
                     }
                 })
             } else if (data.data.result == 0) {
                 /*表示不是组成员*/
-                wx.redirectTo({
-                    url: 'invite',
+                wx.navigateTo({
+                    url: 'invite?id='+data.data.id,
                 })
             } else {
-                wx.redirectTo({
+                wx.navigateTo({
                     url: 'chat'
                 })
             }

@@ -14,20 +14,20 @@ class ProChatGroupMember extends Model
     	$num =  WechatUser::where('openid', $openid)
     		->count();
     	if ($num == 0) {
-    		return '404';//表示不存在该用户
+    		return array('result' => '404');//表示不存在该用户
     	}
 
     	$first = WechatUser::where('wechat_user.openid', $openid)
     		->leftJoin('pro_chat_group_member as pcgm', 'pcgm.user_id', 'wechat_user.id')
-    		->select('pcgm.group_id as group_id')
+    		->select('pcgm.group_id as group_id', 'wechat_user.id as id')
     		->first();
 
     	// dd($first->toArray());
 
     	if ($first->group_id)
-    		return 1;
+    		return array('result' => 1, 'id' => $first->id);
     	else
-    		return 0;
+    		return array('result' => 0, 'id' => $first->id);
     	return $count;
 
     }

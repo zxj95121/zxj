@@ -16,5 +16,7 @@ class WechatUser extends Model
     	$flight->gender = $gender;
     	$flight->headimgurl = $avatar;
     	$flight->save();
+
+        return $flight->id;
     }
 }
