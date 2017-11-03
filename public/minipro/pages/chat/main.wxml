@@ -5,7 +5,7 @@
   </block> -->
 <!-- </view> -->
 <view class='container'>
-    <view wx:for="{{groupObj}}" class="group" hover-class="group-active" bindtap='groupClick'>
+    <view wx:for="{{groupObj}}" class="group" hover-class="group-active" bindtap='groupClick' data-id='{{item.id}}'>
             <image class="group-image" src='{{item.group_imgurl}}'></image>
 
             <view class="group-word">

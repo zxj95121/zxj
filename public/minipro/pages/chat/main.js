@@ -103,14 +103,16 @@ getUserInfo: function (e) {
         hasUserInfo: true
     })
 },
-groupClick: function() {
-    this.exeRequest();
+groupClick: function(e) {
+    this.exeRequest(e);
 },
-exeRequest: function () {
+exeRequest: function (e) {
     var openid = wx.getStorageSync('openid');
     var nickname = wx.getStorageSync('nickname');
     var gender = wx.getStorageSync('gender');
     var avatarUrl = wx.getStorageSync('avatarUrl');
+
+    var group_id = e.currentTarget.dataset.id;
 
     wx.request({
         url: 'https://api.zhangxianjian.com/pro/chat/checkMember',
@@ -144,7 +146,7 @@ exeRequest: function () {
             } else if (data.data.result == 0) {
                 /*表示不是组成员*/
                 wx.navigateTo({
-                    url: 'invite?id='+data.data.id,
+                    url: 'invite?id='+data.data.id+'&group_id='+group_id,
                 })
             } else {
                 wx.navigateTo({

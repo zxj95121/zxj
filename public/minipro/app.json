@@ -2,7 +2,8 @@
   "pages":[
     "pages/chat/main",
     "pages/chat/chat",
-    "pages/chat/invite"
+    "pages/chat/invite",
+    "pages/chat/resInvite"
   ],
   "window":{
     "backgroundTextStyle":"light",

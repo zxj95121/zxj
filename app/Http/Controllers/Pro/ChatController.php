@@ -42,4 +42,56 @@ class ChatController extends Controller
     	return response()->json($groupArr);
 
     }
+
+    /*当前用户是否可以加入群聊的一系列状态获取*/
+    public function isInGroup(Request $request)
+    {
+    	$openid = $request->input('openid');
+    	$nickName = $request->input('nickName');
+    	$gender = $request->input('gender');
+    	$avatarUrl = $request->input('avatarUrl');
+    	$id = $request->id;
+    	$group_id = $request->group_id;
+
+    	/*查看openid是否为系统用户，不是自动创建*/
+    	WechatUser::isUser($openid, $nickName, $gender, $avatarUrl);
+
+    	/*进行入群前的判断，是否异性，是否都不是群成员等等*/
+    	$result = ProChatGroupMember::isInGroup($openid);
+
+    	return response()->json($result);
+    }
+
+    /*重新验证身份并进行一系列状态获取*/
+    public function regetInfo(Request $request)
+    {
+    	$openid = $request->input('openid');
+    	$nickName = $request->input('nickName');
+    	$gender = $request->input('gender');
+    	$avatarUrl = $request->input('avatarUrl');
+    	$id = $request->id;
+    	$group_id = $request->group_id;
+
+    	/*更新下数据库的gender*/
+    	WechatUser::where('openid', $openid)
+    		->update(['gender' => $gender]);
+
+    	/*进行入群前的判断，是否异性，是否都不是群成员等等*/
+    	$result = ProChatGroupMember::isInGroup($openid);
+
+    	return response()->json($result);
+    }
+
+    /*用户同意加入群聊*/
+    public function joinGroup(Request $request)
+    {
+    	$openid = $request->input('openid');
+    	$id = $request->id;
+    	$group_id = $request->group_id;
+
+    	ProChatGroupMember::joinGroup($openid, $id, $group_id);
+
+    	return response()->json(['result' => 0]);
+    }
+
 }

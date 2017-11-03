@@ -39,21 +39,27 @@ Page({
           ]
       }],
       uls: [],
-      id: 0
+      id: 0,
+      group_id: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log(options);
+      this.setData({
+        id: options.id,
+        group_id: options.group_id
+      });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    wx.navigateTo({
+      url: 'resInvite?id=1&group_id=1'
+    })
   },
 
   /**
@@ -101,11 +107,11 @@ Page({
       }
       return {
           title: '邀请你一起加入群聊',
-          path: '/page/chat/resInvite?id=2',
+          path: '/pages/chat/resInvite?id='+this.data.id+'&group_id='+this.data.group_id,
           success: function (res) {
               // 转发成功
-              wx.redirectTo({
-                  url: 'main',
+              wx.navigateBack({
+                delta: 1
               })
           },
           fail: function (res) {
