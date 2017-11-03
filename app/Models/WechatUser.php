@@ -21,18 +21,14 @@ class WechatUser extends Model
         return $flight->id;
     }
 
-    /*是否为系统用户，如果不是并且带了相关信息则自动创新建新用户*/
-    public static function isUser($openid, $nickname='', $gender='', $avatar='')
+    /*是否为系统用户，如果不是带了相关信息则自动创新建新用户*/
+    public static function isUser($openid, $nickname, $gender, $avatar)
     {
         $count = WechatUser::where('openid', $openid)
             ->count();
         if ($count < 1) {
-            if ($nickname) {
-                WechatUser::newUser($openid, $nickname, $gender, $avatar);
-                return true;
-            } else {
-                return false;
-            }
+            WechatUser::newUser($openid, $nickname, $gender, $avatar);
+            return true;
         } else {
             return true;
         }
