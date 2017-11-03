@@ -27,7 +27,7 @@ class WechatUser extends Model
         $count = WechatUser::where('openid', $openid)
             ->count();
         if ($count < 1) {
-            if ($nickname && $gender && $avatar) {
+            if ($nickname) {
                 WechatUser::newUser($openid, $nickname, $gender, $avatar);
                 return true;
             } else {

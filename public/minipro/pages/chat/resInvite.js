@@ -24,10 +24,7 @@ Page({
             group_id: options.group_id
         });
 
-        this.inits();
-    },
-
-    inits: function() {
+        var that = this;
         if (!wx.getStorageSync('openid')) {
             wx.login({
                 success: function (res) {
@@ -42,11 +39,11 @@ Page({
                             success: function (data) {
                                 wx.setStorageSync('openid', data.data.openid);
 
-                                if (!this.data.isRequest) {
-                                    this.exeRequest();
-                                    this.setData({
+                                if (that.data.isRequest == 0 && wx.getStorageSync('nickname')) {
+                                    that.setData({
                                         isRequest: 1
                                     });
+                                    that.exeRequest();
                                 }
                                 // this.exeRequest();
                             }
@@ -57,63 +54,42 @@ Page({
                 }
             });
 
-        } else if (!wx.getStorageSync('nickname')) {
-            if (this.data.canIUse) {
-                // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                // 所以此处加入 callback 以防止这种情况
-                app.userInfoReadyCallback = res => {
+        }
+
+        if (!wx.getStorageSync('nickname')) {
+            // 在没有 open-type=getUserInfo 版本的兼容处理
+            wx.getUserInfo({
+                success: res => {
+                    app.globalData.userInfo = res.userInfo
                     this.setData({
                         userInfo: res.userInfo,
                         hasUserInfo: true
                     })
-                    console.log(res.userInfo);
 
                     wx.setStorageSync('nickname', res.userInfo.nickName);
                     wx.setStorageSync('gender', res.userInfo.gender);
                     wx.setStorageSync('avatarUrl', res.userInfo.avatarUrl);
 
-                    if (!this.data.isRequest) {
-                        this.exeRequest();
-                        this.setData({
+                    if (that.data.isRequest == 0 && wx.getStorageSync('openid')) {
+                        that.setData({
                             isRequest: 1
                         });
+                        that.exeRequest();
                     }
-                    // this.exeRequest();
+                    // that.exeRequest();
                 }
-            } else {
-                // 在没有 open-type=getUserInfo 版本的兼容处理
-                wx.getUserInfo({
-                    success: res => {
-                        app.globalData.userInfo = res.userInfo
-                        this.setData({
-                            userInfo: res.userInfo,
-                            hasUserInfo: true
-                        })
+            })
+        }
 
-                        wx.setStorageSync('nickname', res.userInfo.nickName);
-                        wx.setStorageSync('gender', res.userInfo.gender);
-                        wx.setStorageSync('avatarUrl', res.userInfo.avatarUrl);
-
-                        if (!this.data.isRequest) {
-                            this.exeRequest();
-                            this.setData({
-                                isRequest: 1
-                            });
-                        }
-                        // this.exeRequest();
-                    }
-                })
-            }
-        } else {
-            if (!this.data.isRequest) {
-                this.exeRequest();
-                this.setData({
+        if (wx.getStorageSync('openid') && wx.getStorageSync('nickname')) {
+            if (!that.data.isRequest) {
+                that.exeRequest();
+                that.setData({
                     isRequest: 1
                 });
             }
             // this.exeRequest();
         }
-
     },
     getUserInfo: function (e) {
         // console.log(e)
@@ -208,7 +184,6 @@ Page({
                     userInfo: res.userInfo,
                     hasUserInfo: true
                 })
-                console.log(res.userInfo);
 
                 wx.setStorageSync('nickname', res.userInfo.nickName);
                 wx.setStorageSync('gender', res.userInfo.gender);
@@ -235,10 +210,11 @@ Page({
     },
     //对返回的数据进行处理
     testResult: function (data) {
-        if (data.data.result == 0) {
+        console.log(data);
+        if (data.result == 0) {
             wx.showModal({
               title: '邀请函',
-              content: data.data.pre+'邀请你加入群聊，是否接受？',
+              content: data.pre+'邀请你加入群聊，是否接受？',
               success: function(res) {
                 if (res.confirm) {
                     /*用户接受*/
@@ -252,7 +228,7 @@ Page({
                         method: 'post',
                         dataType: 'json',
                         success: function (data, code) {
-                            if (data.data.result == 0) {
+                            if (data.result == 0) {
                                 /*接受成功*/
                                 wx.showToast({
                                   title: '入群成功',
@@ -275,12 +251,12 @@ Page({
                 }
               }
             })
-        } else if (data.data.result == 1) {
+        } else if (data.result == 1) {
             //都是系统成员了
             wx.showModal({
               title: '错误提示',
               showCancel: false,
-              content: data.data.pre+'和'+data.data.now+'都已经是群聊成员了',
+              content: data.pre+'和'+data.now+'都已经是群聊成员了',
               success: function(res) {
                 if (res.confirm) {
                     wx.reLaunch({
@@ -293,12 +269,12 @@ Page({
                 }
               }
             })
-        } else if (data.data.result == 2) {
+        } else if (data.result == 2) {
             //某个人已经是系统成员了
             wx.showModal({
               title: '错误提示',
               showCancel: false,
-              content: data.data.data+'已经是群聊成员了',
+              content: data.data+'已经是群聊成员了',
               success: function(res) {
                 if (res.confirm) {
                     wx.reLaunch({
@@ -311,12 +287,12 @@ Page({
                 }
               }
             })
-        } else if (data.data.result == 3) {
+        } else if (data.result == 3) {
             //存在性别不明
             wx.showModal({
               title: '错误提示',
               confirmText: '重新验证',
-              content: data.data.data+'的微信尚未设置性别',
+              content: data.data+'的微信尚未设置性别',
               success: function(res) {
                 if (res.confirm) {
                     wx.reLaunch({
@@ -329,12 +305,12 @@ Page({
                 }
               }
             })
-        } else if (data.data.result == 4) {
+        } else if (data.result == 4) {
             //性别都不明
             wx.showModal({
               title: '错误提示',
               confirmText: '重新验证',
-              content: data.data.pre+'和'+data.data.now+'的微信均未设置性别。',
+              content: data.pre+'和'+data.now+'的微信均未设置性别。',
               success: function(res) {
                 if (res.confirm) {
                     
@@ -349,7 +325,7 @@ Page({
                 }
               }
             })
-        } else if (data.data.result == 5){
+        } else if (data.result == 5){
             wx.showModal({
               title: '错误提示',
               showCancel: false,

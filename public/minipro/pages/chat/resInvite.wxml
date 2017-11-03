@@ -1,4 +1,4 @@
 <view class="container">
-	<text>发大水范德萨分{{id}}+{{group_id}}罚款
+	<text>王者{{id}}+{{group_id}}罚款
 	</text>
 </view>
