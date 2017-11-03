@@ -28,7 +28,7 @@ class ChatController extends Controller
     	$gender = $request->input('gender');
     	$avatarUrl = $request->input('avatarUrl');
     	
-    	if (ProChatGroupMember::checkMember($openid) == '404') {
+    	if (ProChatGroupMember::checkMember($openid)['result'] == '404') {
     		//验证是否确实不存在该用户
     		$id = WechatUser::newUser($openid, $nickName, $gender, $avatarUrl);
     		return response()->json(['result' => '0', 'id'=>$id]);
