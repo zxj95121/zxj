@@ -1,4 +1,6 @@
 // pages/chat/invite.js
+const app = getApp()
+
 Page({
 
     /**
