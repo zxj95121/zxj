@@ -50,8 +50,8 @@ class ChatController extends Controller
     	$nickName = $request->input('nickName');
     	$gender = $request->input('gender');
     	$avatarUrl = $request->input('avatarUrl');
-    	$id = $request->id;
-    	$group_id = $request->group_id;
+    	$id = $request->input('id');
+    	$group_id = $request->input('group_id');
 
     	/*查看openid是否为系统用户，不是自动创建*/
     	WechatUser::isUser($openid, $nickName, $gender, $avatarUrl);
@@ -69,8 +69,8 @@ class ChatController extends Controller
     	$nickName = $request->input('nickName');
     	$gender = $request->input('gender');
     	$avatarUrl = $request->input('avatarUrl');
-    	$id = $request->id;
-    	$group_id = $request->group_id;
+    	$id = $request->input('id');
+    	$group_id = $request->input('group_id');
 
     	/*更新下数据库的gender*/
     	WechatUser::where('openid', $openid)
@@ -86,8 +86,8 @@ class ChatController extends Controller
     public function joinGroup(Request $request)
     {
     	$openid = $request->input('openid');
-    	$id = $request->id;
-    	$group_id = $request->group_id;
+    	$id = $request->input('id');
+    	$group_id = $request->input('group_id');
 
     	ProChatGroupMember::joinGroup($openid, $id, $group_id);
 
