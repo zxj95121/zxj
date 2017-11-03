@@ -25,10 +25,15 @@ class WechatUser extends Model
     public static function isUser($openid, $nickname, $gender, $avatar)
     {
         $count = WechatUser::where('openid', $openid)
-            ->select('id')
             ->count();
         if ($count < 1) {
-            WechatUser::newUser($openid, $nickname, $gender, $avatar);
+            // WechatUser::newUser($openid, $nickname, $gender, $avatar);
+            $flight = new WechatUser();
+            $flight->openid = $openid;
+            $flight->nickname = $nickname;
+            $flight->gender = $gender;
+            $flight->headimgurl = $avatar;
+            $flight->save();
             return true;
         } else {
             return true;
