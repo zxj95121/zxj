@@ -42,7 +42,7 @@ class ProChatGroupMember extends Model
     	$preObj = WechatUser::find($id);//表示邀请人
     	$nowObj = WechatUser::find($user_id);//表示受邀人
 
-    	if ($preObj->gender + $nowObj->gender == 2) {
+    	if ($preObj->gender + $nowObj->gender == 3) {
     		//再判断两人是不是已在群聊中
     		$preCount = ProChatGroupMember::where('user_id', $id)
     			->where('group_id', $group_id)
