@@ -77,7 +77,7 @@ class ChatController extends Controller
     		->update(['gender' => $gender]);
 
     	/*进行入群前的判断，是否异性，是否都不是群成员等等*/
-    	$result = ProChatGroupMember::isInGroup($openid);
+    	$result = ProChatGroupMember::isInGroup($openid, $id, $group_id);
 
     	return response()->json($result);
     }
