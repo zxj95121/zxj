@@ -209,8 +209,9 @@ Page({
     },
     //对返回的数据进行处理
     testResult: function (data) {
-        console.log(data);
+        var openid = wx.getStorageSync('openid');
         var that = this;
+
         if (data.result == 0) {
             wx.showModal({
               title: '邀请函',
@@ -222,8 +223,8 @@ Page({
                         url: 'https://api.zhangxianjian.com/pro/chat/joinGroup',
                         data: {
                             openid: openid,
-                            id: this.data.id,
-                            group_id: group_id
+                            id: that.data.id,
+                            group_id: that.data.group_id
                         },
                         method: 'post',
                         dataType: 'json',

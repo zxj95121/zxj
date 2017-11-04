@@ -72,7 +72,7 @@ class ProChatGroupMember extends Model
     	}
     }
 
-    public function joinGroup($openid, $id, $group_id)
+    public static function joinGroup($openid, $id, $group_id)
     {
     	$user_id = WechatUser::getId($openid);
 
