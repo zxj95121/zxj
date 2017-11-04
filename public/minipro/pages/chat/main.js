@@ -110,6 +110,7 @@ exeRequest: function (e) {
                     method: 'post',
                     dataType: 'json',
                     success: function (data, code) {
+                        console.log(gender+'aba');
                         if (data.data.result == 0) {
                             wx.navigateTo({
                                 url: 'invite?id='+data.data.id,

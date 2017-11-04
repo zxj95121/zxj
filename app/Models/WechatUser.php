@@ -14,7 +14,7 @@ class WechatUser extends Model
     	$flight = new WechatUser();
     	$flight->openid = $openid;
     	$flight->nickname = $nickname;
-    	$flight->gender = $gender;
+    	$flight->gender = ''.$gender;
     	$flight->headimgurl = $avatar;
     	$flight->save();
 
@@ -31,7 +31,7 @@ class WechatUser extends Model
             $flight = new WechatUser();
             $flight->openid = $openid;
             $flight->nickname = $nickname;
-            $flight->gender = $gender;
+            $flight->gender = ''.$gender;
             $flight->headimgurl = $avatar;
             $flight->save();
             return true;
