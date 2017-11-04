@@ -74,7 +74,7 @@ class ChatController extends Controller
 
     	/*更新下数据库的gender*/
     	WechatUser::where('openid', $openid)
-    		->update(['gender' => $gender]);
+    		->update(['gender' => ''.$gender]);
 
     	/*进行入群前的判断，是否异性，是否都不是群成员等等*/
     	$result = ProChatGroupMember::isInGroup($openid, $id, $group_id);
