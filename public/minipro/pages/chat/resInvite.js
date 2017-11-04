@@ -311,6 +311,26 @@ Page({
             //性别都不明
             wx.showModal({
               title: '错误提示',
+              confirmText: '确认',
+              content: data.pre+'和'+data.now+'，同性不可一起入群。',
+              success: function(res) {
+                if (res.confirm) {
+                    
+
+                    /*重新请求用户信息*/
+
+
+                } else if (res.cancel) {
+                    wx.reLaunch({
+                      url: 'main'
+                    })
+                }
+              }
+            })
+        } else if (data.result == 5) {
+            //性别都不明
+            wx.showModal({
+              title: '错误提示',
               confirmText: '重新验证',
               content: data.pre+'和'+data.now+'的微信均未设置性别。',
               success: function(res) {

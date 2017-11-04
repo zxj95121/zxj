@@ -42,7 +42,7 @@ class ProChatGroupMember extends Model
     	$preObj = WechatUser::find($id);//表示邀请人
     	$nowObj = WechatUser::find($user_id);//表示受邀人
 
-    	if ((int)$preObj->gender + (int)$nowObj->gender == 3) {
+    	if ($preObj->gender + $nowObj->gender == 3) {
     		//再判断两人是不是已在群聊中
     		$preCount = ProChatGroupMember::where('user_id', $id)
     			->where('group_id', $group_id)
@@ -67,8 +67,10 @@ class ProChatGroupMember extends Model
     	} else if ($nowObj->gender == 0) {
     		//受邀人性别不明
     		return array('result' => 3, 'data' => $nowObj->nickname);
+    	} else if ($nowObj->gender == $preObj->gender){
+    		return array('result' => 4, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname);
     	} else {
-    		return array('result' => 4);
+    		return array('result' => 5, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname);
     	}
     }
 
