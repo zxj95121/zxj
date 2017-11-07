@@ -129,6 +129,10 @@
 			}
 		})
 		$('#search').click(function(){
+			if (parseInt($('input[name="download_num"]').val()) < 50) {
+				alert('要下载的数目最小值为50');
+				return;
+			}
 			$.ajax({
 				url: '/jing/getNum',
 				type: 'post',
