@@ -21,7 +21,7 @@ Route::get('/a', function () {
 Route::get('/jing', 'JingController@jing');
 Route::post('/jing/getNum', 'JingController@getNum');
 Route::post('/jing/getData', 'JingController@getData');
-Route::get('/jing/downloadTxt/{file}', 'JingController@downloadTxt');
+Route::get('/jing/downloadTxt', 'JingController@downloadTxt');
 
 Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) {
     $router->get('/uploadVideo','ShareVideoController@upload');
