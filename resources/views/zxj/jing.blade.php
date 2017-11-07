@@ -144,7 +144,7 @@
 					window.num = data.num;
 
 					if (parseInt($('input[name="download_num"]').val()) > data.num) {
-						alert('要下载的数目必须小于语料库数目');
+						alert('要下载的数目必须小于语料库数目:'+data.num);
 					} else {
 						$('#numModal').modal('show');
 					}
