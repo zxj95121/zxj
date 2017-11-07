@@ -91,7 +91,7 @@ class JingController extends Controller
 
     	$data = Wechat::curls($url);
 
-    	require_once('/plugin/simple_html_dom/simple_html_dom.php');
+    	require_once($_SERVER['DOCUMENT_ROOT'].'/plugin/simple_html_dom/simple_html_dom.php');
 
     	$html = str_get_html($data);
 
