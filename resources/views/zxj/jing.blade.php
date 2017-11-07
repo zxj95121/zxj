@@ -184,7 +184,7 @@
 						} else {
 							$('#tishi').show().html('生成文件完成！');
 
-							window.open("http://www.zhangxianjian.com/images/jing/ccl"+data.txt+".txt");
+							window.open("http://www.zhangxianjian.com/downloadTxt/"+data.txt);
 						}
 					},
 					error: function(data) {

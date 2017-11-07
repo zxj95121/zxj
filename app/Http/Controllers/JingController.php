@@ -72,6 +72,15 @@ class JingController extends Controller
     	
     }
 
+    //downloadTxt
+    public function downloadTxt($file, Request $request)
+    {
+    	$filename = $_SERVER['DOCUMENT_ROOT'].'/images/jing/ccl'.$file.'.txt'; //文件路径
+		header("Content-Type: application/force-download");
+		header("Content-Disposition: attachment; filename=".$file.'.txt');
+		readfile($filename);
+    }
+
     private function getSome($group, $n, $word, $download_num, $left_num, $right_num, $txt)
     {
     	$number = JingSearchNumber::getNumber($group, $n);
