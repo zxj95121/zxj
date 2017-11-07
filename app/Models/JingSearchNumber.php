@@ -16,7 +16,6 @@ class JingSearchNumber extends Model
     	//先从数组库查出组数
     	$obj = JingSearchNumber::where('status', 1)
     		->select('group')
-    		->groupBy('group')
     		->orderBy('group', 'desc')
     		->first();
     	if ($obj)
