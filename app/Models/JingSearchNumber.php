@@ -38,13 +38,13 @@ class JingSearchNumber extends Model
     	return $count;
     }
 
-    public static function getNumber($group, $n)
+    public static function getNumber($group, $n, $skip)
     {
-    	$num = ($n-1)*20;
+    	$num = ($n-1)*$skip;
     	$number = JingSearchNumber::where('status', '1')
     		->where('group', $group)
     		->offset($num)
-    		->limit(20)
+    		->limit($skip)
     		->select('number')
     		->get()
     		->toArray();

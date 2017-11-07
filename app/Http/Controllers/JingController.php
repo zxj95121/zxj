@@ -43,6 +43,7 @@ class JingController extends Controller
     	$download_num = (int)$request->input('download_num');
     	$num = (int)$request->input('num');
 
+    	$skip = (int)($download_num/50);
     	
 
     	if ($request->input('txt')) {
@@ -83,7 +84,8 @@ class JingController extends Controller
 
     private function getSome($group, $n, $word, $download_num, $left_num, $right_num, $txt)
     {
-    	$number = JingSearchNumber::getNumber($group, $n);
+    	$skip = (int)($download_num/50);
+    	$number = JingSearchNumber::getNumber($group, $n, $skip);
 
     	if (!$number)
     		return false;
@@ -102,10 +104,10 @@ class JingController extends Controller
     	$pre = 0;
 
     	$fp = fopen($txt, 'a+');
-    	$k = ($n-1)*20+1;
+    	$k = ($n-1)*$skip+1;
 
 		while ($current <= $number['max']) {
-			$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num=1500&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
+			$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num=1000&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
 
 			$data = Wechat::curls($url);
 
@@ -136,7 +138,7 @@ class JingController extends Controller
 	    		}
 			}
 
-			$current += 1500;
+			$current += 1000;
 		}
     	
 		fclose($fp);

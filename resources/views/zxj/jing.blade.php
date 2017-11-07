@@ -159,6 +159,7 @@
 		})
 
 		function ajaxSetFile(txt='', group='', n='') {
+			var skip = parseInt(parseInt($('input[name="download_num"]').val())/50);
 			if (txt) {
 				$.ajax({
 					url: '/jing/getData',
@@ -176,7 +177,7 @@
 					},
 					success: function(data) {
 						if (data.result) {
-							var precent = parseInt(parseInt(data.n)*2000/parseInt($('input[name="download_num"]').val()));
+							var precent = parseInt(parseInt(data.n)*skip*100/parseInt($('input[name="download_num"]').val()));
 							precent = precent > 100 ? 100:precent;
 							$('#loading').css('width', '' + precent + '%').html('' + precent + '%');
 							console.log('' + precent + '%');
