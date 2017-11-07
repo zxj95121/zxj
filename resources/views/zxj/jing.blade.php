@@ -41,7 +41,7 @@
 	</style>
 </head>
 <body>
-	<div class="container-fluid" style="padding: 0px;">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 title">
 				自动抽取语料下载
