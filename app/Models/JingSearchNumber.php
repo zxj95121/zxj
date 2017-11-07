@@ -14,11 +14,15 @@ class JingSearchNumber extends Model
     public static function saveNumber($arr)
     {
     	//先从数组库查出组数
-    	$count = JingSearchNumber::where('status', 1)
+    	$obj = JingSearchNumber::where('status', 1)
     		->select('group')
     		->groupBy('group')
-    		->count();
-    	$count++;
+    		->orderBy('group', 'desc')
+    		->first();
+    	if ($obj)
+    		$count = (int)$obj->group + 1;
+    	else
+    		$count = 1;
     	$date = date('Y-m-d H:i:s', time());
 
     	foreach ($arr as $value) {
