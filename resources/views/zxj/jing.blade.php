@@ -85,7 +85,7 @@
 					下载条目数
 				</div>
 				<div class="col-md-8 col-xs-8 col-sm-8">
-					<input type="number" name="download_num" class="form-control" placeholder="请输入要随机的数目" value="2000">
+					<input type="number" name="download_num" class="form-control" placeholder="请输入要随机的数目" min="50">
 				</div>
 			</div>
 		</div>
@@ -143,6 +143,11 @@
 					$('#numModal').modal('show');
 					$('#num').html(data.num);
 					window.num = data.num;
+
+					if (parseInt($('input[name="download_num"]').val()) > data.num) {
+						alert('要下载的数目必须小于语料库数目');
+						$('#numModal').modal('hide');
+					}
 				}
 
 			})
