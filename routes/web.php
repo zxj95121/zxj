@@ -17,6 +17,11 @@ Route::get('/a', function () {
     echo phpinfo();
 });
 
+/*Jing*/
+Route::get('/jing', 'JingController@jing');
+Route::post('/jing/getNum', 'JingController@getNum');
+Route::post('/jing/getData', 'JingController@getData');
+
 Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) {
     $router->get('/uploadVideo','ShareVideoController@upload');
     $router->get('/shareVideo','ShareVideoController@show');
