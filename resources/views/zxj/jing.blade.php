@@ -183,9 +183,9 @@
 							console.log('' + precent + '%');
 							ajaxSetFile(data.txt, data.group, data.n);
 						} else {
-							$('#tishi').show().html('生成文件完成！<a href="http://www.zhangxianjian.com/downloadTxt?file='+data.txt+'"><span class="label label-success">点我下载</span></a>');
+							$('#tishi').show().html('生成文件完成！<a href="http://www.zhangxianjian.com/jing/downloadTxt?file='+data.txt+'"><span class="label label-success">点我下载</span></a>');
 
-							window.open("http://www.zhangxianjian.com/downloadTxt?file="+data.txt);
+							window.open("http://www.zhangxianjian.com/jing/downloadTxt?file="+data.txt);
 						}
 					},
 					error: function(data) {
