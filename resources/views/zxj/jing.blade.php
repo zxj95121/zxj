@@ -98,7 +98,7 @@
 	  	<div class="modal-dialog" role="document">
 	   		<div class="modal-content">
 	      		<div class="modal-header">
-	        		<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+	        		<button id="closeBtn" style="display: none;" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        			<h4 class="modal-title">下载提醒</h4>
 	      		</div>
       			<div class="modal-body">
@@ -195,6 +195,7 @@
 							$('#tishi').show().html('生成文件完成！<a href="http://www.zhangxianjian.com/jing/downloadTxt?file='+data.txt+'"><span class="label label-success">点我下载</span></a>');
 
 							window.open("http://www.zhangxianjian.com/jing/downloadTxt?file="+data.txt);
+							$('#closeBtn').show();
 						}
 					},
 					error: function(data) {
