@@ -106,8 +106,10 @@ class JingController extends Controller
     	$fp = fopen($txt, 'a+');
     	$k = ($n-1)*$skip+1;
 
-		while ($current <= $number['max']) {
-			$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num=1000&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
+    	$num = $number['max'] - $number['min'] + 1;
+
+    	if ($num < 1000) {
+    		$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.($number['min']-1).'&num='.$num.'&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
 
 			$data = Wechat::curls($url);
 
@@ -137,10 +139,42 @@ class JingController extends Controller
 	    			}	
 	    		}
 			}
+    	} else {
+			while ($current <= $number['max']) {
+				$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num=1000&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
 
-			$current += 1000;
-		}
-    	
+				$data = Wechat::curls($url);
+
+				$html = str_get_html($data);
+
+				foreach($html->find('table[align=center] tr') as $element) {
+		    		//获取当前ID
+		    		$ids = array();
+		    		preg_match('/(\d+)\./', $element->children(0)->plaintext, $ids);
+
+		    		$result[] = $ids[1];
+		    		if (isset($number[$ids[1]]) && $number[$ids[1]] == $ids[1]) {
+						$left = $element->children(1)->plaintext;
+						$center = '['.$element->children(2)->plaintext.']';
+						$right = $element->children(3)->plaintext;
+
+						$str = $left.$center.$right."\r\n";
+
+		    			if ($ids[1] == $pre) {
+		    				//表示还是当前这个记录
+		    				fwrite($fp, '  '.$str);
+		    			} else {
+		    				//表示是一条新纪录
+		    				fwrite($fp, $k.':'.$str);
+		    				$pre = $ids[1];
+		    				$k++;
+		    			}	
+		    		}
+				}
+
+				$current += 1000;
+			}
+    	}
 		fclose($fp);
     	
     	return true;
