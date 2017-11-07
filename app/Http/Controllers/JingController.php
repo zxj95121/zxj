@@ -105,7 +105,7 @@ class JingController extends Controller
     	$k = ($n-1)*20+1;
 
 		while ($current <= $number['max']) {
-			$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num=2000&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
+			$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num=1500&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
 
 			$data = Wechat::curls($url);
 
@@ -136,7 +136,7 @@ class JingController extends Controller
 	    		}
 			}
 
-			$current += 2000;
+			$current += 1500;
 		}
     	
 		fclose($fp);
