@@ -85,46 +85,53 @@ class JingController extends Controller
 
     	$word = urlencode($word);
 
-    	// $url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?q='.$word.'&start='.($number['min']-1).'&num='.$num.'&index=FullIndex&outputFormat=HTML&encoding=UTF-8&scopestr=&search=%E6%9F%A5%E6%89%BE&inresult=&dir=xiandai&dir=xiandai&orderStyle=DocID&scopestr=&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&neighborSortLength=0';
+		$current = $number['min']-1;
 
-    	$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.($number['min']-1).'&num='.$num.'&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
+		require_once($_SERVER['DOCUMENT_ROOT'].'/plugin/simple_html_dom/simple_html_dom.php');
 
-    	$data = Wechat::curls($url);
-
-    	require_once($_SERVER['DOCUMENT_ROOT'].'/plugin/simple_html_dom/simple_html_dom.php');
-
-    	$html = str_get_html($data);
-
-    	$len = 0;
+		$len = 0;
     	$pre = 0;
 
     	$fp = fopen($txt, 'a+');
     	$k = ($n-1)*20+1;
 
-    	foreach($html->find('table[align=center] tr') as $element) {
-    		//获取当前ID
-    		$ids = array();
-    		preg_match('/(\d+)\./', $element->children(0)->plaintext, $ids);
+		while ($current <= $number['max']) {
+			$url = 'http://ccl.pku.edu.cn:8080/ccl_corpus/pattern?dir=xiandai&q='.$word.'&inresult=&start='.$current.'&num='.$num.'&index=FullIndex&outputFormat=HTML&orderStyle=DocID&encoding=UTF-8&neighborSortLength=0&maxLeftLength='.$left_num.'&maxRightLength='.$right_num.'&isForReading=&scopestr=';
 
-    		$result[] = $ids[1];
-    		if (isset($number[$ids[1]]) && $number[$ids[1]] == $ids[1]) {
-				$left = $element->children(1)->plaintext;
-				$center = '['.$element->children(2)->plaintext.']';
-				$right = $element->children(3)->plaintext;
+			$data = Wechat::curls($url);
 
-				$str = $left.$center.$right."\r\n";
+			$html = str_get_html($data);
 
-    			if ($ids[1] == $pre) {
-    				//表示还是当前这个记录
-    				fwrite($fp, '  '.$str);
-    			} else {
-    				//表示是一条新纪录
-    				fwrite($fp, $k.':'.$str);
-    				$pre = $ids[1];
-    				$k++;
-    			}	
-    		}
+			foreach($html->find('table[align=center] tr') as $element) {
+	    		//获取当前ID
+	    		$ids = array();
+	    		preg_match('/(\d+)\./', $element->children(0)->plaintext, $ids);
+
+	    		$result[] = $ids[1];
+	    		if (isset($number[$ids[1]]) && $number[$ids[1]] == $ids[1]) {
+					$left = $element->children(1)->plaintext;
+					$center = '['.$element->children(2)->plaintext.']';
+					$right = $element->children(3)->plaintext;
+
+					$str = $left.$center.$right."\r\n";
+
+	    			if ($ids[1] == $pre) {
+	    				//表示还是当前这个记录
+	    				fwrite($fp, '  '.$str);
+	    			} else {
+	    				//表示是一条新纪录
+	    				fwrite($fp, $k.':'.$str);
+	    				$pre = $ids[1];
+	    				$k++;
+	    			}	
+	    		}
+			}
+
+			$current += 1000;
 		}
+    	
+		fclose($fp);
+    	
     	return true;
     }
 
