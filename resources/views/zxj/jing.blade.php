@@ -3,7 +3,7 @@
 <head>
 	<title>晶语料库下载</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="/all/home/css/bootstrap.css">
 	<link rel="stylesheet" href="/all/admin/css/bootstrap-reset.css">
 	<style type="text/css">
