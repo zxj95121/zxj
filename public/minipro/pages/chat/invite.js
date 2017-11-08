@@ -96,6 +96,53 @@ Page({
   onReachBottom: function () {
   
   },
+  regetInfo: function () {
+        var that = this;
+        var openid = wx.getStorageSync('openid');
+
+        wx.getUserInfo({
+            success: res => {
+                app.globalData.userInfo = res.userInfo
+                that.setData({
+                    userInfo: res.userInfo,
+                    hasUserInfo: true
+                })
+
+                wx.setStorageSync('nickname', res.userInfo.nickName);
+                wx.setStorageSync('gender', res.userInfo.gender);
+                wx.setStorageSync('avatarUrl', res.userInfo.avatarUrl);
+
+                wx.request({
+                    url: 'https://api.zhangxianjian.com/pro/chat/regetInfo',
+                    data: {
+                        openid: openid,
+                        nickname: res.userInfo.nickName,
+                        gender: res.userInfo.gender,
+                        avatarUrl: res.userInfo.avatarUrl,
+                        id: that.data.id,
+                        group_id: that.data.group_id
+                    },
+                    method: 'post',
+                    dataType: 'json',
+                    success: function (data, code) {
+                        wx.showModal({
+                          title: '提示',
+                          showCancel: false,
+                          content: '验证完成',
+                          success: function(res) {
+                            if (res.confirm) {
+                                //不需要任何操作
+                            } else if (res.cancel) {
+                               //不做任何操作
+                            }
+                          }
+                        })
+                    }
+                })
+            }
+        })
+
+    },
 
   /**
    * 用户点击右上角分享
@@ -104,6 +151,24 @@ Page({
       if (res.from === 'button') {
           // 来自页面内转发按钮
           console.log(res.target)
+      }
+      var that = this;
+      //判断当前用户的性别是否已经设置
+      var gender = wx.getStorageSync('gender');
+      if (!gender) {
+        wx.showModal({
+          title: '错误提示',
+          showCancel: false,
+          content: '尚未设置微信性别，无法邀请他人入群。',
+          confirmText: '重新验证',
+          success: function(res) {
+            if (res.confirm) {
+                that.regetInfo();
+            } else if (res.cancel) {
+               //不做任何操作
+            }
+          }
+        })
       }
       return {
           title: '邀请你一起加入群聊',

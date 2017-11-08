@@ -178,7 +178,7 @@ Page({
         wx.getUserInfo({
             success: res => {
                 app.globalData.userInfo = res.userInfo
-                this.setData({
+                that.setData({
                     userInfo: res.userInfo,
                     hasUserInfo: true
                 })
@@ -194,8 +194,8 @@ Page({
                         nickname: res.userInfo.nickName,
                         gender: res.userInfo.gender,
                         avatarUrl: res.userInfo.avatarUrl,
-                        id: this.data.id,
-                        group_id: this.data.group_id
+                        id: that.data.id,
+                        group_id: that.data.group_id
                     },
                     method: 'post',
                     dataType: 'json',
@@ -318,7 +318,7 @@ Page({
                     
 
                     /*重新请求用户信息*/
-
+                    that.regetInfo();
 
                 } else if (res.cancel) {
                     wx.reLaunch({
