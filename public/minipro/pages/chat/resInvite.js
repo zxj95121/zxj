@@ -12,7 +12,8 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
-        isRequest: 0
+        isRequest: 0,
+        nickname: ''
     },
 
     /**
@@ -211,6 +212,8 @@ Page({
     testResult: function (data) {
         var openid = wx.getStorageSync('openid');
         var that = this;
+
+        this.data.nickname = data.nickname;//nickname表示邀请人的昵称
 
         if (data.result == 0) {
             wx.showModal({

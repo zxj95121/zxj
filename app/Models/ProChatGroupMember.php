@@ -35,42 +35,45 @@ class ProChatGroupMember extends Model
     public static function isInGroup($openid, $id, $group_id) {
     	$user_id = WechatUser::getId($openid);
 
+        $preObj = WechatUser::find($id);//表示邀请人
+
     	if ($user_id == $id) {
-    		return array('result' => 6);
+    		return array('result' => 6, 'nickname' => $preObj->nickname);
     	}
 
-    	$preObj = WechatUser::find($id);//表示邀请人
+    	
     	$nowObj = WechatUser::find($user_id);//表示受邀人
 
     	if ($preObj->gender + $nowObj->gender == 3) {
     		//再判断两人是不是已在群聊中
     		$preCount = ProChatGroupMember::where('user_id', $id)
-    			->where('group_id', $group_id)
-    			->count();
+                ->where('group_id', $group_id)
+                ->count();
+
     		$nowCount = ProChatGroupMember::where('user_id', $user_id)
     			->where('group_id', $group_id)
     			->count();
     		if (!$preCount && !$nowCount) {
     			/*表示都不是群聊成员*/
-    			return array('result' => 0, 'pre' => $preObj->nickname);
+    			return array('result' => 0, 'pre' => $preObj->nickname, 'nickname' => $preObj->nickname);
     		} else if($preCount && $nowCount) {
     			//都是系统成员了
-    			return array('result' => 1, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname);
+    			return array('result' => 1, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname, 'nickname' => $preObj->nickname);
     		} else if ($preCount) {
-    			return array('result' => 2, 'data' => $preObj->nickname);
+    			return array('result' => 2, 'data' => $preObj->nickname, 'nickname' => $preObj->nickname);
     		} else {
-    			return array('result' => 2, 'data' => $nowObj->nickname);
+    			return array('result' => 2, 'data' => $nowObj->nickname, 'nickname' => $preObj->nickname);
     		}
     	} else if ($preObj->gender == 0) {
     		//邀请人性别不明
-    		return array('result' => 3, 'data' => $preObj->nickname);
+    		return array('result' => 3, 'data' => $preObj->nickname, 'nickname' => $preObj->nickname);
     	} else if ($nowObj->gender == 0) {
     		//受邀人性别不明
-    		return array('result' => 3, 'data' => $nowObj->nickname);
+    		return array('result' => 3, 'data' => $nowObj->nickname, 'nickname' => $preObj->nickname);
     	} else if ($nowObj->gender == $preObj->gender){
-    		return array('result' => 4, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname);
+    		return array('result' => 4, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname, 'nickname' => $preObj->nickname);
     	} else {
-    		return array('result' => 5, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname);
+    		return array('result' => 5, 'pre' => $preObj->nickname, 'now' => $nowObj->nickname, 'nickname' => $preObj->nickname);
     	}
     }
 
