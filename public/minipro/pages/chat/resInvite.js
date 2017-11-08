@@ -92,6 +92,25 @@ Page({
             }
             // this.exeRequest();
         }
+
+        var that = this;
+        //获取组名称
+        wx.request({
+            url: 'https://api.zhangxianjian.com/pro/chat/getGroupName',
+            data: {
+                group_id: this.data.group_id
+            },
+            method: 'post',
+            dataType: 'json',
+            success: function(data) {
+                var message = data.data;
+                if (message.errcode == 0) {
+                    that.setData({
+                        group_name: message.group_name
+                    });
+                }
+            }
+        })
     },
     getUserInfo: function (e) {
         // console.log(e)
@@ -127,23 +146,6 @@ Page({
             dataType: 'json',
             success: function (data, code) {
                 that.testResult(data.data);
-            }
-        })
-
-        //获取组名称
-        wx.request({
-            url: 'https://api.zhangxianjian.com/pro/chat/getGroupName',
-            data: {
-                group_id: group_id
-            },
-            method: 'post',
-            dataType: 'json',
-            success: function(data, code) {
-                if (data.errcode = 0) {
-                    that.setData({
-                        group_name: data.group_name
-                    });
-                }
             }
         })
     },
