@@ -97,7 +97,7 @@ class ChatController extends Controller
     public function getGroupName(Request $request)
     {
         $group_id = $request->input('group_id');
-        $group_name = ProChatGroup::getName($group_id);
+        $group_name = ProChatGroup::getGroupName($group_id);
 
         return response()->json(['errcode'=>0, 'group_name'=>$group_name]);
     }

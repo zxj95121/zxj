@@ -1,4 +1,4 @@
 <view class="container">
-	<text>{{nickname}}邀请你加入群聊“{{group_name}}”
+	<text>{{nickname}}邀请你加入群聊 {{group_name}}
 	</text>
 </view>
