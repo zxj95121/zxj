@@ -19,4 +19,11 @@ class ProChatGroup extends Model
     		->toArray();
     	return $groupArr;
     }
+
+    //获取群聊名称
+    public static function getName($group_id)
+    {
+        $obj = ProChatGroup::find($group_id);
+        return $obj->group_name;
+    }
 }

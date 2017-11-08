@@ -60,4 +60,5 @@ Route::group(['prefix' => 'pro', 'namespace' => 'Pro'], function($router) {
 	$router->post('/chat/isInGroup', 'ChatController@isInGroup');//查找该用户是否已加入群聊或者是否为异性
 	$router->post('/chat/joinGroup', 'ChatController@joinGroup');//用户同意加入群聊
 	$router->post('/chat/regetInfo', 'ChatController@regetInfo');//重新获取用户身份，并返回判断信息
+	$router->post('/chat/getGroupName', 'ChatController@getGroupName');//获取组名称
 });

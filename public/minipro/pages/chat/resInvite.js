@@ -13,7 +13,8 @@ Page({
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         isRequest: 0,
-        nickname: ''
+        nickname: '',
+        group_name: ''
     },
 
     /**
@@ -128,6 +129,23 @@ Page({
                 that.testResult(data.data);
             }
         })
+
+        //获取组名称
+        wx.request({
+            url: 'https://api.zhangxianjian.com/pro/chat/getGroupName',
+            data: {
+                group_id: group_id
+            },
+            method: 'post',
+            dataType: 'json',
+            success: function(data, code) {
+                if (data.errcode = 0) {
+                    that.setData({
+                        group_name: data.group_name
+                    });
+                }
+            }
+        })
     },
 
     /**
@@ -213,7 +231,9 @@ Page({
         var openid = wx.getStorageSync('openid');
         var that = this;
 
-        this.data.nickname = data.nickname;//nickname表示邀请人的昵称
+        that.setData({
+            nickname: data.nickname
+        });
 
         if (data.result == 0) {
             wx.showModal({
@@ -321,7 +341,7 @@ Page({
                     
 
                     /*重新请求用户信息*/
-                    that.regetInfo();
+                    // that.regetInfo();
 
                 } else if (res.cancel) {
                     wx.reLaunch({
