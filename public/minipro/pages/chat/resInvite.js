@@ -347,7 +347,7 @@ Page({
                 }
               }
             })
-        } else if (data.result == 5){
+        } else if (data.result == 6){
             wx.showModal({
               title: '错误提示',
               showCancel: false,

@@ -36,7 +36,7 @@ class ProChatGroupMember extends Model
     	$user_id = WechatUser::getId($openid);
 
     	if ($user_id == $id) {
-    		return array('result' => 5);
+    		return array('result' => 6);
     	}
 
     	$preObj = WechatUser::find($id);//表示邀请人
