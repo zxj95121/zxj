@@ -76,7 +76,7 @@ Page({
 
     //建立连接
     wx.connectSocket({
-      url: "wss://api.zhangxianjian.com:2346",
+      url: "wss://api.zhangxianjian.com",
       complete: function(data) {
         console.log('fads');
       }
