@@ -15,6 +15,7 @@ class ProChatGroup extends Model
     public static function getGroup()
     {
     	$groupArr = ProChatGroup::where('status', 1)
+            ->groupBy('id')
     		->select(DB::raw('id, count(*) as count, group_name, group_imgurl, group_num'))
     		->get()
     		->toArray();
