@@ -27,15 +27,25 @@
 .group-word{
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: flex-start;
 }
 
 .group-name{
+    width: 100%;
     font-size: 32rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .group-message{
     font-size: 24rpx;
     color: #aaa;
     margin-top: 10rpx;
+}
+
+.group-count{
+    color: #ccc;
+    margin-right: 24rpx;
 }
