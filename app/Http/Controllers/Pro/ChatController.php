@@ -92,9 +92,9 @@ class ChatController extends BaseController
     	$result = ProChatGroupMember::joinGroup($openid, $id, $group_id);
 
         if ($result === 1) {
-            return response()->json['result' => 1];//人数超限制
+            return response()->json(['result' => 1]);//人数超限制
         } else if ($result === false) {
-            return response()->json['result' => 2];//数据库插入失败
+            return response()->json(['result' => 2]);//数据库插入失败
         }
 
     	return response()->json(['result' => 0]);
