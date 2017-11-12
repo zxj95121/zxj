@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Zxj\Message;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 
 use App\Models\LeaveMessage;
 
 use Session;
 use Wechat;
 
-class LeaveMessageController extends Controller
+class LeaveMessageController extends BaseController
 {
 	/*客户留言处理*/
     public function leavePost(Request $request)
