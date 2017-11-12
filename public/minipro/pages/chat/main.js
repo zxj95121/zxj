@@ -25,6 +25,7 @@ onLoad: function () {
             that.setData({
                 groupObj: data.data
             })
+            console.log(that.data.groupObj);
         }
     })
 

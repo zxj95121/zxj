@@ -267,6 +267,29 @@ Page({
                                       url: 'main'
                                     });
                                 }, 1800);
+                            } else if (data.result == 1) {
+                                //成员数达到上限
+                                wx.showModal({
+                                    title: '失败提示',
+                                    showCancel: false,
+                                    content: '群聊人数已达上限',
+                                    success: function(res) {
+                                        wx.reLaunch({
+                                          url: 'main'
+                                        })
+                                    }
+                                })
+                            } else {
+                                wx.showModal({
+                                    title: '系统错误',
+                                    showCancel: false,
+                                    content: '入群失败，请联系管理员',
+                                    success: function(res) {
+                                        wx.reLaunch({
+                                            url: 'main'
+                                        })
+                                    }
+                                })
                             }
                         }
                     })

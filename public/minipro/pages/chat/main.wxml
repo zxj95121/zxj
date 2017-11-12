@@ -9,7 +9,7 @@
             <image class="group-image" src='{{item.group_imgurl}}'></image>
 
             <view class="group-word">
-                <text  class="group-name">{{item.group_name}}</text>
+                <text  class="group-name">{{item.group_name}}{{$item.count}}人</text>
                 <text class="group-message">地方咖啡</text>
             </view>
     </view>

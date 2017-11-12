@@ -81,14 +81,29 @@ class ProChatGroupMember extends Model
     {
     	$user_id = WechatUser::getId($openid);
 
-    	$flight = new ProChatGroupMember();
-    	$flight->group_id = $group_id;
-    	$flight->user_id = $user_id;
-    	$flight->save();
+        //表成员数量
+        $count = ProChatGroupMember::where('group_id', $group_id)
+            ->where('status', '1')
+            ->count();
 
-    	$flight = new ProChatGroupMember();
-    	$flight->group_id = $group_id;
-    	$flight->user_id = $id;
-    	$flight->save();
+        if ($count >= 20) {
+            return 1;//表示成员数量已达上限
+        }
+
+        try{
+        	$flight = new ProChatGroupMember();
+        	$flight->group_id = $group_id;
+        	$flight->user_id = $user_id;
+        	$flight->save();
+
+        	$flight = new ProChatGroupMember();
+        	$flight->group_id = $group_id;
+        	$flight->user_id = $id;
+        	$flight->save();
+            
+            return true;
+        } catch (\Exception $e){
+            return false;
+        }
     }
 }

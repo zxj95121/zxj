@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Pro;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 
 use App\Models\ProChatGroupMember;
 use App\Models\WechatUser;
 use App\Models\ProChatGroup;
 
-class ChatController extends Controller
+class ChatController extends BaseController
 {
 	//检查该用户是否为该群成员
     public function checkMember(Request $request)
@@ -89,7 +89,13 @@ class ChatController extends Controller
     	$id = $request->input('id');
     	$group_id = $request->input('group_id');
 
-    	ProChatGroupMember::joinGroup($openid, $id, $group_id);
+    	$result = ProChatGroupMember::joinGroup($openid, $id, $group_id);
+
+        if ($result === 1) {
+            return response()->json['result' => 1];//人数超限制
+        } else if ($result === false) {
+            return response()->json['result' => 2];//数据库插入失败
+        }
 
     	return response()->json(['result' => 0]);
     }

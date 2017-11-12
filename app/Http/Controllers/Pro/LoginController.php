@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Pro;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 
 use Wechat;
 
-class LoginController extends Controller
+class LoginController extends BaseController
 {
     public function getkey(Request $request)
     {
