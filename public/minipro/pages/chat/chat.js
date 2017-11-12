@@ -71,6 +71,23 @@ Page({
     }
 
     // 判断用户是否是群成员，如果不是跳走
+
+
+
+    //建立连接
+    wx.connectSocket({
+      url: "wss://api.zhangxianjian.com:2346",
+      complete: function(data) {
+        console.log('fads');
+      }
+    })
+
+    //连接成功
+    wx.onSocketOpen(function() {
+      wx.sendSocketMessage({
+        data: 'stock',
+      })
+    })
     
   },
   getUserInfo: function(e) {
