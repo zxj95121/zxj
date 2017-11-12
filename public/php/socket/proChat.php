@@ -5,17 +5,17 @@ require_once __DIR__ . '/workerman/Autoloader.php';
 require_once __DIR__ . '/mysql-master/src/Connection.php';
 require_once __DIR__ . '/mysql-master/vendor/autoload.php';
 
-// $context = array(
-//     'ssl' => array(
-//         // 使用绝对路径
-//         'local_cert'  => '/etc/apache2/cert/214314', // 也可以是crt文件
-//         'local_pk'    => '/etc/ssl/server.key',
-//         'verify_peer' => false,
-//     )
-// );
+$context = array(
+    'ssl' => array(
+        // 使用绝对路径
+        'local_cert'  => '/etc/apache2/cert/214314716540331.pem', // 也可以是crt文件
+        'local_pk'    => '/etc/apache2/cert/214314716540331.key',
+        'verify_peer' => false,
+    )
+);
 
 // $worker = new Worker("websocket://127.0.0.1:2346");
-$worker = new Worker("websocket://0.0.0.0:443");
+$worker = new Worker("websocket://0.0.0.0:443", $context);
 
 // 每个进程最多执行1000个请求
 define('MAX_REQUEST', 400);
