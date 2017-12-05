@@ -87,6 +87,7 @@ $worker->onMessage = function($connection, $data)
             ->innerJoin('pro_chat_record','pro_chat_record.group_id = '.$data['group_id'])
             ->query();
 
+        $sendArr = array();
         foreach ($connect as $value) {
             $sendArr[$value['worker_id']] = 1;
         }
