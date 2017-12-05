@@ -20,7 +20,8 @@ class ProChatRecord extends Model
     		->orderBy('pro_chat_record.created_at', 'desc')
     		->select('pro_chat_record.content as content', 'pro_chat_record.type as type', 'pro_chat_record.user_id as uid', 'pro_chat_record.created_at as created_at', 'wu.headimgurl as headimgurl', 'wu.nickname as nickname')
     		->limit(3)
-    		->get();
+    		->get()
+    		->toArrray();
 
     	$records = Wechat::deal_sqlResult($records, true);
     	return $records;
