@@ -56,6 +56,7 @@ $worker->onMessage = function($connection, $data)
     $cid = $connection->id;
     //临时返回原数据
     $connection->send($data);
+    $data_pre = $data;
     $data = json_decode($data, true);
     // echo $data;
 
@@ -96,7 +97,7 @@ $worker->onMessage = function($connection, $data)
         {
             if (array_key_exists($con->id, $sendArr)) {
 
-                $con->send($msg);
+                $con->send($data_pre);
                 unset($sendArr[$con->id]);
             }
         }
