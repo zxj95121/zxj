@@ -100,8 +100,8 @@ $worker->onMessage = function($connection, $data)
             ->row();
 
         $data['created_at'] = $time;
-        $data['avatar'] = $info['avatar'];
-        $data['nickname'] = $info['nickname'];
+        $data['avatar'] = $info->avatar;
+        $data['nickname'] = $info->nickname;
 
         foreach($connection->worker->connections as $con)
         {
