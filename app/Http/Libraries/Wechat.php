@@ -73,7 +73,7 @@ class Wechat extends ServiceProvider
                 $result[$key][$k] = $v;
             }
             if ($time) {
-                $created_at = strtotime($time$result[$key][$column]);//聊天内容的日期
+                $created_at = strtotime($result[$key][$column]);//聊天内容的日期
 
                 $space = time() - $created_at;
                 $time_space = '';
