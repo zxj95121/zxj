@@ -97,7 +97,7 @@ $worker->onMessage = function($connection, $data)
         $info = $db->select('headimgurl as avatar, nickname')
             ->from('wechat_user')
             ->where('id = '+$data['uid'])
-            ->single();
+            ->row();
 
         $data['created_at'] = $time;
         $data['avatar'] = $info['avatar'];
