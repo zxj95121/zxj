@@ -22,7 +22,7 @@ class ProChatRecord extends Model
     		->limit(3)
     		->get();
 
-    	$records = Wechat::deal_sqlResult($records, $true);
+    	$records = Wechat::deal_sqlResult($records, true);
     	return $records;
     }
 }
