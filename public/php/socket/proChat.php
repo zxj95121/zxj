@@ -34,11 +34,6 @@ $worker->onConnect = function($connection)
     // echo "new connection from ip " . $connection->getRemoteIp() . "\n";
     // echo $connection->id;
 
-    $connection->onMessage = function($connection, $data)
-    {
-        echo $data+'----hahaha';
-        $connection->send('receive success');
-    };
     // 已经处理请求数
     static $request_count = 0;
 
@@ -77,6 +72,9 @@ $worker->onMessage = function($connection, $data)
             'updated_at' => $time
         ))->query();
 
+    } else if ($data['type'] == 0) {
+        //初次进来，给用户存储当前的进程id
+        $db->update('wechat_user')->cols(array('worker_id'=>$cid))->where('id='.$data['uid'])->query();
     }
     // if ($data['type'] == 'u') {
     //     $user_type = 'u';

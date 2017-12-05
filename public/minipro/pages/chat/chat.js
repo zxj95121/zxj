@@ -90,9 +90,6 @@ Page({
     //建立连接
     wx.connectSocket({
         url: "wss://api.zhangxianjian.com/wss",
-        data:{
-            uid: data.uid;
-        },
         complete: function(data) {
             console.log('fads');
         }
@@ -100,9 +97,14 @@ Page({
 
     //连接成功
     wx.onSocketOpen(function() {
-      // wx.sendSocketMessage({
-      //   data: 'stock',
-      // });
+        var json = JSON.stringify({
+            type: 0,
+            uid: data.uid
+        });
+        //发送初始化数据
+        wx.sendSocketMessage({
+            data: json,
+        });
     })
 
     wx.onSocketMessage(function(res) {
