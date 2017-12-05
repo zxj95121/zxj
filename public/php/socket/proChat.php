@@ -99,7 +99,7 @@ $worker->onMessage = function($connection, $data)
             ->where('id = '+$data['uid'])
             ->row();
 
-        var_dump(info);
+        var_dump($info);
 
         $data['created_at'] = $time;
         // $data['avatar'] = $info->avatar;
