@@ -12,10 +12,10 @@
       <text class="master-nickname">聊天 just for 装逼</text>
   </view>
 <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-  <view class="message-time">
-    <text>{{chatMessage[0].created_at}}</text>
-  </view>
   <block wx:for="{{chatMessage}}" wx:key="{{index}}">
+    <view wx:if="{{index%10 == 0}}" class="message-time">
+      <text>{{chatMessage[0].created_at}}</text>
+    </view>
     <view wx:if="{{item.type == 1}}" class="message message-{{item.direction}}">
         <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
         <image bindtap="bindViewTap" class="message-avatar" src="{{item.avatar}}" background-size="cover"></image>

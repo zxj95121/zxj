@@ -19,7 +19,7 @@ class ProChatRecord extends Model
     		->leftJoin('wechat_user as wu', 'wu.id', '=', 'pro_chat_record.user_id')
     		->orderBy('pro_chat_record.created_at', 'desc')
     		->select('pro_chat_record.content as content', 'pro_chat_record.type as type', 'pro_chat_record.user_id as uid', 'pro_chat_record.created_at as created_at', 'wu.headimgurl as headimgurl', 'wu.nickname as nickname')
-    		->limit(3)
+    		->limit(20)
     		->get()
     		->toArray();
 
