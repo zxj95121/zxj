@@ -34,6 +34,11 @@ $worker->onConnect = function($connection)
     // echo "new connection from ip " . $connection->getRemoteIp() . "\n";
     // echo $connection->id;
 
+    $connection->onMessage = function($connection, $data)
+    {
+        echo $data+'----hahaha';
+        $connection->send('receive success');
+    };
     // 已经处理请求数
     static $request_count = 0;
 
@@ -54,10 +59,25 @@ $worker->onMessage = function($connection, $data)
 {
     global $db;
     $cid = $connection->id;
-    // $data = json_decode($data, true);
-    echo $data;
-    $connection->send('hello world');
+    //临时返回原数据
+    $connection->send($data);
+    $data = json_decode($data, true);
+    // echo $data;
 
+    if ($data['type'] == 1) {
+        //发送的是文本内容
+        $data['content'] = emoji_encode(strip_tags($data['content']));
+
+        $time = date('Y-m-d H:i:s');
+        $insert_id = $db->insert('pro_chat_record')->cols(array(
+            'group_id' => '0',
+            'content' => $data['content'],
+            'user_id' => $data['uid'],
+            'created_at' => $time,
+            'updated_at' => $time
+        ))->query();
+
+    }
     // if ($data['type'] == 'u') {
     //     $user_type = 'u';
     //     /*用户端*/

@@ -89,6 +89,9 @@ exeRequest: function (e) {
 
     var group_id = e.currentTarget.dataset.id;
 
+
+    //通过用户的openid来获取用户的uid，也存在storage里
+
     wx.request({
         url: 'https://api.zhangxianjian.com/pro/chat/checkMember',
         data: {
@@ -116,6 +119,7 @@ exeRequest: function (e) {
                             wx.navigateTo({
                                 url: 'invite?id='+data.data.id,
                             })
+                            wx.setStorageSync('uid', data.data.id);
                         }
                     }
                 })
@@ -124,10 +128,12 @@ exeRequest: function (e) {
                 wx.navigateTo({
                     url: 'invite?id='+data.data.id+'&group_id='+group_id,
                 })
+                wx.setStorageSync('uid', data.data.id);
             } else {
                 wx.navigateTo({
-                    url: 'chat'
+                    url: 'chat?uid='+data.data.id+'&group_id='+group_id,
                 })
+                wx.setStorageSync('uid', data.data.id);
             }
         }
     })

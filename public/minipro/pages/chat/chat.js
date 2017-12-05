@@ -34,7 +34,11 @@ Page({
     ],
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
+    //用户id和组id
+    uid: 0,
+    group_id: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -42,7 +46,15 @@ Page({
     //   url: '../logs/logs'
     // })
   },
-  onLoad: function () {
+  onLoad: function (options) {
+    this.setData({
+        uid: options.uid,
+        group_id: options.group_id
+    });
+
+    var data = this.data;
+
+
     // console.log(app.globalData);
     if (app.globalData.userInfo) {
       this.setData({
@@ -78,6 +90,9 @@ Page({
     //建立连接
     wx.connectSocket({
         url: "wss://api.zhangxianjian.com/wss",
+        data:{
+            uid: data.uid;
+        },
         complete: function(data) {
             console.log('fads');
         }
@@ -172,9 +187,15 @@ Page({
         var sendContent = data.sendContent;
         var sendClass = data.sendClass;
         if (sendClass == 'sendDone') {
+            var dataArr = new Object();
+            dataArr.uid = data.uid;
+            dataArr.group_id = data.group_id;
+            dataArr.content = sendContent;
+            dataArr.type = 1;//表示发送的是文本内容
             wx.sendSocketMessage({
-                data: sendContent
+                data: JSON.stringify(dataArr)
             });
+            //重置input内容
             this.setData({
                 sendContent: ''
             });
