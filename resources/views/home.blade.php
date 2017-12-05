@@ -6,7 +6,7 @@
 	<title>张贤健的个人网站</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="张贤健">
-	<meta name="keywords" content="程晓琴, 张贤健, wells, php, PHP, laravel"/>
+	<meta name="keywords" content="张贤健, wells, php, PHP, laravel"/>
 	<meta name="baidu-site-verification" content="lX0mR46Fv3" />
 	<meta name="description" content="自己选择的不平凡，所有坎坷都得去挑战。"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -66,7 +66,8 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(/all/home/images/user-4.jpg);"></div>
+							<div class="profile-thumb" style=""><img src="/all/home/images/user-4.jpg" alt="张贤健" style="height: 100%;border-radius: 50%;"></div>
+
 							<h1><span>Wells 张贤健</span></h1>
 							<h3><span>Do what I want to do,forget what I can't forget. </span></h3>
 							<br>

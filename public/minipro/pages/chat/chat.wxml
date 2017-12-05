@@ -34,8 +34,8 @@
 
   <view class="message-last"></view>
 
-  <view class="inputView" style='padding-bottom:{{inputViewBottom}};'>
-    <input class="messageInput" placeholder-class='messagePlaceHolder' bindfocus="inputFocus" bindblur="inputBlur" bindinput="inputInput" type='text' placeholder='请输入内容' cursor-spacing="9" bindlinechange="inputLineChange"></input>
-    <view class="sendMessage {{sendClass}}">发送</view>
-  </view>
+    <view class="inputView" style='padding-bottom:{{inputViewBottom}};'>
+        <input class="messageInput" placeholder-class='messagePlaceHolder' bindfocus="inputFocus" bindblur="inputBlur" bindinput="inputInput" type='text' placeholder='请输入内容' cursor-spacing="9" bindlinechange="inputLineChange"></input>
+        <view class="sendMessage {{sendClass}}" bindtap="sendMessageFunc">发送</view>
+    </view>
 </view>

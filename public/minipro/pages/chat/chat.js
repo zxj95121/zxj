@@ -76,28 +76,32 @@ Page({
 
     //建立连接
     wx.connectSocket({
-      url: "wss://api.zhangxianjian.com/wss",
-      complete: function(data) {
-        console.log('fads');
-      }
+        url: "wss://api.zhangxianjian.com/wss",
+        complete: function(data) {
+            console.log('fads');
+        }
     })
 
     //连接成功
     wx.onSocketOpen(function() {
-      wx.sendSocketMessage({
-        data: 'stock',
-      })
+      // wx.sendSocketMessage({
+      //   data: 'stock',
+      // });
+    })
+
+    wx.onSocketMessage(function(res) {
+        console.log('收到服务器内容：' + res.data)
     })
     
   },
-  getUserInfo: function(e) {
-    // console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+    getUserInfo: function(e) {
+        // console.log(e)
+        app.globalData.userInfo = e.detail.userInfo
+        this.setData({
+            userInfo: e.detail.userInfo,
+            hasUserInfo: true
+        })
+    },
 
   // input聚焦
   inputFocus: function(e) {
@@ -158,5 +162,11 @@ Page({
         }
       ]
     })
-  }
+  },
+
+    sendMessageFunc: function(e){
+        wx.sendSocketMessage({
+            data: e.detail.value,
+        });
+    }
 })
