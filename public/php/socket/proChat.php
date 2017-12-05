@@ -94,7 +94,7 @@ $worker->onMessage = function($connection, $data)
         }
 
         //查该条消息的用户信息
-        $info = $db->select('headimgurl as avatar', 'nickname')
+        $info = $db->select('headimgurl as avatar,nickname')
             ->from('wechat_user')
             ->where('id = '+$data['uid'])
             ->row();
