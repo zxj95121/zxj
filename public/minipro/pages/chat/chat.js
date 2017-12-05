@@ -122,6 +122,7 @@ Page({
         method: 'post',
         dataType: 'json',
         success: function (data, code) {
+            console.log(data);
         }
     });
 
