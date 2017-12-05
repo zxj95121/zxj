@@ -56,6 +56,7 @@ $worker->onMessage = function($connection, $data)
     $cid = $connection->id;
     // $data = json_decode($data, true);
     echo $data;
+    $connection->send('hello world');
 
     // if ($data['type'] == 'u') {
     //     $user_type = 'u';
