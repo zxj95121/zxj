@@ -93,11 +93,21 @@ $worker->onMessage = function($connection, $data)
             $sendArr[$value['worker_id']] = 1;
         }
 
+        //查该条消息的用户信息
+        $info = $db->select('headimgurl as avatar, nickname')
+            ->from('wechat_user')
+            ->where('id = '+$data['uid'])
+            ->single();
+
+        $data['created_at'] = $time;
+        $data['avatar'] = $info['avatar'];
+        $data['nickname'] = $info['nickname'];
+
         foreach($connection->worker->connections as $con)
         {
             if (array_key_exists($con->id, $sendArr)) {
 
-                $con->send($data_pre);
+                $con->send(json_encode($data));
                 unset($sendArr[$con->id]);
             }
         }
