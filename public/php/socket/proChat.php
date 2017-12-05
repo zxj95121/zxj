@@ -65,7 +65,7 @@ $worker->onMessage = function($connection, $data)
 
         $time = date('Y-m-d H:i:s');
         $insert_id = $db->insert('pro_chat_record')->cols(array(
-            'group_id' => '0',
+            'group_id' => $data['group_id'],
             'content' => $data['content'],
             'user_id' => $data['uid'],
             'created_at' => $time,
@@ -75,6 +75,31 @@ $worker->onMessage = function($connection, $data)
     } else if ($data['type'] == 0) {
         //初次进来，给用户存储当前的进程id
         $db->update('wechat_user')->cols(array('worker_id'=>$cid))->where('id='.$data['uid'])->query();
+    }
+
+
+    if ((int)$data['type'] > 0) {
+        //说明传输的是聊天数据，则要广播消息
+        $connect = $db->select('wechat_user.worker_id as worker_id')->from('wechat_user')
+            ->where('wechat_user.status', 1)
+            ->where('wechat_user.id != '.$data['uid'])
+            ->where('wechat_user.worker_id != 0')
+            ->innerJoin('pro_chat_record','pro_chat_record.group_id = '.$data['group_id'])
+            ->query();
+
+        foreach ($connect as $value) {
+            $sendArr[$value['worker_id']] = 1;
+        }
+
+        foreach($connection->worker->connections as $con)
+        {
+            if (array_key_exists($con->id, $sendArr)) {
+
+                $con->send($msg);
+                unset($sendArr[$con->id]);
+            }
+        }
+
     }
     // if ($data['type'] == 'u') {
     //     $user_type = 'u';
