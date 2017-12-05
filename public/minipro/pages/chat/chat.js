@@ -8,7 +8,8 @@ var WxParse = require('../../wxParse/wxParse.js');
 Page({
   data: {
     inputViewBottom: '10rpx',
-    sendClass: 'sendDefault',
+    sendClass: 'sendDefault',//提交按钮
+    sendContent: '',//用户输入的内容
     zhen: true,
     jia: false,
     chatMessage: [
@@ -120,11 +121,13 @@ Page({
     var val = e.detail.value;
     if (val == '') {
       this.setData({
-        sendClass: 'sendDefault'
+        sendClass: 'sendDefault',
+        sendContent: val.trim()
       });
     } else {
       this.setData({
-        sendClass: 'sendDone'
+        sendClass: 'sendDone',
+        sendContent: val.trim()
       });
     }
   },
@@ -165,8 +168,16 @@ Page({
   },
 
     sendMessageFunc: function(e){
-        wx.sendSocketMessage({
-            data: e.detail.value,
-        });
+        var data = this.data;
+        var sendContent = data.sendContent;
+        var sendClass = data.sendClass;
+        if (sendClass == 'sendDone') {
+            wx.sendSocketMessage({
+                data: sendContent
+            });
+            this.setData({
+                sendContent: ''
+            });
+        }
     }
 })

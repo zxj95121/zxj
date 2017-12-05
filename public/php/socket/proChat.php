@@ -248,7 +248,7 @@ $worker->onClose = function($connection)
 {
     global $db;
 
-    // echo "connection closed\n".$connection->id;
+    echo "connection closed\n".$connection->id;
     // $pid = $db->select('id')->from('new_user')->where('worker_id= :worker_id')->bindValues(array('worker_id'=>$connection->id))->single();
     // if ($pid) {
     //     $row_count = $db->update('new_user')->cols(array('is_chat'=>'0', 'worker_id'=>'0'))->where('id='.$pid)->query();
