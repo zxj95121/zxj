@@ -99,9 +99,11 @@ $worker->onMessage = function($connection, $data)
             ->where('id = '+$data['uid'])
             ->row();
 
+        var_dump(info);
+
         $data['created_at'] = $time;
-        $data['avatar'] = $info->avatar;
-        $data['nickname'] = $info->nickname;
+        // $data['avatar'] = $info->avatar;
+        // $data['nickname'] = $info->nickname;
 
         foreach($connection->worker->connections as $con)
         {
