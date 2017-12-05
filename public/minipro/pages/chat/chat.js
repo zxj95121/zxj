@@ -52,7 +52,8 @@ Page({
         group_id: options.group_id
     });
 
-    var data = this.data;
+    var that_data = this.data;
+    var that = this;
 
 
     // console.log(app.globalData);
@@ -99,7 +100,7 @@ Page({
     wx.onSocketOpen(function() {
         var json = JSON.stringify({
             type: 0,
-            uid: data.uid
+            uid: that_data.uid
         });
         //发送初始化数据
         wx.sendSocketMessage({
@@ -117,12 +118,25 @@ Page({
     wx.request({
         url: 'https://api.zhangxianjian.com/pro/chat/getChats_init',
         data: {
-            group_id: data.group_id 
+            group_id: that_data.group_id 
         },
         method: 'post',
         dataType: 'json',
         success: function (data, code) {
-            console.log(data);
+            var result = data.data.result;
+            console.log(result);
+            for (var i in result) {
+                result[i].avatar = result[i].headimgurl;
+                if (result[i].uid == that_data.uid) {
+                    result[i].direction = 'right';
+                } else {
+                    result[i].direction = 'left';
+                }
+            }
+            that.setData({
+                chatMessage: result
+            })
+            console.log(result);
         }
     });
 
@@ -168,35 +182,35 @@ Page({
     // var cc = 'c' + parseInt(Math.random() * 1000) +'<template is="wxParse" data="{{wxParseData:article.nodes}}"/>';
     // WxParse.wxParse('article', 'html', cc, this);
 
-    this.setData({
-      chatMessage: [
-        {
-          type: 1,
-          direction: 'left',
-          avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
-          nickname: '分为奇偶发',
-          'content': 'fkjbkklajf0报刊架'
-        },
-        {
-          type: 1,
-          direction: 'left',
-          avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
-          nickname: '张贤健',
-          content: '带连接安抚疯狂点击'
-        },
-        {
-          type: 1,
-          direction: 'right',
-          avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
-          nickname: '张贤健',
-          content: 'fdasfsvdf发的萨芬无法v大飞哥说打分'
-        },
-        {
-          type: 0,
-          time: '3天前'
-        }
-      ]
-    })
+    // this.setData({
+    //   chatMessage: [
+    //     {
+    //       type: 1,
+    //       direction: 'left',
+    //       avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
+    //       nickname: '分为奇偶发',
+    //       'content': 'fkjbkklajf0报刊架'
+    //     },
+    //     {
+    //       type: 1,
+    //       direction: 'left',
+    //       avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
+    //       nickname: '张贤健',
+    //       content: '带连接安抚疯狂点击'
+    //     },
+    //     {
+    //       type: 1,
+    //       direction: 'right',
+    //       avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
+    //       nickname: '张贤健',
+    //       content: 'fdasfsvdf发的萨芬无法v大飞哥说打分'
+    //     },
+    //     {
+    //       type: 0,
+    //       time: '3天前'
+    //     }
+    //   ]
+    // })
   },
 
     sendMessageFunc: function(e){

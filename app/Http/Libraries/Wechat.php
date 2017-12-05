@@ -88,7 +88,6 @@ class Wechat extends ServiceProvider
                 } else {
                     $time_space = '>1年';
                 }
-                $result[$key][$column] = $created_at;
                 $result[$key]['time_space'] = $time_space;
             }
         }
