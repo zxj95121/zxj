@@ -18,7 +18,7 @@ require_once __DIR__ . '/mysql-master/vendor/autoload.php';
 $worker = new Worker("websocket://0.0.0.0:2346");
 
 // 每个进程最多执行1000个请求
-define('MAX_REQUEST', 400);
+define('MAX_REQUEST', 1000000);
 
 /*程序刚启动*/
 $worker->onWorkerStart = function($worker)
