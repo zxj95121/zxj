@@ -97,13 +97,16 @@ $worker->onMessage = function($connection, $data)
         $info = $db->select('headimgurl as avatar,nickname')
             ->from('wechat_user')
             ->where('id = '+$data['uid'])
-            ->row();
+            ->query();
 
         // var_dump($info);
 
+        foreach ($info as $value) {
+            $data['avatar'] = $value['avatar'];
+            $data['nickname'] = $value['nickname'];
+        }
         $data['created_at'] = $time;
-        $data['avatar'] = $info['avatar'];
-        $data['nickname'] = $info['nickname'];
+        
 
         foreach($connection->worker->connections as $con)
         {
