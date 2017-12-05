@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\WechatUser;
+use Wechat;
 
 class ProChatRecord extends Model
 {
@@ -21,6 +22,7 @@ class ProChatRecord extends Model
     		->limit(3)
     		->get();
 
+    	$records = Wechat::deal_sqlResult($records);
     	return $records;
     }
 }
