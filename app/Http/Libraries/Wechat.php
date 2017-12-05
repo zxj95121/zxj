@@ -65,15 +65,21 @@ class Wechat extends ServiceProvider
     * @function deal_sqlResult将$data变成数组，处理字符串日期成合适的显示文字
     * @program 查出来的结果
     */
-    public static function deal_sqlResult($data, $time=false, $column='created_at')
+    public static function deal_sqlResult($data, $time=false, $desc=false, $column='created_at')
     {
         $result = array();
+        $count = count($array);
         foreach ($data as $key => $value) {
+            if ($desc) {//逆序
+                $key_key = --$count;
+            } else {
+                $key_key = $key;
+            }
             foreach ($value as $k => $v) {
-                $result[$key][$k] = $v;
+                $result[$key_key][$k] = $v;
             }
             if ($time) {
-                $created_at = strtotime($result[$key][$column]);//聊天内容的日期
+                $created_at = strtotime($result[$key_key][$column]);//聊天内容的日期
 
                 $space = time() - $created_at;
                 $time_space = '';
@@ -88,7 +94,7 @@ class Wechat extends ServiceProvider
                 } else {
                     $time_space = '>1年';
                 }
-                $result[$key]['time_space'] = $time_space;
+                $result[$key_key]['time_space'] = $time_space;
             }
         }
         return $result;
