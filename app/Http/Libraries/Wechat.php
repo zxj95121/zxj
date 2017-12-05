@@ -68,7 +68,7 @@ class Wechat extends ServiceProvider
     public static function deal_sqlResult($data, $time=false, $desc=false, $column='created_at')
     {
         $result = array();
-        $count = count($result);
+        $count = count($data);
         foreach ($data as $key => $value) {
             if ($desc) {//逆序
                 $key_key = --$count;
