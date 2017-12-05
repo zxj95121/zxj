@@ -110,7 +110,21 @@ Page({
     wx.onSocketMessage(function(res) {
         console.log('收到服务器内容：' + res.data)
     })
-    
+
+
+
+    /*获取最新10条聊天数据*/
+    wx.request({
+        url: 'https://api.zhangxianjian.com/pro/chat/getChats_init',
+        data: {
+            group_id: data.group_id 
+        },
+        method: 'post',
+        dataType: 'json',
+        success: function (data, code) {
+        }
+    });
+
   },
     getUserInfo: function(e) {
         // console.log(e)

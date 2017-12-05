@@ -8,6 +8,7 @@ use App\Http\Controllers\BaseController;
 use App\Models\ProChatGroupMember;
 use App\Models\WechatUser;
 use App\Models\ProChatGroup;
+use App\Models\ProChatRecord;
 
 class ChatController extends BaseController
 {
@@ -106,5 +107,14 @@ class ChatController extends BaseController
         $group_name = ProChatGroup::getGroupName($group_id);
 
         return response()->json(['errcode'=>0, 'group_name'=>$group_name]);
+    }
+
+    //寻找最初的十条数据
+    public function getChats_init(Request $request){
+        $group_id = $request->input('group_id');
+
+        $records = ProChatRecord::getChats_init($group_id);
+
+        return response()->json(['errcode'=>0, 'result'=>$records]);
     }
 }
