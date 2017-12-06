@@ -109,7 +109,11 @@ Page({
     })
 
     wx.onSocketMessage(function(res) {
-        console.log('收到服务器内容：' + res.data)
+        var chatData = that_data.chatMessage;
+        if (res.data.type == 1) {
+            chatData[chatData.length] = JSON.parse(res.data);
+        }
+        console.log('收到服务器内容：' + JSON.parse(res.data));
     })
 
 
