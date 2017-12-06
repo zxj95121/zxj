@@ -51,6 +51,11 @@ Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']],
 
 /*-------------------api-----------------pro---------------------*/
 Route::group(['prefix' => 'pro', 'namespace' => 'Pro'], function($router) {
+
+    /*库云项目API*/
+    $router->post('/requestSave', 'FirmApiController@requestSave');
+
+
 	/*wx.login*/
 	$router->get('/login/getkey', 'LoginController@getkey');
 
