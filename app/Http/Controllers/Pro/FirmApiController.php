@@ -11,7 +11,9 @@ class FirmApiController extends Controller
 {
     public function requestSave(Request $request)
     {
-    	$name = $request->input('name');//请求类型名称
+        $name = $request->input('name');//请求类型名称
+        $reference = $request->input('reference');//请求索引reference
+    	$url = $request->input('url');//请求的url地址
     	$request_param = $request->input('request');//请求的数据
     	$result = $request->input('result');//返回的结果
 
@@ -20,7 +22,9 @@ class FirmApiController extends Controller
     	}
 
     	$flight = new FirmApiSave();
-    	$flight->name = $name;
+        $flight->name = $name;
+        $flight->reference = $reference;
+    	$flight->url = $url;
     	$flight->request = $request_param;
     	$flight->result = $result;
     	$flight->save();
