@@ -313,6 +313,10 @@
 		</div>
 	</div>
 
+	<div id="friendly_link">
+		
+	</div>
+
 	<!-- <div id="map" class="fh5co-map"></div> -->
 	</div>
 
