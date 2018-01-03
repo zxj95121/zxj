@@ -29,10 +29,18 @@
 							<i class="icon-credit-card2"></i>
 						</div>
 						<div class="title-right">
-							的看法尽快答复
+							个人信息（Personal Info）
 						</div>
 					</div>
 					<div class="introduce">
+						<div class="intro">姓　　名：张贤健</div>
+						<div class="intro">出生年月：1995年12月</div>
+						<div class="intro">民　　族：汉</div>
+						<div class="intro">身　　高： 172cm</div>
+						<div class="intro">姓　　名：张贤健</div>
+						<div class="intro">出生年月：1995年12月</div>
+						<div class="intro">民　　族：汉</div>
+						<div class="intro">身　　高： 172cm</div>
 					</div>
 				</div>
 				<div class="kind-right kind-son">
