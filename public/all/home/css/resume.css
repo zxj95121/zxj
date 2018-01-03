@@ -96,7 +96,11 @@ body{
 	font-size: 0.24rem;
 }
 
-.kind-son-picShow{ position: relative; margin: 10px;  }
+.kind-son-picShow{ 
+	position: relative; 
+	margin: 10px;  
+}
+
 .kind-son-wrap2{ position: absolute; width: 100%; left: 0; top: 0; right: 0; bottom: 0; transform: rotate(5deg);    }
 .kind-son-wrap1{  position: relative; z-index: 22; }
 .kind-son-wrap{ border-radius: 5px; border: 1px solid #dbdbdb; padding: 5px; background: #fff;}
@@ -123,3 +127,6 @@ body{
 li{
 	list-style: none ;
 }
+
+
+.introduce-item .introduce-content{ margin-bottom:0; }
