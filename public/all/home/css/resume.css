@@ -113,7 +113,7 @@ body{
 .kind-son-wrap2{ position: absolute; /*width: 100%;*/ left: 0; top: 0; right: 0; bottom: 0; transform: rotate(5deg);    }
 .kind-son-wrap1{  position: relative; z-index: 22; }
 .kind-son-wrap{ border-radius: 5px; border: 1px solid #dbdbdb; padding: 5px; background: #fff;}
-.kind-son-pic{ width: 100%; display: block; height: 2rem; }
+.kind-son-pic{ /*width: 100%;*/ display: block; height: 2rem; }
 /*.kind+.kind{ margin-top: 10px;  }*/
 
 
