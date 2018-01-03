@@ -45,10 +45,183 @@
 					</div>
 				</div>
 				<div class="kind-right kind-son">
+					<div class="kind-son-picShow">
+						<div class="kind-son-wrap kind-son-wrap2"></div>
+						<div class="kind-son-wrap kind-son-wrap1">
+							<img src="/all/home/images/cover_bg_1.jpg" class="kind-son-pic" >
+						</div>
+					</div>
 					
 				</div>
 			</div>
+
+
+			<div class="kind">
+				<div class="kind-son">
+					<div class="title">
+						<div class="title-icon">
+							<i class="icon-credit-card2"></i>
+						</div>
+						<div class="title-right">
+							<div class="title-right-content">教育背景（Education）
+							</div>
+						</div>
+					</div>
+					<div class="introduce">
+						<div class="introduce-wrap">
+							<h2 class="introduce-wrap-item">2005.7-2009.6</h2>
+							<h2 class="introduce-wrap-item">安徽师范大学</h2>
+							<h2 class="introduce-wrap-item">计算机专业</h2>
+							<div class="clear"></div>
+						</div>
+						<p class="introduce-content">
+							主修课程：<br/>
+							主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容
+						</p>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="kind">
+				<div class="kind-son">
+					<div class="title">
+						<div class="title-icon">
+							<i class="icon-credit-card2"></i>
+						</div>
+						<div class="title-right">
+							<div class="title-right-content">实习经历（Internship）
+							</div>
+						</div>
+					</div>
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2005.7-2009.6</h2>
+								<h2 class="introduce-wrap-item">1111111</h2>
+								<h2 class="introduce-wrap-item">1111111</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										主修课程内容主修课程内容主修课程内容主修课程内容主修
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容
+									</p>
+								</li>
+							</ul>
+							
+						</div>
+
+
+						
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="kind">
+				<div class="kind-son">
+					<div class="title">
+						<div class="title-icon">
+							<i class="icon-credit-card2"></i>
+						</div>
+						<div class="title-right">
+							<div class="title-right-content">校园经历（Campus）
+							</div>
+						</div>
+					</div>
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2005.7-2009.6</h2>
+								<h2 class="introduce-wrap-item">1111111</h2>
+								<h2 class="introduce-wrap-item">1111111</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										主修课程内容主修课程内容主修课程内容主修课程内容主修
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容
+									</p>
+								</li>
+							</ul>
+							
+						</div>
+
+
+						
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="kind">
+				<div class="kind-son">
+					<div class="title">
+						<div class="title-icon">
+							<i class="icon-credit-card2"></i>
+						</div>
+						<div class="title-right">
+							<div class="title-right-content">技能证书（Skills Certificate）
+							</div>
+						</div>
+					</div>
+					<div class="introduce">
+						<p class="introduce-content">
+							主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容
+						</p>
+
+
+						
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="kind">
+				<div class="kind-son">
+					<div class="title">
+						<div class="title-icon">
+							<i class="icon-credit-card2"></i>
+						</div>
+						<div class="title-right">
+							<div class="title-right-content">自我评价（Self-assessment）
+							</div>
+						</div>
+					</div>
+					<div class="introduce">
+						<p class="introduce-content">
+							主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容主修课程内容
+						</p>
+
+
+						
+					</div>
+				</div>
+				
+			</div>
+
+
+			<div class="kind">
+				<div class="bottom"></div>
+			</div>
 		</div>
+
+
 	</div>
 	<script src="/all/home/js/rem.js"></script>
 	<script src="/all/home/js/jquery.min.js"></script>
