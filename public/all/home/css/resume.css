@@ -125,7 +125,10 @@ body{
 
 .introduce-sec+.introduce-sec{ margin-top: 0.2rem;  }
 
-.bottom{ height: 0.2rem; background: #234567; width: 100%;margin-top: 0.2rem;margin-bottom: 0.1rem; }
+.bottom{ height: 0.2rem; background: #234567; width: 100%;margin-top: 0.2rem; }
+.kind-bottom{
+	padding-bottom: 0.1rem;
+}
 
 li{
 	list-style: none ;

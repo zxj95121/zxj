@@ -8,11 +8,10 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="author" content="张贤健">
 	<meta name="keywords" content="张贤健, wells, php, PHP, 个人简历, 张贤健的个人简历"/>
-	<link rel="stylesheet" href="/all/home/css/bootstrap.css">
-	<link rel="stylesheet" href="/all/home/css/resume.css">
+<!-- 	<link rel="stylesheet" href="/all/home/css/bootstrap.css"> -->
+	<link rel="stylesheet" href="/all/home/css/resume.css?v=2">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="/all/home/css/icomoon.css">
-	<!-- <link rel="stylesheet" href="/all/home/css/style.css"> -->
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
@@ -275,16 +274,16 @@
 			</div>
 
 
-			<div class="kind">
+			<div class="kind kind-bottom">
 				<div class="bottom"></div>
 			</div>
 		</div>
 
 
 	</div>
-	<script src="/all/home/js/rem.js"></script>
 	<script src="/all/home/js/jquery.min.js"></script>
+	<script src="/all/home/js/rem.js?v=2"></script>
 	<!-- Bootstrap -->
-	<script src="/all/home/js/bootstrap.min.js"></script>
+<!-- 	<script src="/all/home/js/bootstrap.min.js"></script> -->
 </body>
 </html>
