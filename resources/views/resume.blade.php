@@ -29,7 +29,8 @@
 							<i class="icon-credit-card2"></i>
 						</div>
 						<div class="title-right">
-							个人信息（Personal Info）
+							<div class="title-right-content">个人信息（Personal Info）
+							</div>
 						</div>
 					</div>
 					<div class="introduce">
