@@ -22,10 +22,10 @@
 	<div id="wrap">
 		<div id="content">
 			<div class="kind">
-				<div class="kind-left kind-son">
+				<div class="kind-son">
 					<div class="title">
 						<div class="title-icon">
-							<i class="icon-credit-card2"></i>
+							<i class="icon-flag"></i>
 						</div>
 						<div class="title-right">
 							<div class="title-right-content">个人信息（Personal Info）
@@ -42,7 +42,7 @@
 						<div class="intro">邮　　箱：xianjian951216@163.com</div>
 					</div>
 				</div>
-				<div class="kind-right kind-son">
+				<div class="kind-son kind-photo">
 					<div class="kind-son-picShow">
 						<div class="kind-son-wrap kind-son-wrap2"></div>
 						<div class="kind-son-wrap kind-son-wrap1">
