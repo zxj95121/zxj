@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
+Route::get('/resume', 'HomeController@resume')->name('resume');
 
 Route::get('/a', function () {
     echo phpinfo();
