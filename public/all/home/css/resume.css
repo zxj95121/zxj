@@ -107,7 +107,7 @@ body{
 .introduce-wrap{ width: 100%;  padding-left: 0.2rem;  }
 .clear{ clear: both; height: 0; font-size: 0; line-height: 0; opacity: 0;  }
 .introduce-wrap-item{ font-weight: 900; font-size: 0.25rem; float: left; width: 33.33333333%; margin: 0; line-height: 1.5;   }
-.introduce-content{ padding-left: 0.2rem;
+.introduce-content{ padding-left: 0.2rem; margin-top: 0;
     font-size: 0.24rem;  }
 
 .introduce-item{ position: relative; padding-left: 0.25rem;  }
@@ -119,3 +119,7 @@ body{
 .introduce-sec+.introduce-sec{ margin-top: 0.2rem;  }
 
 .bottom{ height: 0.2rem; background: #234567; width: 100%; }
+
+li{
+	list-style: none ;
+}
