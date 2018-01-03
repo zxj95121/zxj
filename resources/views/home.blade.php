@@ -18,7 +18,7 @@
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"> -->
-	
+	 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="/all/home/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
