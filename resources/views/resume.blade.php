@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<title>张贤健的个人简历</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
 	<meta name="author" content="张贤健">
 	<meta name="keywords" content="张贤健, wells, php, PHP, 个人简历, 张贤健的个人简历"/>
 	<link rel="stylesheet" href="/all/home/css/bootstrap.css">
@@ -24,16 +25,14 @@
 			<div class="kind">
 				<div class="kind-left kind-son">
 					<div class="title">
-						<span class="icon">
-							<i class="icon-linegraph"></i>
-						</span>
-						<span>fdafd</span>
-						<span>打发时间</span>
+						<div class="title-icon">
+							<i class="icon-credit-card2"></i>
+						</div>
+						<div class="title-right">
+							的看法尽快答复
+						</div>
 					</div>
-					<div class="title">
-						afdsf
-						<span>fdafd</span>
-						<span>打发时间</span>
+					<div class="introduce">
 					</div>
 				</div>
 				<div class="kind-right kind-son">
