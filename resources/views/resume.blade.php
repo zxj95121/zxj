@@ -222,7 +222,7 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							熟练掌握jquery，了解React框架及webpack打包工具。熟悉BootStrap，layui，mui等前端框架的使用。
+							熟练掌握jquery，了解React框架及webpack打包工具。熟悉BootStrap，layui，mui等前端框架。
 						</p>
 					</li>
 					<li class="introduce-item">
@@ -234,7 +234,13 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							网站搭建，项目搭建，熟悉laravel和thinkphp框架的使用。
+							网站搭建，项目搭建，熟悉laravel和thinkphp框架。
+						</p>
+					</li>
+					<li class="introduce-item">
+						<div class="introduce-item-dots"></div>
+						<p class="introduce-content">
+							了解memcache,redis缓存技术，熟练使用AJAX,JSON等。
 						</p>
 					</li>
 				</div>
