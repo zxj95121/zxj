@@ -129,7 +129,7 @@ body{
 	border-radius: 100%;
   }
 
-.introduce-sec+.introduce-sec{ margin-top: 0.2rem;  }
+.introduce-sec{ margin-top: 0.2rem; width: 100%; }
 
 .bottom{ height: 0.2rem; background: #234567; width: 100%;margin-top: 0.2rem; }
 .kind-bottom{

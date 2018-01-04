@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/resume', 'HomeController@resume')->name('resume');
+Route::get('/my/introduce', 'HomeController@introduce')->name('introduce');
 
 Route::get('/a', function () {
     echo phpinfo();

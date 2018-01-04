@@ -14,4 +14,8 @@ class HomeController extends Controller
     public function resume() {
     	return view('resume');
     }
+
+    public function introduce() {
+    	return view('introduce');
+    }
 }
