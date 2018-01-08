@@ -6,8 +6,8 @@
 	<title>张贤健的个人网站</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="张贤健">
-	<meta name="keywords" content="张贤健, wells, php, PHP, laravel"/>
-	<meta name="baidu-site-verification" content="lX0mR46Fv3" />
+	<meta name="keywords" content="张贤健, wells, php, PHP, laravel, 微信, 小程序, "/>
+	<!-- <meta name="baidu-site-verification" content="lX0mR46Fv3" /> -->
 	<meta name="description" content="自己选择的不平凡，所有坎坷都得去挑战。"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	
