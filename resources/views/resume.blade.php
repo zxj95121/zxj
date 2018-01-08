@@ -37,7 +37,7 @@
 						<div class="intro">出生年月：1995年12月</div>
 						<div class="intro">家　　乡：安徽安庆</div>
 						<div class="intro">电　　话： 17557286038</div>
-						<div class="intro">毕业院校：安徽师范大学</div>
+						<div class="intro">毕业院校：安徽师范大学（2013.9-2017.6）</div>
 						<div class="intro">学　　历：大学本科</div>
 						<div class="intro">邮　　箱：xianjian951216@163.com</div>
 					</div>
@@ -105,7 +105,7 @@
 					<div class="introduce">
 						<div class="introduce-sec">
 							<div class="introduce-wrap">
-								<h2 class="introduce-wrap-item">2016.9-2017.6</h2>
+								<h2 class="introduce-wrap-item">2016.9-2017.12</h2>
 								<h2 class="introduce-wrap-item">杭州新方向网络</h2>
 								<h2 class="introduce-wrap-item">PHP工程师</h2>
 								<div class="clear"></div>
@@ -114,7 +114,7 @@
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										经常与客户进行沟通，了解并确认需求并与小组成员一起讨论交流；
+										经常与客户进行沟通，了解需求并与小组成员一起讨论交流；
 
 									</p>
 								</li>
@@ -137,37 +137,6 @@
 										开发员工端商品价格处理、售后问题处理等功能。
 									</p>
 								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="introduce">
-						<div class="introduce-sec">
-							<div class="introduce-wrap">
-								<h2 class="introduce-wrap-item">2017.7-2018.1</h2>
-								<h2 class="introduce-wrap-item">安徽库云网络</h2>
-								<h2 class="introduce-wrap-item">PHP工程师</h2>
-								<div class="clear"></div>
-							</div>
-							<ul class="introduce-list">
-								<li class="introduce-item">
-									<div class="introduce-item-dots"></div>
-									<p class="introduce-content">
-										搭建Web服务器环境；
-									</p>
-								</li>
-								<li class="introduce-item">
-									<div class="introduce-item-dots"></div>
-									<p class="introduce-content">
-										移动端网页开发，小程序开发；
-									</p>
-								</li>
-								<li class="introduce-item">
-									<div class="introduce-item-dots"></div>
-									<p class="introduce-content">
-										负责系统的laravel框架搭建以及用户系统构建（管理员端采用微信扫码登陆）；
-									</p>
-								</li>
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
@@ -177,16 +146,19 @@
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										用户发表说说、图片九宫格、用户收藏关注等。
+										社交项目用户发表说说、图片九宫格、用户收藏关注不看此人等。
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										移动端网页开发，小程序开发；
 									</p>
 								</li>
 							</ul>
-							
 						</div>
-
-
-						
 					</div>
+
 				</div>
 				
 			</div>
