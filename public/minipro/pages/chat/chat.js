@@ -125,7 +125,7 @@ Page({
         that.setData({
           chatMessage: chatData
         })
-        this.scrollToBottom();
+        that.scrollToBottom();
         console.log(data);
     })
 
@@ -153,7 +153,7 @@ Page({
             that.setData({
                 chatMessage: result
             })
-            this.scrollToBottom();
+            that.scrollToBottom();
             console.log(result);
         }
     });
