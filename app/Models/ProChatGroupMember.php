@@ -90,20 +90,16 @@ class ProChatGroupMember extends Model
             return 1;//表示成员数量已达上限
         }
 
-        try{
-        	$flight = new ProChatGroupMember();
-        	$flight->group_id = $group_id;
-        	$flight->user_id = $user_id;
-        	$flight->save();
+    	$flight = new ProChatGroupMember();
+    	$flight->group_id = $group_id;
+    	$flight->user_id = $user_id;
+    	$flight->save();
 
-        	$flight = new ProChatGroupMember();
-        	$flight->group_id = $group_id;
-        	$flight->user_id = $id;
-        	$flight->save();
-            
-            return 2;//true
-        } catch (Exception $e){
-            return 3;//false
-        }
+    	$flight2 = new ProChatGroupMember();
+    	$flight2->group_id = $group_id;
+    	$flight2->user_id = $id;
+    	$flight2->save();
+        
+        return 2;//true
     }
 }
