@@ -254,6 +254,7 @@ Page({
                         method: 'post',
                         dataType: 'json',
                         success: function (data, code) {
+                            var data = data.data;
                             if (data.result == 0) {
                                 /*接受成功*/
                                 wx.showToast({

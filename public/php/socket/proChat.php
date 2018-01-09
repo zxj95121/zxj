@@ -104,6 +104,7 @@ $worker->onMessage = function($connection, $data)
         $data['avatar'] = stripslashes($info['headimgurl']);
         $data['nickname'] = $info['nickname'];
         $data['direction'] = 'left';
+        $data['rid'] = $insert_id;
         $data['created_at'] = $time;
         
 
@@ -112,7 +113,7 @@ $worker->onMessage = function($connection, $data)
             if (array_key_exists($con->id, $sendArr)) {
 
                 $con->send(json_encode($data));
-                echo '向'.$con->id.'发';
+                // echo '向'.$con->id.'发';
                 unset($sendArr[$con->id]);
             }
         }

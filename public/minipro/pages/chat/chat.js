@@ -198,6 +198,16 @@ Page({
   onPullDownRefresh: function () {
     var that = this;
     var that_data = this.data;
+    var n = -1;
+    for (var m in that_data.chatMessage) {
+        m++;
+        break;
+    }
+    if (n < 0) {
+        //不需要进行刷新
+        wx.stopPullDownRefresh();//撤销下拉
+        return false;
+    }
     /*获取前十条记录*/
     wx.request({
         url: 'https://api.zhangxianjian.com/pro/chat/getChats_prev',
