@@ -118,7 +118,7 @@ Page({
         if (data.type == 1) {
             chatData[len] = data;
             if (data.uid = that.data.uid) {
-                chatData[len]['direction'] = 'left';
+                chatData[len]['direction'] = 'right';
             }
         }
         that.setData({

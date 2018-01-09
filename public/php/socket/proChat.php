@@ -112,6 +112,7 @@ $worker->onMessage = function($connection, $data)
             if (array_key_exists($con->id, $sendArr)) {
 
                 $con->send(json_encode($data));
+                echo '向'.$con->id.'发';
                 unset($sendArr[$con->id]);
             }
         }
