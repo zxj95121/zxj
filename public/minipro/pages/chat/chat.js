@@ -197,6 +197,9 @@ Page({
   },
   onPullDownRefresh: function () {
     console.log('fads');
+    setTimeout(function(){
+        wx.stopPullDownRefresh();
+    }, 1200);
     // var cc = 'c' + parseInt(Math.random() * 1000) +'<template is="wxParse" data="{{wxParseData:article.nodes}}"/>';
     // WxParse.wxParse('article', 'html', cc, this);
 
