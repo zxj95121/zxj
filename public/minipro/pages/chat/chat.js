@@ -110,10 +110,14 @@ Page({
 
     wx.onSocketMessage(function(res) {
         var chatData = that_data.chatMessage;
-        if (res.data.type == 1) {
-            chatData[chatData.length] = res.data;
+        var data = JSON.parse(res.data);
+        if (data.type == 1) {
+            chatData[chatData.length] = data;
         }
-        console.log('收到服务器内容：' + res.data);
+        that.setData({
+          chatMessage: chatData
+        })
+        console.log(data);
     })
 
 

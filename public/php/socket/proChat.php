@@ -83,7 +83,7 @@ $worker->onMessage = function($connection, $data)
         //说明传输的是聊天数据，则要广播消息
         $connect = $db->select('wechat_user.worker_id as worker_id')->from('wechat_user')
             ->where('wechat_user.status', 1)
-            ->where('wechat_user.id != '.$data['uid'])
+            // ->where('wechat_user.id != '.$data['uid'])
             ->where('wechat_user.worker_id != 0')
             ->innerJoin('pro_chat_record','pro_chat_record.group_id = '.$data['group_id'])
             ->query();
@@ -99,9 +99,9 @@ $worker->onMessage = function($connection, $data)
             ->where("id = '".$data['uid']."' ")
             ->row();
 
-        var_dump($info);
+        // var_dump($info);
 
-        $data['avatar'] = $info['headimgurl'];
+        $data['avatar'] = stripslashes($info['headimgurl']);
         $data['nickname'] = $info['nickname'];
         $data['created_at'] = $time;
         
