@@ -13,24 +13,24 @@ Page({
     zhen: true,
     jia: false,
     chatMessage: [
-      {
-        type: 1,
-        direction: 'left',
-        avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
-        nickname: '张贤健',
-        content: '带连接安抚疯狂点击'
-      },
-      {
-        type: 1,
-        direction: 'right',
-        avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
-        nickname: '张贤健',
-        content: 'fdasfsvdf发的萨芬无法v大飞哥说打分'
-      },
-      {
-        type: 0,
-        time: '3天前'
-      }
+      // {
+      //   type: 1,
+      //   direction: 'left',
+      //   avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
+      //   nickname: '张贤健',
+      //   content: '带连接安抚疯狂点击'
+      // },
+      // {
+      //   type: 1,
+      //   direction: 'right',
+      //   avatar: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFyViadyZicZicLzh5EKcz4JyQoBfMwb0nPPf3xJibyWuuYwNW4qVIFCIda1Xk7XJyia0tTHIIcehzK6w/0',
+      //   nickname: '张贤健',
+      //   content: 'fdasfsvdf发的萨芬无法v大飞哥说打分'
+      // },
+      // {
+      //   type: 0,
+      //   time: '3天前'
+      // }
     ],
     userInfo: {},
     hasUserInfo: false,
@@ -227,14 +227,11 @@ Page({
             that.setData({
                 chatMessage: result
             })
-            that.scrollToBottom();
+            wx.stopPullDownRefresh();//撤销下拉
+            // that.scrollToBottom();
             console.log(result);
         }
     });
-    console.log('fads');
-    setTimeout(function(){
-        wx.stopPullDownRefresh();
-    }, 1200);
     // var cc = 'c' + parseInt(Math.random() * 1000) +'<template is="wxParse" data="{{wxParseData:article.nodes}}"/>';
     // WxParse.wxParse('article', 'html', cc, this);
 

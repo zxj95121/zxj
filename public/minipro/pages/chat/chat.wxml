@@ -14,7 +14,7 @@
 <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   <block wx:for="{{chatMessage}}" wx:key="{{index}}">
     <view wx:if="{{index%10 == 0}}" class="message-time">
-      <text>{{chatMessage[0].created_at}}</text>
+      <text>{{chatMessage[index].created_at}}</text>
     </view>
     <view wx:if="{{item.type == 1}}" class="message message-{{item.direction}}">
         <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
@@ -25,10 +25,10 @@
         </view>
     </view>
     <block wx:else>
-          <view class="message-time">
+        <view class="message-time">
             <text>{{item.time}}</text>
-          </view>
-        </block>
+        </view>
+    </block>
   </block>
 
   <view class="message-last"></view>

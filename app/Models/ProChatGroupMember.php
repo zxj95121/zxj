@@ -101,9 +101,9 @@ class ProChatGroupMember extends Model
         	$flight->user_id = $id;
         	$flight->save();
             
-            return true;
+            return 2;//true
         } catch (\Exception $e){
-            return false;
+            return 3;//false
         }
     }
 }
