@@ -111,8 +111,15 @@ Page({
     wx.onSocketMessage(function(res) {
         var chatData = that_data.chatMessage;
         var data = JSON.parse(res.data);
+        var len = 0;
+        for (var i in chatData) {
+          len++;
+        }
         if (data.type == 1) {
-            chatData[chatData.length] = data;
+            chatData[len] = data;
+            if (data.uid = that.data.uid) {
+              $chatData[len]['direction'] = 'left';
+            }
         }
         that.setData({
           chatMessage: chatData

@@ -103,6 +103,7 @@ $worker->onMessage = function($connection, $data)
 
         $data['avatar'] = stripslashes($info['headimgurl']);
         $data['nickname'] = $info['nickname'];
+        $data['direction'] = 'left';
         $data['created_at'] = $time;
         
 
