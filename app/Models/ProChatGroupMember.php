@@ -102,7 +102,7 @@ class ProChatGroupMember extends Model
         	$flight->save();
             
             return 2;//true
-        } catch (\Exception $e){
+        } catch (Exception $e){
             return 3;//false
         }
     }
