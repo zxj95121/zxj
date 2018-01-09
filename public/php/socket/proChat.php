@@ -94,14 +94,14 @@ $worker->onMessage = function($connection, $data)
         }
 
         //查该条消息的用户信息
-        $info = $db->select('headimgurl as avatar,nickname')
+        $info = $db->select('headimgurl,nickname')
             ->from('wechat_user')
             ->where("id = '".$data['uid']."' ")
             ->row();
 
         var_dump($info);
 
-        $data['avatar'] = $info['avatar'];
+        $data['avatar'] = $info['headimgurl'];
         $data['nickname'] = $info['nickname'];
         $data['created_at'] = $time;
         
