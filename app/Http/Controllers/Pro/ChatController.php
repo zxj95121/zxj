@@ -117,4 +117,9 @@ class ChatController extends BaseController
 
         return response()->json(['errcode'=>0, 'result'=>$records]);
     }
+
+    /*寻找前十条聊天记录*/
+    public function getChats_prev(Request $request) {
+        
+    }
 }

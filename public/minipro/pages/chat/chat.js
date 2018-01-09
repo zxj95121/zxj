@@ -196,6 +196,32 @@ Page({
     }
   },
   onPullDownRefresh: function () {
+    /*获取前十条记录*/
+    wx.request({
+        url: 'https://api.zhangxianjian.com/pro/chat/getChats_prev',
+        data: {
+            group_id: that_data.group_id 
+        },
+        method: 'post',
+        dataType: 'json',
+        success: function (data, code) {
+            var result = data.data.result;
+            console.log(result);
+            for (var i in result) {
+                result[i].avatar = result[i].headimgurl;
+                if (result[i].uid == that_data.uid) {
+                    result[i].direction = 'right';
+                } else {
+                    result[i].direction = 'left';
+                }
+            }
+            that.setData({
+                chatMessage: result
+            })
+            that.scrollToBottom();
+            console.log(result);
+        }
+    });
     console.log('fads');
     setTimeout(function(){
         wx.stopPullDownRefresh();
