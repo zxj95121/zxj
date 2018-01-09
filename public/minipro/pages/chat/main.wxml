@@ -11,8 +11,7 @@
             <view class="group-word">
                 <view  class="group-name">
                     <text>{{item.group_name}}</text>
-                    <text class="group-count" wx:if="item.count == 1">0人</text>
-                    <text class="group-count" wx:else>{{item.count}}人</text>
+                    <text class="group-count">{{item.count}}人</text>
                 </view>
                 <view class="group-message">本群成员上限：20人</view>
             </view>

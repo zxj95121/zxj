@@ -20,6 +20,12 @@ class ProChatGroup extends Model
     		->select(DB::raw('pro_chat_group.id, count(*) as count, pro_chat_group.group_name, pro_chat_group.group_imgurl, pro_chat_group.group_num'))
     		->get()
     		->toArray();
+
+        foreach ($groupArr as $key => $value) {
+            if ($value['count'] == 1) {
+                $groupArr[$key]['count'] = 0;
+            }
+        }
     	return $groupArr;
     }
 
