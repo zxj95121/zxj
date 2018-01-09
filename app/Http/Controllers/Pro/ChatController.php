@@ -120,6 +120,11 @@ class ChatController extends BaseController
 
     /*寻找前十条聊天记录*/
     public function getChats_prev(Request $request) {
-        
+        $group_id = $request->input('group_id');
+        $rid = $request->input('rid');
+
+        $records = ProChatRecord::getChats_prev($group_id, $rid);
+
+        return response()->json(['errcode'=>0, 'result'=>$records, 'count'=>count($records)]);
     }
 }

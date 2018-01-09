@@ -196,16 +196,20 @@ Page({
     }
   },
   onPullDownRefresh: function () {
+    var that = this;
+    var that_data = this.data;
     /*获取前十条记录*/
     wx.request({
         url: 'https://api.zhangxianjian.com/pro/chat/getChats_prev',
         data: {
-            group_id: that_data.group_id 
+            group_id: that_data.group_id,
+            rid: that_data.chatMessage[0].rid
         },
         method: 'post',
         dataType: 'json',
         success: function (data, code) {
             var result = data.data.result;
+            var count = parseInt(data.data.count);
             console.log(result);
             for (var i in result) {
                 result[i].avatar = result[i].headimgurl;
@@ -214,6 +218,11 @@ Page({
                 } else {
                     result[i].direction = 'left';
                 }
+            }
+
+            var chatData = that_data.chatMessage;
+            for (var i in chatData) {
+                result[parseInt(i)+count] = chatData[i];
             }
             that.setData({
                 chatMessage: result
