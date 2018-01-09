@@ -55,7 +55,7 @@ $worker->onMessage = function($connection, $data)
     global $db;
     $cid = $connection->id;
     //临时返回原数据
-    $connection->send($data);
+    // $connection->send($data);
     $data_pre = $data;
     $data = json_decode($data, true);
     // echo $data;

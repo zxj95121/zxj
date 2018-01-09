@@ -116,14 +116,16 @@ Page({
           len++;
         }
         if (data.type == 1) {
-            chatData[len] = data;
-            if (data.uid = that.data.uid) {
-                chatData[len]['direction'] = 'right';
+            
+            if (data.uid == that.data.uid) {
+                data.direction = 'right';
             }
+            chatData[len] = data;
         }
         that.setData({
           chatMessage: chatData
         })
+        this.scrollToBottom();
         console.log(data);
     })
 
@@ -151,6 +153,7 @@ Page({
             that.setData({
                 chatMessage: result
             })
+            this.scrollToBottom();
             console.log(result);
         }
     });
@@ -246,5 +249,13 @@ Page({
                 sendContent: ''
             });
         }
+    },
+    scrollToBottom: function() {
+        wx.createSelectorQuery().select('#j_page').boundingClientRect(function(rect){
+            // 使页面滚动到底部
+            wx.pageScrollTo({
+                scrollTop: 1000+rect.height
+            })
+        }).exec()
     }
 })
