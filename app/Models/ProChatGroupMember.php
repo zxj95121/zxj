@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\WechatUser;
+use App\Models\ProChatGroup;
 
 class ProChatGroupMember extends Model
 {
@@ -100,6 +101,10 @@ class ProChatGroupMember extends Model
     	$flight2->user_id = $id;
     	$flight2->save();
         
+
+        $flight3 = ProChatGroup::find($group_id);
+        $flight3->group_num = int($flight3->group_num) + 2;
+        $flight3->save();
         return 2;//true
     }
 }

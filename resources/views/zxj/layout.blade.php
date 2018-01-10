@@ -78,6 +78,23 @@
                         </ul>
                     </li>
 
+
+                    <li class="has-submenu {!!(Request::is('zxj/chatGroup/add', 'zxj/chatGroup/list')? 'active' : '') !!}">
+                        <a href="#">
+                            <i class="ion-chatbubbles"></i> 
+                            <span class="nav-label">群聊管理</span>
+                            <!-- <span class="badge bg-info" style="float: right;">7</span> -->
+                        </a>
+                        <ul class="list-unstyled lyUl">
+                            <li class="{!!(Request::is('zxj/chatGroup/add')? 'active' : '') !!}">
+                                <a href="/zxj/chatGroup/add">添加群<!-- <span class="badge bg-success" style="float: right;">7</span> --></a>
+                            </li>
+                            <li class="{!!(Request::is('zxj/chatGroup/list')? 'active' : '') !!}">
+                                <a href="/zxj/chatGroup/list">群列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
                 
