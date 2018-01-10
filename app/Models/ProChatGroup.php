@@ -17,15 +17,15 @@ class ProChatGroup extends Model
     	$groupArr = ProChatGroup::where('pro_chat_group.status', 1)
             ->leftJoin('pro_chat_group_member as pcgm', 'pcgm.group_id', 'pro_chat_group.id')
             ->groupBy('pro_chat_group.id')
-    		->select(DB::raw('pro_chat_group.id, count(*) as count, pro_chat_group.group_name, pro_chat_group.group_imgurl, pro_chat_group.group_num'))
+    		->select(DB::raw('pro_chat_group.id, count(*) as count, pro_chat_group.group_name, pro_chat_group.group_imgurl, pro_chat_group.group_num as count'))
     		->get()
     		->toArray();
 
-        foreach ($groupArr as $key => $value) {
-            if ($value['count'] == 1) {
-                $groupArr[$key]['count'] = 0;
-            }
-        }
+        // foreach ($groupArr as $key => $value) {
+        //     if ($value['count'] == 1) {
+        //         $groupArr[$key]['count'] = 0;
+        //     }
+        // }
     	return $groupArr;
     }
 
