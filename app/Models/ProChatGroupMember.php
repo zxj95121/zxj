@@ -103,7 +103,7 @@ class ProChatGroupMember extends Model
         
 
         $flight3 = ProChatGroup::find($group_id);
-        $flight3->group_num = int($flight3->group_num) + 2;
+        $flight3->group_num = (int)($flight3->group_num) + 2;
         $flight3->save();
         return 2;//true
     }
