@@ -10,7 +10,15 @@
 
 @section('content')
     <div class="wraper container-fluid" id="bodytable">
-          <div class="page-title"> 
+        <div class="page-title">
+        	<div class="form-group col-md-6">
+        		<div class="col-md-4" style="text-align: right;height: 100%;">
+        			<label for="group_name">群聊名称</label>
+        		</div>
+        		<div class="col-md-8">
+        			<input class="form-control" id="group_name" type="text" />
+        		</div>
+        	</div>
         </div>
     </div>
 @endsection

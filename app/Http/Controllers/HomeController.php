@@ -11,11 +11,18 @@ class HomeController extends Controller
     	return view('home');
     }
 
-    public function resume() {
+    public function resume()
+    {
     	return view('resume');
     }
 
-    public function introduce() {
+    public function introduce()
+    {
     	return view('introduce');
+    }
+
+    public function dawanzi()
+    {
+        return view('dawanzi');
     }
 }
