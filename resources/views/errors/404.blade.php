@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>404错误页面</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 <style type="text/css">
 	/*重设*/
 html {
@@ -9823,7 +9824,7 @@ blockquote.border-dot strong,
           </div>
           <div class="padding-big">
                <a href="/" class="button bg-yellow">返回首页</a>
-               <a href="#" onclick="alert('那你想多了');" class="button">打死张贤健</a>
+               <a href="#" style="margin-top: 1rem;" onclick="alert('那你想多了');" class="button">打死张贤健</a>
           </div> 
       </div> 
    </div> 
