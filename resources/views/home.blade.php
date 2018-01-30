@@ -306,7 +306,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<input type="submit" onclick="javascript:void(0);" style="color: #FF9000;font-weight: bold;" value="提交信息" class="btn btn-primary">
+					<input type="submit" onclick="javascript:void(0);" style="color: #FF9000;font-weight: bold;height: 40px;box-shadow: none;" value="提交信息" class="btn btn-primary">
 				</div>
 
 			</form>	
