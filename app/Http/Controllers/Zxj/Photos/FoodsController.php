@@ -16,7 +16,7 @@ class FoodsController extends Controller
     public function foodsUpload(Request $request)
     {
     	echo asset('storage/file.txt');
-    	$path = $request->file('file')->store('local');
+    	$path = $request->file('file')->store('public');
     	// $file = $request->file('file')->store('local');
     	// $path = Storage::putFile('s3', $request->file('file'));
     	// $icon = $request->file('file')->store('local', 'uploads');
