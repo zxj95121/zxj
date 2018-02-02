@@ -95,6 +95,19 @@
                         </ul>
                     </li>
 
+                    <li class="has-submenu {!!(Request::is('zxj/photos/foods')? 'active' : '') !!}">
+                        <a href="#">
+                            <i class="ion-chatbubbles"></i> 
+                            <span class="nav-label">图片管理</span>
+                            <!-- <span class="badge bg-info" style="float: right;">7</span> -->
+                        </a>
+                        <ul class="list-unstyled lyUl">
+                            <li class="{!!(Request::is('zxj/photos/foods')? 'active' : '') !!}">
+                                <a href="/zxj/photos/foods">食物图片<!-- <span class="badge bg-success" style="float: right;">7</span> --></a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
                 

@@ -54,6 +54,10 @@ Route::group(['prefix' => 'zxj','namespace' => 'Zxj','middleware' => ['Admin']],
 
     /*关于群聊部分*/
     $router->get('/chatGroup/add', 'Chat\ChatGroupController@add');
+
+    /*关于图片部分*/
+    $router->get('/photos/foods', 'Photos\FoodsController@foods');
+    $router->post('/photos/foods/foodsUpload', 'Photos\FoodsController@foodsUpload');
 });
 
 /*-------------------api-----------------pro---------------------*/
