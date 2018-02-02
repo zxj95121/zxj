@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>张贤健的个人网站</title>
+	<title>张贤健-溪山行旅</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="张贤健">
 	<meta name="keywords" content="张贤健, wells, php, PHP, laravel, 微信, 小程序, "/>
@@ -306,7 +306,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<input type="submit" onclick="javascript:void(0);" style="color: #FF9000;font-weight: bold;" value="提交信息" class="btn btn-primary">
+					<input type="submit" onclick="javascript:void(0);" style="color: #FF9000;font-weight: bold;height: 40px;box-shadow: none;" value="提交信息" class="btn btn-primary">
 				</div>
 
 			</form>	
@@ -315,6 +315,9 @@
 
 	<div id="friendly_link">
 		
+	</div>
+	<div style="background-color: #FF9000;height: 38px;line-height: 38px;font-size: 16px;text-align: center;width: 100%;float: left;">
+		<a href="http://www.miitbeian.gov.cn/" style="color: #FFF;">皖ICP备17010760号</a>
 	</div>
 
 	<!-- <div id="map" class="fh5co-map"></div> -->
