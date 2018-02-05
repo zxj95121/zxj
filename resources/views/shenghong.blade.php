@@ -76,7 +76,7 @@
 							<li class="introduce-item">
 								<div class="introduce-item-dots"></div>
 								<p class="introduce-content">
-									在学生工作处任职并获优秀学生干部称号
+									在学生工作处任职并获优秀学生干部称号。
 								</p>
 							</li>
 							<li class="introduce-item">
