@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/resume', 'HomeController@resume')->name('resume');
+Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
 Route::get('/dawanzi', 'HomeController@dawanzi')->name('dawanzi');
 Route::get('/my/introduce', 'HomeController@introduce')->name('introduce');
 

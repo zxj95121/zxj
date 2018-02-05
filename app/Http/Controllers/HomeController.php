@@ -13,7 +13,12 @@ class HomeController extends Controller
 
     public function resume()
     {
-    	return view('resume');
+        return view('resume');
+    }
+    
+    public function shenghong()
+    {
+    	return view('shenghong');
     }
 
     public function introduce()
