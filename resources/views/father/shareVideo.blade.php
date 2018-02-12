@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<script src="/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="/all/home/js/jquery.min.js"></script>
 		<link href="" rel="stylesheet">
 	<style type="text/css">
 	#modelView{background-color:#DDDDDD;z-index:0;opacity:0.7;height: 100%;width: 100%;position: relative;}
@@ -21,7 +21,7 @@
 	<div class="playvideo">
 	<div class="zy_media">
     	<video poster="/images/father/videoShow.png" data-config='{"mediaTitle": ""}'>
-        	<source src='https://v.qq.com/iframe/preview.html?vid=g0516zex7j8&amp;width=500&amp;height=375&amp;auto=0' type="video/mp4">
+        	<source src='{{$obj["url"]}}' type="video/{{$obj['suffix']}}">
       	  您的浏览器不支持HTML5视频
    	 </video>
 

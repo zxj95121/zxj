@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
+
+
 Route::get('/resume', 'HomeController@resume')->name('resume');
 Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
 Route::get('/dawanzi', 'HomeController@dawanzi')->name('dawanzi');
@@ -28,9 +30,10 @@ Route::post('/jing/getData', 'JingController@getData');
 Route::get('/jing/downloadTxt', 'JingController@downloadTxt');
 
 Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) {
+    $router->get('/index', 'ShareVideoController@index');
     $router->get('/uploadVideo','ShareVideoController@upload');
     $router->get('/shareVideo','ShareVideoController@show');
-    $router->post('/fileupload','ShareVideoController@fileupload');
+    $router->any('/ajaxVideo','ShareVideoController@ajaxVideo');
 });
 
 Route::group(['prefix' => 'algorithm','namespace' => 'Algorithm'], function ($router) {

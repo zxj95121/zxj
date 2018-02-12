@@ -9,10 +9,14 @@ use App\Models\ShareVideo;
 
 class ShareVideoController extends Controller
 {
+    public function index(Request $request)
+    {
+        return view('father.index');
+    }
+
     public function show(Request $request)
     {
-    	// $id = $request->input('id');
-    	$id = 1;
+    	$id = $request->input('id');
     	$obj = ShareVideo::find($id);
     	return view('father.shareVideo', ['obj'=>$obj]);
     }
@@ -22,23 +26,30 @@ class ShareVideoController extends Controller
     	return view('father.uploadVideo');
     }
 
-    public function fileupload(Request $request)
+
+    public function ajaxVideo(Request $request)
     {
     	if ($request->hasFile('file')) {
 		   $file = $request->file('file');
-		   $desc = $request->input('description');
+		   $desc = $request->input('desc');
 		   $name = date('YmdHis').rand(100,999);
 		   $suffix = $file->getClientOriginalExtension();
-		   $request->file('file')->move('/var/www/html/home/public/father', $name.'.'.$suffix);
-		   $url = 'http://www.zhangxianjian.com/father/'.$name.'.'.$suffix;
+           // return response()->json($_SERVER);
+
+		   // $request->file('file')->move($_SERVER['DOCUMENT_ROOT'].'/father/videos/'. $name.'.'.$suffix);
+           $path = Storage::putFile('public/photos', $request->file('file'));
+		   $url = $_SERVER['HTTP_ORIGIN'].'/storage/photos/'.basename($path);
 
 		   $flight = new ShareVideo();
 		   $flight->desc = $desc;
 		   $flight->url = $url;
+           $flight->suffix = $suffix;
 		   $flight->status = 1;
 		   $flight->save();
 		   $id = $flight->id;
-		   return redirect('/father/shareVideo?id='.$id);
+
+           return response()->json(['errcode' => 0, 'id'=> $id]);
+		   // return redirect('/father/shareVideo?id='.$id);
 		}
     }
 }
