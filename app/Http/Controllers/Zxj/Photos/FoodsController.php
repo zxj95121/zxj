@@ -22,8 +22,6 @@ class FoodsController extends Controller
     	// $icon = $request->file('file')->store('local', 'uploads');
     	// $path = Storage::disk('s3')->get($icon)->getPath();
     	echo $path;
-    	
-    	echo basename($path);
   //   	if($file->isValid()) {
 		//     $clientName = $file->getClientOriginalName();    //客户端文件名称..
 		//     // $tmpName = $file->getFileName();   //缓存在tmp文件夹中的文件名例如php8933.tmp 这种类型的.

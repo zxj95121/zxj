@@ -69,20 +69,20 @@
 						<div class="introduce-wrap">
 							<h2 class="introduce-wrap-item">2013.9-2017.6</h2>
 							<h2 class="introduce-wrap-item">黄山学院</h2>
-							<h2 class="introduce-wrap-item"></h2>
+							<h2 class="introduce-wrap-item">会计学</h2>
 							<div class="clear"></div>
 						</div>
 						<ul class="introduce-list">
 							<li class="introduce-item">
 								<div class="introduce-item-dots"></div>
 								<p class="introduce-content">
-									在学生工作处任职并获优秀学生干部称号
+									在学生工作处任职并获优秀学生干部称号。
 								</p>
 							</li>
 							<li class="introduce-item">
 								<div class="introduce-item-dots"></div>
 								<p class="introduce-content">
-									成绩优异，连续获三次国家励志奖学金，一次二等奖学金，两次三等奖学金，一次三好学生称号。
+									成绩优异，连续获三次国家励志奖学金，一次二等奖学金，两次三等奖学金，一次三好学生称号以及优秀毕业生荣誉。
 								</p>
 							</li>
 						</ul>
@@ -106,7 +106,7 @@
 						<div class="introduce-sec">
 							<div class="introduce-wrap">
 								<h2 class="introduce-wrap-item">2016.2-2017.1</h2>
-								<h2 class="introduce-wrap-item">均益金属辖属分公司</h2>
+								<h2 class="introduce-wrap-item">池州美利达智能装备科技</h2>
 								<h2 class="introduce-wrap-item">会计助理</h2>
 								<div class="clear"></div>
 							</div>
@@ -114,45 +114,39 @@
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										你干了啥
+										主要协助主办会计的工作包括报销，工资核算，计账之类。
 
 									</p>
 								</li>
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										你干了啥
+										组织并安排仓库进行定期盘点，保证账实相符。
 
 									</p>
 								</li>
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										你干了啥
+										审核原始凭证包括外来原始凭证和自制原始凭证。
 									</p>
 								</li>
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										你干了啥
+										根据原始凭证填制记账凭证，编制会计分录。
 									</p>
 								</li>
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										你干了啥
+										根据记账凭证登记账簿。
 									</p>
 								</li>
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										你干了啥
-									</p>
-								</li>
-								<li class="introduce-item">
-									<div class="introduce-item-dots"></div>
-									<p class="introduce-content">
-										你干了啥
+										熟悉公司从采购原材料到生产再到销售半成品、产成品的一系列流程。
 									</p>
 								</li>
 							</ul>
@@ -188,13 +182,19 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							CET英语六级，能阅读英文文档，简单英语交流。
+							CET英语六级，能阅读英文文档，简单英语交流，用英文文件答复等。
 						</p>
 					</li>
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							国家二级计算机证书，熟练操作计算机相关办公软件。
+							国家二级计算机证书，熟练操作友金蝶等财务软件的使用，熟练使用计算机EXCEL等相关办公软件。
+						</p>
+					</li>
+					<li class="introduce-item">
+						<div class="introduce-item-dots"></div>
+						<p class="introduce-content">
+							人力资源管理师三级
 						</p>
 					</li>
 				</div>
@@ -215,7 +215,7 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							忠实诚信,讲原则，说到做到，决不推卸责任；肯学习,肯吃苦，肯加班，有问题不逃避,愿意虚心向他人学习；自信但不自负,不以自我为中心；会用100%的热情和精力投入到工作中。
+							忠实诚信,讲原则，说到做到，决不推卸责任；肯学习,肯吃苦，肯加班，有问题不逃避,愿意虚心向他人学习；自信但不自负,不以自我为中心。
 						</p>
 					</li>
 <!-- 					<li class="introduce-item">
