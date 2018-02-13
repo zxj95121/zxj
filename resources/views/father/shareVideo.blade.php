@@ -26,7 +26,7 @@
 	      	  	您的浏览器不支持HTML5视频
 	   	 	</video>
 		</div>
-		<div id="modelView">&nbsp;</div>
+		<!-- <div id="modelView">&nbsp;</div> -->
 	</div>
 
 <script src="/plugin/mediaPlay/zy.media.min.js"></script>
@@ -37,8 +37,8 @@
     var height = document.documentElement.clientHeight;
     var width = document.body.clientWidth;
     // var screenheight = window.screen.height/2;
-    $("#modelView").width(width);
-    $("#modelView").height(height);
+    // $("#modelView").width(width);
+    // $("#modelView").height(height);
     // var videoheight = $(".zy_media").height()/2;
     // var padding_top = screenheight-videoheight;
     // var padding_top = '100px';
