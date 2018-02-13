@@ -44,6 +44,8 @@ class ShareVideoController extends Controller
                     $path = Storage::putFile('public/photos', $request->file('file'.$i));
                     $img_url = '/storage/photos/'.basename($path);
                     continue;
+                } else {
+                    $sf = $suffix;
                 }
 
     		   // $request->file('file')->move($_SERVER['DOCUMENT_ROOT'].'/father/videos/'. $name.'.'.$suffix);
@@ -55,7 +57,7 @@ class ShareVideoController extends Controller
 	   $flight = new ShareVideo();
 	   $flight->desc = $desc;
 	   $flight->url = $url;
-       $flight->suffix = $suffix;
+       $flight->suffix = $sf;
        $flight->img_url = $img_url;
 	   $flight->status = 1;
 	   $flight->save();
