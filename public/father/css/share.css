@@ -1,0 +1,65 @@
+#center95{
+	width: 95%;
+	margin: 0 auto;
+}
+#ctitle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+#ctitle div:nth-of-type(1), #ctitle div:nth-of-type(3){
+	width: calc(( 100% - 60px ) / 2);
+	height: 0;
+	border: 2px dotted #e4e4e4;
+}
+#ctitle div:nth-of-type(2){
+	text-align: center;
+	font-size: 14px;
+	width: 80px;
+}
+
+/*评论*/
+.comment{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 12px;
+	margin-bottom: 13px;
+}
+.cimg{
+	width: 8%;
+}
+.cimg img{
+	width: 100%;
+	height: 100%;
+}
+.cright{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: /*calc(100% - 10px)*/90%;
+}
+.cr-top{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: #7b7b7b;
+}
+.thumb i{
+	text-indent: -9999px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    padding-right: 3px;
+	background: url(/father/images/base.png) no-repeat 0 0;
+}
+.content{
+	color: #404040;
+	font-size: 15px;
+}

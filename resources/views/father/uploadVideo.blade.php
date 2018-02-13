@@ -75,6 +75,9 @@
             opt.otherData = [{ "name": "desc", "value": $('#desc').val() }];
             // window.layerIndex = layer.load(1, { time: 10 * 1000, shade: false });
             console.log(opt);
+            //防止多次上传
+            window.waitLayer = layer.load(2);
+            $('#startUpload').addClass('disabled');
         }
 
         
@@ -92,6 +95,10 @@
                 // $('#close_add')[0].click();
                 layer.msg('图片上传失败，请联系管理员。');
             }
+
+            layer.close(window.waitLayer);
+            $('#startUpload').removeClass('disabled');
+
             uploadTools.uploadError(opt);//显示上传错误
             uploadTools.uploadSuccess(opt);//显示上传成功
         }
