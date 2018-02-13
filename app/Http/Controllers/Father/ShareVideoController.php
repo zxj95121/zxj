@@ -40,7 +40,7 @@ class ShareVideoController extends Controller
                 $name = date('YmdHis').rand(100,999);
                 $suffix = $file->getClientOriginalExtension();
 
-                if (in_array(array('jpeg', 'jpg', 'gif', 'png'), $suffix)) {
+                if (in_array($suffix, array('jpeg', 'jpg', 'gif', 'png'))) {
                     $path = Storage::putFile('public/photos', $request->file('file'));
                     $img_url = '/storage/photos/'.basename($path);
                     break;
