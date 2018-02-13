@@ -41,13 +41,13 @@ class ShareVideoController extends Controller
                 $suffix = $file->getClientOriginalExtension();
 
                 if (in_array($suffix, array('jpeg', 'jpg', 'gif', 'png'))) {
-                    $path = Storage::putFile('public/photos', $request->file('file'));
+                    $path = Storage::putFile('public/photos', $request->file('file'.$i));
                     $img_url = '/storage/photos/'.basename($path);
-                    break;
+                    continue;
                 }
 
     		   // $request->file('file')->move($_SERVER['DOCUMENT_ROOT'].'/father/videos/'. $name.'.'.$suffix);
-               $path = Storage::putFile('public/photos', $request->file('file'));
+               $path = Storage::putFile('public/photos', $request->file('file'.$i));
     		   $url = $_SERVER['HTTP_ORIGIN'].'/storage/photos/'.basename($path);
             }
         }
