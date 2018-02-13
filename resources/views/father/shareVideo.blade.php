@@ -17,7 +17,7 @@
 	</head>
 	<body>
 	<!-- <body onmousewheel="return false;"> -->
-		<img src="{{$obj['img_url']}}" style="width: 100%;" alt="视频展示图">
+		<!-- <img src="{{$obj['img_url']}}" style="width: 100%;" alt="视频展示图"> -->
 	
 	<div class="playvideo">
 		<div class="zy_media">
