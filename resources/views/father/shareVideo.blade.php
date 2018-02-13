@@ -20,7 +20,7 @@
 	
 	<div class="playvideo">
 	<div class="zy_media">
-    	<video poster="/images/father/videoShow.png" data-config='{"mediaTitle": ""}'>
+    	<video poster="{{$obj['img_url']}}" data-config='{"mediaTitle": ""}'>
         	<source src='{{$obj["url"]}}' type="video/{{$obj['suffix']}}">
       	  您的浏览器不支持HTML5视频
    	 </video>
