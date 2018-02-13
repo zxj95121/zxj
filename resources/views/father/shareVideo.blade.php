@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/plugin/mediaPlay/zy.media.min.css">
 	</head>
 	<body onmousewheel="return false;">
-		<img src="/father/headimg.jpg" style="height: 0px;opacity: 0;">
+		<img src="{{$obj['img_url']}}" style="height: 0px;opacity: 0;" alt="视频展示图">
 	
 	<div class="playvideo">
 	<div class="zy_media">

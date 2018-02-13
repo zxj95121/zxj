@@ -34,6 +34,7 @@ Route::group(['prefix' => 'father','namespace' => 'Father'], function ($router) 
     $router->get('/uploadVideo','ShareVideoController@upload');
     $router->get('/shareVideo','ShareVideoController@show');
     $router->any('/ajaxVideo','ShareVideoController@ajaxVideo');
+    $router->get('/videoList','ShareVideoController@videoList');
 });
 
 Route::group(['prefix' => 'algorithm','namespace' => 'Algorithm'], function ($router) {

@@ -372,7 +372,7 @@ var uploadTools = {
 
         for(var i=0;i<fileList.length;i++){
             if(fileList[i]!=null){
-                formData.append("file",fileList[i]);
+                formData.append("file"+i,fileList[i]);
             }
         }
         if(opt.otherData!=null&&opt.otherData!=""){

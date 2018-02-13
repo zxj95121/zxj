@@ -48,6 +48,10 @@
                 <img class="icon" src="/father/material/video.png"/>
                 <div class="title">上传视频</div>
             </div>
+            <div class="shortcut win10-open-window" data-url="/father/videoList" data-title="视频列表">
+                <img class="icon" src="/father/material/list.png"/>
+                <div class="title">视频列表</div>
+            </div>
         </div>
         <div id="win10-desktop-scene"></div>
     </div>
@@ -92,5 +96,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
