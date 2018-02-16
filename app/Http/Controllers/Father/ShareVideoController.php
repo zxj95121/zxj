@@ -22,6 +22,13 @@ class ShareVideoController extends Controller
     	return view('father.shareVideo', ['obj'=>$obj]);
     }
 
+    public function show2(Request $request)
+    {
+        $id = $request->input('id');
+        $obj = ShareVideo::find($id);
+        return view('father.shareVideo2', ['obj'=>$obj]);
+    }
+
     public function upload()
     {
     	return view('father.uploadVideo');
