@@ -29,17 +29,17 @@
 		<!-- <div id="modelView">&nbsp;</div> -->
 		<!-- <img src="{{$obj['img_url']}}"> -->
 		<div id="content" style="top: 233px;position: relative;">
-			<section class="editor">
+			<section class="editor" style="display: none;">
 			    <div>
 			        <div>
 			            <section style="text-align:center;">
 			                <section style="display: inline-block;margin-top: 35px;margin-bottom: 180px;">
 			                    <section style=" box-sizing: border-box; width: 240px; clear: both;  height: 240px; border-radius: 50%; color: inherit;display:inline-block;">
-			                        <img src="http://ww1.sinaimg.cn/large/006qBWBXjw1f5rdvso3e8g30i20i2gta.gif" style="border-radius:50%; box-sizing:border-box; color:inherit; display:inline-block; height:auto !important; width:100%"/>
+			                        <img src="{{$obj['img_url']}}" style="border-radius:50%; box-sizing:border-box; color:inherit; display:inline-block; height:auto !important; width:100%"/>
 			                    </section>
 			                    <section style="border: 0px; box-sizing: border-box;  clear: both; overflow: hidden; margin-top: -270px;margin-left: 185px;">
 			                        <section style="border: 5px solid rgb(254,254,254); box-sizing: border-box; width: 100px; clear: both; height: 100px; border-radius: 50%; color: inherit;display:inline-block;">
-			                            <img src="http://ww1.sinaimg.cn/large/006qBWBXjw1f5rdvso3e8g30i20i2gta.gif" style="border-radius:50%; box-sizing:border-box; color:inherit; display:inline-block; height:auto !important; width:100%"/>
+			                            <img src="{{$obj['img_url']}}" style="border-radius:50%; box-sizing:border-box; color:inherit; display:inline-block; height:auto !important; width:100%"/>
 			                        </section>
 			                    </section>
 			                </section>
