@@ -194,19 +194,25 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							熟练掌握jquery，了解React框架及webpack打包工具。熟悉BootStrap，layui，mui等前端框架。
+							熟练掌握jquery，了解vue。熟悉BootStrap，layui，mui等前端框架。
 						</p>
 					</li>
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							微信公众号开发，小程序开发，接口开发。
+							微信公众号开发，小程序开发，APP接口开发。
 						</p>
 					</li>
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							网站搭建，项目搭建，熟悉laravel和thinkphp框架。
+							熟练使用thinkphp和laravel框架，熟练使用MySql数据库。
+						</p>
+					</li>
+					<li class="introduce-item">
+						<div class="introduce-item-dots"></div>
+						<p class="introduce-content">
+							服务器网站搭建，项目搭建，项目独立开发。
 						</p>
 					</li>
 					<li class="introduce-item">
