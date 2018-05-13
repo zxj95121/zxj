@@ -38,6 +38,7 @@
 						<div class="intro">家　　乡：安徽安庆</div>
 						<div class="intro">电　　话： 17557286038</div>
 						<div class="intro">毕业院校：安徽师范大学（2013.9-2017.6）</div>
+						<div class="intro">专　　业： 软件工程</div>
 						<div class="intro">学　　历：大学本科</div>
 						<div class="intro">邮　　箱：xianjian951216@163.com</div>
 					</div>
@@ -159,6 +160,39 @@
 						</div>
 					</div>
 
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2018.1-2018.5</h2>
+								<h2 class="introduce-wrap-item">安徽好牛软件</h2>
+								<h2 class="introduce-wrap-item">PHP工程师</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										微擎人人商城开发，APP接口开发。
+
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										旧项目修改，包括后端和前端代码、新增需求、bug修复等；
+
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										快速使用插件开发等。
+
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				
 			</div>
@@ -218,7 +252,7 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							了解memcache,redis缓存技术，熟练使用AJAX,JSON等。
+							使用memcache,redis缓存技术，AJAX、CURL等前后端技术,JSON、XML数据格式等。
 						</p>
 					</li>
 				</div>
