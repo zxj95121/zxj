@@ -62,7 +62,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background:#FF9000;" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background:#FF9000;position: relative;" data-stellar-background-ratio="0.5">
 		<a href="http://zhengcheng.club" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
 		background: #9c9e03;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 20px;">郑诚</a>
 		<div class="overlay"></div>
@@ -97,6 +97,8 @@
 				</div>
 			</div>
 		</div>
+		<a href="http://www.zhangxianjian.com/resume" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
+		background: #1f5242;color: #FFF;z-index: 333;letter-spacing: 20px;position: absolute;bottom: 0;left: 0;">张贤健的个人简历</a>
 	</header>
 	
 
