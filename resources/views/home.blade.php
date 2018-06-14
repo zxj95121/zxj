@@ -61,7 +61,7 @@
 	<div id="page">	
 	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background:#FF9000;" data-stellar-background-ratio="0.5">
 		<a href="http://zhengcheng.club" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
-		background: #9c9e0370;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 20px;">郑诚</a>
+		background: #9c9e03;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 20px;">郑诚</a>
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
