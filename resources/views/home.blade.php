@@ -39,6 +39,9 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<style type="text/css">
+		h3,.feature-copy p{
+			font-family: "微软雅黑";
+		}
 		#contactForm input,#contactForm textarea{
 			background-color: #FFF;
 			border: 2px solid #FFF;
@@ -71,7 +74,7 @@
 							<div class="profile-thumb" style=""><img src="/all/home/images/user-4.jpg" alt="张贤健" style="height: 100%;border-radius: 50%;"></div>
 
 							<h1><span>Wells 张贤健</span></h1>
-							<h3><span>Do what I want to do,forget what I can't forget. </span></h3>
+							<h3><span>安师大那么大，有志青年何其多，只是大多未尝一见！</span></h3>
 							<br>
 							<p>
 								<ul class="fh5co-social-icons contactUl">
@@ -113,7 +116,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>网站开发</h3>
-								<p>As long as you dare to think, as long as you dare to do it, the dream will be further from you.</p>
+								<p>萌芽于安师大计算机爱好者协会，初学于大一暑假，奋起于大三在蓝天.</p>
 							</div>
 						</div>
 					</div>
@@ -125,7 +128,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>PHP</h3>
-								<p>As long as you dare to think, as long as you dare to do it, the dream will be further from you.</p>
+								<p>萌芽于大二寒假一篇文档（微信公众平台从入门到精通）.</p>
 							</div>
 						</div>
 
@@ -137,7 +140,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>移动端开发</h3>
-								<p>As long as you dare to think, as long as you dare to do it, the dream will be further from you.</p>
+								<p>起初由于在蓝天微信开发移动端网页.</p>
 							</div>
 						</div>
 					</div>
@@ -153,7 +156,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>热衷新技术</h3>
-								<p>As long as you dare to think, as long as you dare to do it, the dream will be further from you.</p>
+								<p>跟倾向于自己喜欢的，以及力所能及.</p>
 							</div>
 						</div>
 
@@ -166,7 +169,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>团队合作开发</h3>
-								<p>As long as you dare to think, as long as you dare to do it, the dream will be further from you.</p>
+								<p>起始于第一份工作，新方向网络.</p>
 							</div>
 						</div>
 
@@ -178,7 +181,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>微信开发</h3>
-								<p>As long as you dare to think, as long as you dare to do it, the dream will be further from you.</p>
+								<p>同样起源于那篇文档（微信公众平台从入门到精通）.</p>
 							</div>
 						</div>
 					</div>
@@ -269,7 +272,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>志同道合，联系我!</h2>
-					<p>Tel:17557286038</p>
+					<a href="tel:17557286038"><p>Tel:17557286038</p></a>
 					<!-- <p><a href="#" class="btn btn-default btn-lg">Contact Us</a></p> -->
 				</div>
 			</div>
