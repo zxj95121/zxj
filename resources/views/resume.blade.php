@@ -5,7 +5,7 @@
 	<title>张贤健的个人简历</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<meta name="format-detection" content="telephone=no" />
+	<!-- <meta name="format-detection" content="telephone=no" /> -->
 	<meta name="author" content="张贤健">
 	<meta name="keywords" content="张贤健, wells, php, PHP, 个人简历, 张贤健的个人简历"/>
 <!-- 	<link rel="stylesheet" href="/all/home/css/bootstrap.css"> -->
@@ -36,7 +36,7 @@
 						<div class="intro">姓　　名：张贤健</div>
 						<div class="intro">出生年月：1995年12月</div>
 						<div class="intro">家　　乡：安徽安庆</div>
-						<div class="intro">电　　话： 17557286038</div>
+						<div class="intro">电　　话： <a href="tel:17557286038">17557286038</a></div>
 						<div class="intro">毕业院校：安徽师范大学（2013.9-2017.6）</div>
 						<div class="intro">专　　业： 软件工程</div>
 						<div class="intro">学　　历：大学本科</div>
@@ -278,7 +278,7 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							个人网站： <a class="a-link" href="https://api.zhangxianjian.com" target="_blank" title="张贤健的个人网站">http://www.zhangxianjian.com</a>
+							个人网站： <a class="a-link" href="http://www.zhangxianjian.com" target="_blank" title="张贤健的个人网站">http://www.zhangxianjian.com</a>
 						</p>
 					</li>
 					<li class="introduce-item">
