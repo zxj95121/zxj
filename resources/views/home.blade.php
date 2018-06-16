@@ -204,7 +204,7 @@
 				
 					<div class="row">
 						<a href="javascript:void(0);">
-							<div class="col-md-4 text-center">
+							<div class="col-md-4 text-center poemcol">
 								<div class="feature-left">
 									<span class="icon">
 										<!-- <i class="icon-paintbrush"></i> -->
@@ -218,7 +218,7 @@
 							</div>
 						</a>
 						<a href="javascript:void(0);">
-							<div class="col-md-4 text-center">
+							<div class="col-md-4 text-center poemcol">
 								<div class="feature-left">
 									<span class="icon">
 										<!-- <i class="icon-paintbrush"></i> -->
@@ -232,7 +232,7 @@
 							</div>
 						</a>
 						<a href="javascript:void(0);">
-							<div class="col-md-4 text-center">
+							<div class="col-md-4 text-center poemcol">
 								<div class="feature-left">
 									<span class="icon">
 										<img src="/images/shi/guanjunshilianmengyougan.png" alt="观军师联盟有感">

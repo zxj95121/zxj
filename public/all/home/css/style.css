@@ -1303,3 +1303,7 @@ input[type="text"] {
   border-radius: 50%;
   height: 200px;
 }
+.poemcol{
+  display: flex;
+  justify-content: center;
+}
