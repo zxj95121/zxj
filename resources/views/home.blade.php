@@ -235,7 +235,6 @@
 							<div class="col-md-4 text-center">
 								<div class="feature-left">
 									<span class="icon">
-										<!-- <i class="icon-paintbrush"></i> -->
 										<img src="/images/shi/guanjunshilianmengyougan.png" alt="观军师联盟有感">
 									</span>
 									<div class="feature-copy">
