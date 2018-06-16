@@ -192,6 +192,64 @@
 		</div>
 	</div>
 
+
+	<div id="fh5co-features" class="animate-box">
+		<div class="container" id="poem">
+			<div class="services-padding">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>我的诗集</h2>
+					</div>
+				</div>
+				
+					<div class="row">
+						<a href="javascript:void(0);">
+							<div class="col-md-4 text-center">
+								<div class="feature-left">
+									<span class="icon">
+										<!-- <i class="icon-paintbrush"></i> -->
+										<img src="/images/shi/xianshi.jpg" alt="闲忆">
+									</span>
+									<div class="feature-copy">
+										<h3>闲忆</h3>
+										<p>常忆校园中，佳人旦寻，寒来暑往昔年同。惟恨春华拚弃日，往事成空。<br />忽几度春风，有时入梦，然至今一笑难逢。闲做此文无他意，兴趣催动。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0);">
+							<div class="col-md-4 text-center">
+								<div class="feature-left">
+									<span class="icon">
+										<!-- <i class="icon-paintbrush"></i> -->
+										<img src="/images/shi/zhegewuyi.jpg" alt="这个五一">
+									</span>
+									<div class="feature-copy">
+										<h3>这个五一</h3>
+										<p>夏日初至南七里，吵吵嚷嚷闹不已。满天飞屑随风起，脏无比，一夜灰尘落满地。<br />五一假期能有几？代码写尽留无计。曾经好友难再会，拼一醉，而今事事他年泪。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0);">
+							<div class="col-md-4 text-center">
+								<div class="feature-left">
+									<span class="icon">
+										<!-- <i class="icon-paintbrush"></i> -->
+										<img src="/images/shi/guanjunshilianmengyougan.png" alt="观军师联盟有感">
+									</span>
+									<div class="feature-copy">
+										<h3>观军师联盟有感</h3>
+										<p>屯田之策展士载，不屈行动感仲达。<br />信心信念不可信，真言真语别当真。<br />但愿考验君莫怪，只因教训铭于心。<br />从今若许求拜师，知作门槛行作察。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="fh5co-work" class="fh5co-bg-dark">
 		<div class="container">
 			<div class="row animate-box">
