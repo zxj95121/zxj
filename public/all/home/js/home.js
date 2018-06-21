@@ -15,7 +15,7 @@ var app = new Vue({
   		getPoems: function(e) {
   			var that = this;
   			$.ajax({
-  				url: 'http://zxj.com2/api/poem/managePoem',
+  				url: this.http + '/api/poem/managePoem',
   				type: 'post',
   				dataType: 'json',
   				data: {},
