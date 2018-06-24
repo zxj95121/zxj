@@ -187,7 +187,7 @@
 				
 					<div class="row">
 						<a href="javascript:void(0);" v-for="(item, index) in poems">
-							<div class="col-md-4 clearfix visible-md-block .col-xs-12 col-sm-12 text-center poemcol">
+							<div class="col-md-4 .col-xs-12 col-sm-12 text-center poemcol">
 								<div class="feature-left">
 									<span class="icon">
 										<!-- <i class="icon-paintbrush"></i> -->
