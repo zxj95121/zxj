@@ -119,13 +119,14 @@
 		  								if (index != 0) {
 		  									that.poems.push(arr); 
 		  								}
-		  								
+
 		  								arr = new Array();
 		  								l = 0;
 		  							}
 		  							arr[l++] = item;
 		  						})
 		  						
+		  						that.poems.push(arr);
 		  					}
 		  					console.log(that.poems);
 		  				}
