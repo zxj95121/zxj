@@ -25,7 +25,16 @@ h3,.feature-copy p{
 	height: 60px;
 }
 
-#poemBtn a{
+#poemBtn a:link{
+	text-decoration: none;
+}
+#poemBtn a:visited{
+	text-decoration: none;
+}
+#poemBtn a:hover{
+	text-decoration: none;
+}
+#poemBtn a:active{
 	text-decoration: none;
 }
 

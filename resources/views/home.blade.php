@@ -204,8 +204,8 @@
 					</div>
 
 					<div id="poemBtn" class="row">
-						<a href="http://www.zhangxianjian.com/poem" target="_blank">
-							<button id="seemorepoem" class="btn">查看更多诗集 <i class="icon-arrow-long-right"></i></button>
+						<a id="seemorepoem" class="btn" href="http://www.zhangxianjian.com/poem" target="_blank">
+							查看更多诗集 <i class="icon-arrow-long-right"></i>
 						</a>
 					</div>
 			</div>
