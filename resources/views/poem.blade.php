@@ -23,6 +23,8 @@
 			font-family: "微软雅黑";
 		}
 		.flex{
+			width: 100%;
+			height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
@@ -37,21 +39,22 @@
 		.flex div{
 			width: 80%;
 		}
-		#rowwrap{
-			margin: 0;display: flex;flex-direction: row;flex-wrap: wrap;
-		}
 	</style>
 	</head>
 	<body>
 
 	
-	<div id="page">
-		<div class="row" id="rowwrap">
-			<div class="col-md-4 div.col-sm-12 flex" v-for="(item, index) in poems">
-				<img v-bind:src="http + item.url" alt="">
-				<h3>@{{item.title}}</h3>
-				<div v-html="item.content"></div>
-			</div>
+	<div id="page" class=".container-fluid">
+		<div class="row" class="rowwrap" v-for="(value, key) in poems">
+			<a href="javascript:void(0);" v-for="(item, index) in value">
+				<div class="col-md-4 div.col-sm-12 flexwrap">
+					<div class="flex">
+						<img v-bind:src="http + item.url" alt="">
+						<h3>@{{item.title}}</h3>
+						<div v-html="item.content"></div>
+					</div>
+				</div>
+			</a>
 		</div>
 	</div>
 
@@ -106,7 +109,23 @@
 		  				data: {},
 		  				success: function(data) {
 		  					if (data.code == 0) {
-		  						that.poems = data.data; 
+		  						var arr = new Array();
+		  						var l = 0;
+
+		  						data.data.map((item, index) => {
+		  							// index = parseInt(index);
+
+		  							if (index % 3 == 0) {
+		  								if (index != 0) {
+		  									that.poems.push(arr); 
+		  								}
+		  								
+		  								arr = new Array();
+		  								l = 0;
+		  							}
+		  							arr[l++] = item;
+		  						})
+		  						
 		  					}
 		  					console.log(that.poems);
 		  				}
