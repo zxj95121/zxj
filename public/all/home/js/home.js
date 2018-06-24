@@ -1,4 +1,4 @@
-Vue.config.unsafeDelimiters = ['{', '}'];
+// Vue.config.unsafeDelimiters = ['{', '}'];
 var app = new Vue({
   	el: '#page',
   	data: {
@@ -31,4 +31,4 @@ var app = new Vue({
 })
 
 
-console.log(app)
+// console.log(app)

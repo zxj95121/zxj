@@ -1,0 +1,37 @@
+h3,.feature-copy p{
+	font-family: "微软雅黑";
+}
+#contactForm input,#contactForm textarea{
+	background-color: #FFF;
+	border: 2px solid #FFF;
+}
+.code{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: -200px;
+	left: -80px;
+	z-index: 300;
+	display: none;
+}
+
+/* 查看更多诗集按钮 */
+#poemBtn{
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+
+#poemBtn a{
+	text-decoration: none;
+}
+
+#seemorepoem{
+	height: 40px;
+	background: #096296;
+	color: white;
+	text-align: center;
+}

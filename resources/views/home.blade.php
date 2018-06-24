@@ -38,24 +38,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	<style type="text/css">
-		h3,.feature-copy p{
-			font-family: "微软雅黑";
-		}
-		#contactForm input,#contactForm textarea{
-			background-color: #FFF;
-			border: 2px solid #FFF;
-		}
-		.code{
-			width: 200px;
-			height: 200px;
-			position: absolute;
-			top: -200px;
-			left: -80px;
-			z-index: 300;
-			display: none;
-		}
-	</style>
+	<link rel="stylesheet" href="/all/home/css/home.css">
 	</head>
 	<body>
 		
@@ -217,6 +200,12 @@
 									</div>
 								</div>
 							</div>
+						</a>
+					</div>
+
+					<div id="poemBtn" class="row">
+						<a href="http://www.zhangxianjian.com/poem" target="_blank">
+							<button id="seemorepoem" class="btn">查看更多诗集 <i class="icon-arrow-long-right"></i></button>
 						</a>
 					</div>
 			</div>

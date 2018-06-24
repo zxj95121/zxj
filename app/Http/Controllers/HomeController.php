@@ -15,6 +15,11 @@ class HomeController extends Controller
     {
         return view('resume');
     }
+
+    public function poem()
+    {
+        return view('poem');
+    }
     
     public function shenghong()
     {
