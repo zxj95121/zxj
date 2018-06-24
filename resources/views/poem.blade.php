@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>张贤健-溪山行旅</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<!-- <meta name="author" content="张贤健"> -->
 	<meta name="keywords" content="张贤健, 张贤健的诗集, 安师大张贤健"/>
 	<!-- <meta name="baidu-site-verification" content="lX0mR46Fv3" /> -->
@@ -39,13 +39,16 @@
 		.flex div{
 			width: 80%;
 		}
+		#page .rowwrap{
+			margin: 0;
+		}
 	</style>
 	</head>
 	<body>
 
 	
 	<div id="page" class=".container-fluid">
-		<div class="row" class="rowwrap" v-for="(value, key) in poems">
+		<div class="row rowwrap" v-for="(value, key) in poems">
 			<a href="javascript:void(0);" v-for="(item, index) in value">
 				<div class="col-md-4 div.col-sm-12 flexwrap">
 					<div class="flex">
