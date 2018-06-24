@@ -24,6 +24,11 @@ Route::get('/a', function () {
     echo phpinfo();
 });
 
+/*诗集部分*/
+Route::group(['prefix' => 'poem'], function ($router) {
+    $router->get('/poem_single/{id}', 'PoemController@poem_single');
+});
+
 /*Jing*/
 Route::get('/jing', 'JingController@jing');
 Route::post('/jing/getNum', 'JingController@getNum');
