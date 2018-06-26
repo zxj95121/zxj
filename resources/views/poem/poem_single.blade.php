@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>无题-张贤健的诗</title>
+	<title>@{{poem.title}}-张贤健的诗</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<!-- <meta name="author" content="张贤健"> -->
 	<meta name="keywords" content="张贤健, 张贤健的诗集, 安师大张贤健"/>
@@ -18,6 +18,9 @@
 		html, #page{
 			color: #fff;
     		background: #FF9000;
+		}
+		#page .rowwrap{
+			margin: 0;
 		}
 		.flex{
 			width: 100%;
