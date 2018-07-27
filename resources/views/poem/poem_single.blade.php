@@ -8,7 +8,7 @@
 	<!-- <meta name="author" content="张贤健"> -->
 	<meta name="keywords" content="张贤健, 张贤健的诗集, 安师大张贤健"/>
 	<!-- <meta name="baidu-site-verification" content="lX0mR46Fv3" /> -->
-	<meta name="description" content="张贤健诗"/>
+	<meta name="description" content="张贤健的诗"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	
 	<!-- Bootstrap  -->
