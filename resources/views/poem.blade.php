@@ -83,7 +83,7 @@
 		var app = new Vue({
 		  	el: '#page',
 		  	data: {
-		    	http: 'http://admin.zxjxj.com',
+		    	http: 'https://admin.zxjxj.com',
 		    	poems: [],
 		  	},
 		  	created: function() {
