@@ -74,7 +74,7 @@
 		var app = new Vue({
 		  	el: '#page',
 		  	data: {
-		    	http: 'http://admin.zxjxj.com',
+		    	http: 'https://admin.zxjxj.com',
 		    	// http: 'http://zxj.com2',
 		    	poem_id: {{$poem_id}},
 		    	poem: {},
