@@ -52,8 +52,11 @@
 
 	
 	<div id="page" class=".container-fluid">
-		@foreach($poems as $v)
+		@foreach($poems as $key => $v)
+		@if($key %3 == 0)
+		@php $last = $key; @endphp
 		<div class="row rowwrap">
+		@endif
 			<a href="/poem/poem_single/{{$v['id']}}">
 				<div class="col-md-4 div.col-sm-12 flexwrap">
 					<div class="flex">
@@ -63,7 +66,9 @@
 					</div>
 				</div>
 			</a>
+		@if($key - $last == 2)
 		</div>
+		@endif
 		@endforeach
 	</div> 
 
