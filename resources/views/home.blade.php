@@ -186,25 +186,27 @@
 				</div>
 				
 					<div class="row">
-						<a href="javascript:void(0);" v-for="(item, index) in poems">
+						@foreach($poems as $value)
+						<a href="javascript:void(0);">
 							<div class="col-md-4 .col-xs-12 col-sm-12 text-center poemcol">
 								<div class="feature-left">
 									<span class="icon">
 										<!-- <i class="icon-paintbrush"></i> -->
-										<img v-bind:src="http + item.url" alt="闲忆">
+										<img src="{{$prefix}}{{$value['url']}}" alt="{{$value['title']}}">
 									</span>
 									<div class="feature-copy">
-										<h3>@{{item.title}}</h3>
+										<h3>{{$value['title']}}</h3>
 									
-										<p v-html="item.content">@{{item.content}}</p>
+										<p>{!!$value['content']!!}</p>
 									</div>
 								</div>
 							</div>
 						</a>
+						@endforeach
 					</div>
 
 					<div id="poemBtn" class="row">
-						<a id="seemorepoem" class="btn" href="http://www.zhangxianjian.com/poem" target="_blank">
+						<a id="seemorepoem" class="btn" href="/poem" target="_blank">
 							查看更多诗集 <i class="icon-arrow-long-right"></i>
 						</a>
 					</div>
@@ -441,8 +443,8 @@
 	</script>
 	<!-- 展示二维码 + 留言功能-->
 	<script type="text/javascript" src="/all/home/js/showCode.js"></script>
-	<script type="text/javascript" src="/all/home/js/vue2.5.js"></script>
-	<script type="text/javascript" src="/all/home/js/home.js"></script>
+	<!-- <script type="text/javascript" src="/all/home/js/vue2.5.js"></script> -->
+	<!-- <script type="text/javascript" src="/all/home/js/home.js"></script> -->
 	</body>
 </html>
 

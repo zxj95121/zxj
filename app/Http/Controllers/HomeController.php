@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Wechat;
+use View;
 
 class HomeController extends Controller
 {
+    protected $headers = array(
+        'Origin:https://admin.zxjxj.com/',
+    );
+
     public function home()
-    {   echo getenv('ADMINURL') . 'poem/managePoem';
-        $poems = Wechat::curl(getenv('ADMINURL') . 'poem/managePoem');
-        var_dump($poems);die;
-    	return view('home');
+    {   
+        $prefix = getenv('ADMINURL');
+        $url = $prefix . '/api/poem/managePoem';
+
+        $poems = Wechat::curl($url, null, $this->headers);
+
+    	return view('home', ['poems' => $poems['data'], 'prefix' => $prefix]);
     }
 
     public function resume()
@@ -19,9 +27,14 @@ class HomeController extends Controller
         return view('resume');
     }
 
-    public function poem()
+    public function poem(Request $request)
     {
-        return view('poem');
+        $prefix = getenv('ADMINURL');
+        $url = $prefix . '/api/poem/allpoems';
+
+        $poems = Wechat::curl($url, null, $this->headers);
+        // var_dump($poems);
+        return view('poem', ['poems' => $poems['data'], 'prefix' => $prefix]);
     }
     
     public function shenghong()

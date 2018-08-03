@@ -11,7 +11,7 @@ class Wechat extends ServiceProvider
 	* @function curl请求微信接口等
 	* @program $url,$data=null
 	*/
-	public static function curl($url, $data = null)
+	public static function curl($url, $data = null, $headers = '')
 	{
 		// ------------------------------------------------------------------------
         //curl发送接口请求信息
@@ -19,6 +19,8 @@ class Wechat extends ServiceProvider
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        if ($headers)
+            curl_setopt($curl,CURLOPT_HTTPHEADER, $headers);
         if (!empty($data)){
                 curl_setopt($curl, CURLOPT_POST, 1);
                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);

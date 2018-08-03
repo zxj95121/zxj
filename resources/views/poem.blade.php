@@ -52,17 +52,19 @@
 
 	
 	<div id="page" class=".container-fluid">
-		<div class="row rowwrap" v-for="(value, key) in poems">
-			<a v-for="(item, index) in value" v-bind:href="['/poem/poem_single/' + item.id]">
+		@foreach($poems as $v)
+		<div class="row rowwrap">
+			<a href="/poem/poem_single/{{$v['id']}}">
 				<div class="col-md-4 div.col-sm-12 flexwrap">
 					<div class="flex">
-						<img v-bind:src="http + item.url" alt="">
-						<h3>@{{item.title}}</h3>
-						<div v-html="item.content"></div>
+						<img src="{{$prefix}}{{$v['url']}}" alt="{{$v['title']}}">
+						<h3>{{$v['title']}}</h3>
+						<div>{!!$v['content']!!}</div>
 					</div>
 				</div>
 			</a>
 		</div>
+		@endforeach
 	</div>
 
 	<!-- jQuery -->
@@ -78,8 +80,9 @@
 		})
 	</script>
 
-	<script type="text/javascript" src="/all/home/js/vue2.5.js"></script>
+	<!-- <script type="text/javascript" src="/all/home/js/vue2.5.js"></script> -->
 	<script>
+		return false;
 		var app = new Vue({
 		  	el: '#page',
 		  	data: {
