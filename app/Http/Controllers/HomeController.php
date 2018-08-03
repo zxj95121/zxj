@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Wechat;
 
 class HomeController extends Controller
 {
     public function home()
-    {
+    {   echo getenv('ADMINURL') . 'poem/managePoem';
+        $poems = Wechat::curl(getenv('ADMINURL') . 'poem/managePoem');
+        var_dump($poems);die;
     	return view('home');
     }
 
