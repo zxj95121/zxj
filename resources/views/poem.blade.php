@@ -65,7 +65,7 @@
 			</a>
 		</div>
 		@endforeach
-	</div>
+	</div> 
 
 	<!-- jQuery -->
 	<script src="/all/home/js/jquery.min.js"></script>
