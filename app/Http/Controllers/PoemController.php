@@ -19,6 +19,9 @@ class PoemController extends Controller
 
         $poems = Wechat::curl($url, ['id' => $id], $this->headers);
 
+        if ($poems['code'] == 1) {
+        	return redirect()->route('home');
+        }
     	return view('poem/poem_single', ['prefix' => $prefix, 'poem' => $poems['data']]);
     }
 }
