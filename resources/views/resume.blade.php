@@ -206,7 +206,7 @@
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										公司所有业务开发
+										项目开发
 
 									</p>
 								</li>
