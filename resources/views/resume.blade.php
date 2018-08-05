@@ -193,6 +193,26 @@
 							</ul>
 						</div>
 					</div>
+
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2018.5-至今</h2>
+								<h2 class="introduce-wrap-item">安徽民商科技</h2>
+								<h2 class="introduce-wrap-item">PHP工程师</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										公司所有业务开发
+
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				
 			</div>
