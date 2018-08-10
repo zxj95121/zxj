@@ -3,10 +3,10 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{$poem['title']}}-张贤健的诗</title>
+	<title>张贤健的诗-{{$poem['title']}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<!-- <meta name="author" content="张贤健"> -->
-	<meta name="keywords" content="张贤健, 张贤健的诗集, {{$poem['title']}}"/>
+	<meta name="keywords" content="张贤健, wells, php, PHP,  张贤健的诗集, {{$poem['title']}}"/>
 	<!-- <meta name="baidu-site-verification" content="lX0mR46Fv3" /> -->
 	<meta name="description" content="张贤健的诗"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />

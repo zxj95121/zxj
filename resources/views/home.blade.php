@@ -46,7 +46,7 @@
 	
 	<div id="page">	
 	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background:#FF9000;position: relative;" data-stellar-background-ratio="0.5">
-		<a href="https://www.zhangxianjian.com/poem/poem_single/45" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
+		<a href="https://www.zhangxianjian.com/poem/poem_single/45" target="_blank" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
 		background: #9c9e03;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 20px;">诗推荐：今世</a>
 		<div class="overlay"></div>
 		<div class="container">
@@ -83,6 +83,44 @@
 		<a href="http://www.zhangxianjian.com/resume" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
 		background: #1f5242;color: #FFF;z-index: 333;letter-spacing: 20px;position: absolute;bottom: 0;left: 0;">张贤健的个人简历</a>
 	</header>
+
+	<div id="fh5co-features" class="animate-box">
+		<div class="container" id="poem">
+			<div class="services-padding">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 2rem;">
+						<h2>我的诗集</h2>
+					</div>
+				</div>
+				
+					<div class="row">
+						@foreach($poems as $value)
+						<a href="/poem/poem_single/{{$value['id']}}" target="_blank">
+							<div class="col-md-4 .col-xs-12 col-sm-12 text-center poemcol">
+								<div class="feature-left">
+									<span class="icon">
+										<!-- <i class="icon-paintbrush"></i> -->
+										<img src="{{$prefix}}{{$value['url']}}" alt="{{$value['title']}}">
+									</span>
+									<div class="feature-copy">
+										<h3>{{$value['title']}}</h3>
+									
+										<p>{!!$value['content']!!}</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						@endforeach
+					</div>
+
+					<div id="poemBtn" class="row">
+						<a id="seemorepoem" class="btn" href="/poem" target="_blank">
+							查看更多诗集 <i class="icon-arrow-long-right"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+	</div>
 	
 
 	<div id="fh5co-features" class="animate-box">
@@ -171,45 +209,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div id="fh5co-features" class="animate-box">
-		<div class="container" id="poem">
-			<div class="services-padding">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 2rem;">
-						<h2>我的诗集</h2>
-					</div>
-				</div>
-				
-					<div class="row">
-						@foreach($poems as $value)
-						<a href="javascript:void(0);">
-							<div class="col-md-4 .col-xs-12 col-sm-12 text-center poemcol">
-								<div class="feature-left">
-									<span class="icon">
-										<!-- <i class="icon-paintbrush"></i> -->
-										<img src="{{$prefix}}{{$value['url']}}" alt="{{$value['title']}}">
-									</span>
-									<div class="feature-copy">
-										<h3>{{$value['title']}}</h3>
-									
-										<p>{!!$value['content']!!}</p>
-									</div>
-								</div>
-							</div>
-						</a>
-						@endforeach
-					</div>
-
-					<div id="poemBtn" class="row">
-						<a id="seemorepoem" class="btn" href="/poem" target="_blank">
-							查看更多诗集 <i class="icon-arrow-long-right"></i>
-						</a>
-					</div>
 			</div>
 		</div>
 	</div>
