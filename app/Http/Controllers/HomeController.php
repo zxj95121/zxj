@@ -13,29 +13,7 @@ class HomeController extends Controller
     );
 
     public function home()
-    {   
-        for ($i = 1;$i<=56;$i++) {
-            $urls[] = 'https://www.zhangxianjain.com/poem/poem_single/' . $i;
-        }
-        // $urls = array(
-        //     'http://www.example.com/1.html',
-        //     'http://www.example.com/2.html',
-        // );
-        $api = 'http://data.zz.baidu.com/urls?site=https://www.zhangxianjian.com&token=USdg4zkCAsLBJqs8';
-        $ch = curl_init();
-        $options =  array(
-            CURLOPT_URL => $api,
-            CURLOPT_POST => true,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POSTFIELDS => implode("\n", $urls),
-            CURLOPT_HTTPHEADER => array('Content-Type: text/plain'),
-        );
-        curl_setopt_array($ch, $options);
-        $result = curl_exec($ch);
-        echo $result;
-        die;
-
-
+    {
         $prefix = getenv('ADMINURL');
         $url = $prefix . '/api/poem/managePoem';
 
