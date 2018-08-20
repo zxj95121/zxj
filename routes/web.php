@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
+Route::get('/{id}', 'PoemController@poem_single');
 
 
 Route::get('/resume', 'HomeController@resume')->name('resume');
