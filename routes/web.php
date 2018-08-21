@@ -12,12 +12,12 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('/{id}', 'PoemController@poem_single');
+Route::get('/{id}', 'PoemController@poem_single')->where('id', '[0-9]+');
 
 
 Route::get('/resume', 'HomeController@resume')->name('resume');
 Route::get('/poem', 'HomeController@poem')->name('poem');//我的诗集
-// Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
+Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
 Route::get('/dawanzi', 'HomeController@dawanzi')->name('dawanzi');
 Route::get('/my/introduce', 'HomeController@introduce')->name('introduce');
 
