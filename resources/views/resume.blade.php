@@ -197,17 +197,171 @@
 					<div class="introduce">
 						<div class="introduce-sec">
 							<div class="introduce-wrap">
-								<h2 class="introduce-wrap-item">2018.5-至今</h2>
+								<h2 class="introduce-wrap-item">2018.5-2019.1</h2>
 								<h2 class="introduce-wrap-item">安徽民商科技</h2>
-								<h2 class="introduce-wrap-item">PHP工程师</h2>
+								<h2 class="introduce-wrap-item">PHP开发组长</h2>
 								<div class="clear"></div>
 							</div>
 							<ul class="introduce-list">
 								<li class="introduce-item">
 									<div class="introduce-item-dots"></div>
 									<p class="introduce-content">
-										项目开发
+										负责项目的需求确认，开发管理。
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										负责公司模板应用（微擎应用例如人人商城、禾匠小程序）第三方微信支付对接
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										使用fastadmin框架进行系统的管理后台开发
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										参与公司项目前端的小程序开发，vue开发。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
 
+
+			<div class="kind">
+				<div class="kind-son">
+					<div class="title">
+						<div class="title-icon">
+							<i class="icon-tools-2"></i>
+						</div>
+						<div class="title-right">
+							<div class="title-right-content">项目经历（Program）
+							</div>
+						</div>
+					</div>
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2018.9-2019.1</h2>
+								<h2 class="introduce-wrap-item">小拾光照片书</h2>
+								<h2 class="introduce-wrap-item">微信书系统</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										根据用户需要，抓取QQ微博微信说说进用户账户。
+
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										将抓取到的内容进行排版成书，并在前台展示供用户查看。
+
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										用户可增删改查说说内容，更换封面卷头卷尾、书籍板式，添加致谢和序言页面。
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										用户下单，系统生成书籍PDF，供客户提交印刷厂印刷成书。
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										使用fastadmin做管理后台，前台小程序使用原生开发，PC端使用vue脚手架，引入element-ui。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2018.6-2018.7</h2>
+								<h2 class="introduce-wrap-item">麻溜熊</h2>
+								<h2 class="introduce-wrap-item">教练上课系统</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										普通用户进入，可扫码成为教练的学员，也可通过资质认证成为教练。
+
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										学员可预约课程，查看自己的课程信息、教练信息。
+
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										教练可给学员排课，设置学员课程评价，添加学员。
+									</p>
+								</li>
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										小程序前台，fastadmin后台，整个项目开发。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2018.4-2019.5</h2>
+								<h2 class="introduce-wrap-item">油付宝</h2>
+								<h2 class="introduce-wrap-item">加油小程序</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										这是一个小程序项目，主要负责hui-admin管理后台的开发
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="introduce">
+						<div class="introduce-sec">
+							<div class="introduce-wrap">
+								<h2 class="introduce-wrap-item">2017.11-2018.1</h2>
+								<h2 class="introduce-wrap-item">我的能</h2>
+								<h2 class="introduce-wrap-item">社交</h2>
+								<div class="clear"></div>
+							</div>
+							<ul class="introduce-list">
+								<li class="introduce-item">
+									<div class="introduce-item-dots"></div>
+									<p class="introduce-content">
+										这是一个微信开发项目，负责第一版本的前后端开发，采用颜值作为个人资产，可以来发说说，评论点赞，换取礼品等。
 									</p>
 								</li>
 							</ul>
@@ -248,7 +402,7 @@
 					<li class="introduce-item">
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
-							熟练掌握jquery，了解vue。熟悉BootStrap，layui，mui等前端框架。
+							熟练掌握jquery，熟悉vue。熟悉BootStrap，layui，mui等前端框架。
 						</p>
 					</li>
 					<li class="introduce-item">
@@ -273,6 +427,12 @@
 						<div class="introduce-item-dots"></div>
 						<p class="introduce-content">
 							使用memcache,redis缓存技术，AJAX、CURL等前后端技术,JSON、XML数据格式等。
+						</p>
+					</li>
+					<li class="introduce-item">
+						<div class="introduce-item-dots"></div>
+						<p class="introduce-content">
+							了解workerman,swoole等PHP技术。
 						</p>
 					</li>
 				</div>
