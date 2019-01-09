@@ -21,6 +21,11 @@ Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
 Route::get('/dawanzi', 'HomeController@dawanzi')->name('dawanzi');
 Route::get('/my/introduce', 'HomeController@introduce')->name('introduce');
 
+
+/*说说这块*/
+Route::get('/image', 'ImagesController@index')->name('images');
+
+
 Route::get('/a', function () {
     echo phpinfo();
 });
