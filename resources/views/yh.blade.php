@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>姚慧的个人简历</title>
@@ -15,7 +14,6 @@
     <link rel="stylesheet" href="/all/home/css/icomoon.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 </head>
-
 <body>
     <div id="head">
         <div id="head-left"></div>
@@ -38,9 +36,7 @@
                         <div class="intro">姓　　名：姚慧</div>
                         <div class="intro">出生年月：1994年7月</div>
                         <div class="intro">家　　乡：安徽安庆</div>
-                        <div class="intro">电　　话：
-                            <a href="tel:17557286038">17333043573</a>
-                        </div>
+                        <div class="intro">电　　话：<a href="tel:17557286038">17333043573</a></div>
                         <div class="intro">毕业院校：铜陵学院（2014.9-2018.6）</div>
                         <div class="intro">专　　业： 通信工程</div>
                         <div class="intro">学　　历：大学本科</div>
