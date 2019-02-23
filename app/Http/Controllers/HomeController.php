@@ -39,7 +39,12 @@ class HomeController extends Controller
     
     public function shenghong()
     {
-    	return view('shenghong');
+        return view('shenghong');
+    }
+
+    public function yh()
+    {
+    	return view('yh');
     }
 
     public function introduce()
