@@ -134,7 +134,7 @@
 
                                     </p>
                                 </li>
-                                <li>
+                                <li class="introduce-item">
                                     <div class="introduce-item-dots"></div>
                                     <p class="introduce-content">
                                         小组沟通技术难点，前后端沟通交流。
