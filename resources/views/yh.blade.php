@@ -36,7 +36,7 @@
                         <div class="intro">姓　　名：姚慧</div>
                         <div class="intro">出生年月：1994年7月</div>
                         <div class="intro">家　　乡：安徽安庆</div>
-                        <div class="intro">电　　话：<a href="tel:17557286038">17333043573</a></div>
+                        <div class="intro">电　　话：<a href="tel:17333043573">17333043573</a></div>
                         <div class="intro">毕业院校：铜陵学院（2014.9-2018.6）</div>
                         <div class="intro">专　　业： 通信工程</div>
                         <div class="intro">学　　历：大学本科</div>
