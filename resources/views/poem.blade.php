@@ -84,19 +84,25 @@
 			}
 		})
 
+		var prefix = '{{$prefix}}';
 		var page = 2;
 
 		var temp = 0;//不在请求
 
 		$(function(){
 			var height = $(window).height();
-			var total_height = $('#page').height();
-			var cha = total_height - height;
+			
 			window.onscroll = function() {
 				var top = $(window).scrollTop();
+
+				var total_height = $('#page').height();
+				var cha = total_height - height;
 				
 				if (cha - top < 50) {
 
+					if (temp > 0) {
+						return false;
+					}
 					temp = 1;//在请求
 					//快到底了
 					$.ajax({
@@ -104,9 +110,31 @@
 						type: 'post',
 						dataType: 'json',
 						success: function(data){
-							console.log(data)
+							// console.log('fa', data.data)
+							// temp = 0;
+							if (data.data.length == 0) {
+								temp = 2;//已经请求到底部，所有的诗都请求完了
+								// console.log('请求完成' + temp)
+								return false;
+							} else {
+								temp = 0;
+							}
+
+							if (data.code == 0) {
+								for (var i in data.data) {
+									var dom = $('.rowwrap:last');
+									var rowwrap = dom.find('a').length;
+
+									if (rowwrap < 3) {
+										dom.append('<a href="/poem/poem_single/' + data.data[i].id + '"> <div class="col-md-4 div.col-sm-12 flexwrap"> <div class="flex"> <img src="' + prefix + '' + data.data[i].url + '" alt="' + data.data[i].title + '"> <h3>' + data.data[i].title + '</h3> <div>' + data.data[i].content + '</div> </div> </div> </a>');
+									} else {
+										dom.after('<div class="row rowwrap"><a href="/poem/poem_single/' + data.data[i].id + '"> <div class="col-md-4 div.col-sm-12 flexwrap"> <div class="flex"> <img src="' + prefix + '' + data.data[i].url + '" alt="' + data.data[i].title + '"> <h3>' + data.data[i].title + '</h3> <div>' + data.data[i].content + '</div> </div> </div> </a> </div>');
+									}
+									// console.log(rowwrap);
+								}
+							}
 						},
-						complete: function(){
+						error: function(){
 							temp = 0;//请求完成
 						}
 					})
@@ -114,9 +142,6 @@
 			}
 		})
 
-		function ajaxMore($page=1){
-
-		}
 		
 	</script>
 
