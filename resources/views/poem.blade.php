@@ -83,10 +83,45 @@
 				'X-CSRF-TOKEN': '{{csrf_token()}}'
 			}
 		})
+
+		var page = 2;
+
+		var temp = 0;//不在请求
+
+		$(function(){
+			var height = $(window).height();
+			var total_height = $('#page').height();
+			var cha = total_height - height;
+			window.onscroll = function() {
+				var top = $(window).scrollTop();
+				
+				if (cha - top < 50) {
+
+					temp = 1;//在请求
+					//快到底了
+					$.ajax({
+						url: '/poem_some/' + (page++),
+						type: 'post',
+						dataType: 'json',
+						success: function(data){
+							console.log(data)
+						},
+						complete: function(){
+							temp = 0;//请求完成
+						}
+					})
+				}
+			}
+		})
+
+		function ajaxMore($page=1){
+
+		}
+		
 	</script>
 
 	<!-- <script type="text/javascript" src="/all/home/js/vue2.5.js"></script> -->
-	<script>
+	<!-- <script>
 		return false;
 		var app = new Vue({
 		  	el: '#page',
@@ -134,7 +169,7 @@
 		  		}
 		  	}
 		})
-	</script>
+	</script> -->
 	</body>
 </html>
 

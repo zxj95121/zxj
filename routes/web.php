@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/{id}', 'PoemController@poem_single')->where('id', '[0-9]+');
+Route::get('/poem_some/{id}', 'PoemController@poem_some')->where('id', '[0-9]+');
 
 
 Route::get('/resume', 'HomeController@resume')->name('resume');

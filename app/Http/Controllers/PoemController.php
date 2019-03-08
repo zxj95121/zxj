@@ -24,4 +24,16 @@ class PoemController extends Controller
         }
     	return view('poem/poem_single', ['prefix' => $prefix, 'poem' => $poems['data']]);
     }
+
+    /*ajax每次请求一定量的诗集*/
+    public function poem_some($page, Request $request)
+    {
+        $prefix = getenv('ADMINURL');
+        $url = $prefix . '/api/poem/allpoems';
+
+        $poems = Wechat::curl($url, ['page' => $page, 'pagesize' => 20], $this->headers);
+
+        echo json_encode($poems);
+        die;
+    }
 }

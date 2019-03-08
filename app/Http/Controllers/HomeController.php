@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function poem(Request $request)
     {
         $prefix = getenv('ADMINURL');
-        $url = $prefix . '/api/poem/allpoems';
+        $url = $prefix . '/api/poem/allpoems?pagesize=20';
 
         $poems = Wechat::curl($url, null, $this->headers);
         // var_dump($poems);
