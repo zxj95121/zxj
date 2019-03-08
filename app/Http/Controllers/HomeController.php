@@ -27,6 +27,11 @@ class HomeController extends Controller
         return view('resume');
     }
 
+    public function wells()
+    {
+        return view('wells');
+    }
+
     public function poem(Request $request)
     {
         $prefix = getenv('ADMINURL');

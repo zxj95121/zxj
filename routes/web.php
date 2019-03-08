@@ -16,6 +16,7 @@ Route::get('/{id}', 'PoemController@poem_single')->where('id', '[0-9]+');
 
 
 Route::get('/resume', 'HomeController@resume')->name('resume');
+Route::get('/wells', 'HomeController@wells')->name('wells');
 Route::get('/yh', 'HomeController@yh')->name('yh');
 Route::get('/poem', 'HomeController@poem')->name('poem');//我的诗集
 Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
