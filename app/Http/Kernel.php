@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'Admin' => \App\Http\Middleware\CheckAdmin::class,
         
+        'resume_verify' => \App\Http\Middleware\ResumeVerify::class,
     ];
 }

@@ -2,7 +2,7 @@
  * Created by Yuri2 on 2017/7/10.
  */
 window.Win10 = {
-    _version:'v1.1.2.4',
+    _version:'v1.0',
     _debug:true,
     _bgs:{
         main:'',
@@ -415,14 +415,14 @@ window.Win10 = {
             $("#win10_btn_time").html(hours+':'+mins+'<br/>'+year+'/'+month+'/'+date);
         },1000);
         //离开前警告
-        document.body.onbeforeunload = function(event){
-            var rel = Win10.lang( '系统可能不会保存您所做的更改','The system may not save the changes you have made.');
-            if(!window.event){
-                event.returnValue=rel;
-            }else{
-                window.event.returnValue=rel;
-            }
-        };
+        // document.body.onbeforeunload = function(event){
+        //     var rel = Win10.lang( '系统可能不会保存您所做的更改','The system may not save the changes you have made.');
+        //     if(!window.event){
+        //         event.returnValue=rel;
+        //     }else{
+        //         window.event.returnValue=rel;
+        //     }
+        // };
         Win10.buildList();//预处理左侧菜单
         Win10._startAnimate();//动画处理
         Win10.renderShortcuts();//渲染图标
@@ -445,9 +445,9 @@ window.Win10 = {
             }
         });
         //打广告
-        setTimeout(function () {
-            console.log(Win10.lang('本页由Win10-UI强力驱动\n更多信息：http://win10ui.yuri2.cn \nWin10-UI,轻松打造别具一格的后台界面 ','The page is strongly driven by Win10-UI.\nFor more info: http://win10ui.yuri2.cn.\n Win10-UI, easy to create a unique background interface.'))
-        },2000);
+        // setTimeout(function () {
+        //     console.log(Win10.lang('本页由Win10-UI强力驱动\n更多信息：http://win10ui.yuri2.cn \nWin10-UI,轻松打造别具一格的后台界面 ','The page is strongly driven by Win10-UI.\nFor more info: http://win10ui.yuri2.cn.\n Win10-UI, easy to create a unique background interface.'))
+        // },2000);
         //点击清空右键菜单
         $(document).click(function (event) {
             if(!event.button)
@@ -487,6 +487,7 @@ window.Win10 = {
             }],
             ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('进入全屏','Enable Full Screen'),function () {Win10.enableFullScreen()}],
             ['<i class="fa fa-fw fa-window-restore"></i> '+Win10.lang('退出全屏','Disable Full Screen'),function () {Win10.disableFullScreen()}],
+            ['<i class="fa fa-fw fa-refresh"></i> ' + Win10.lang('刷新网页', 'Refresh'), function () { parent.window.location.reload() }],
             '|',
             ['<i class="fa fa-fw fa-info-circle"></i> '+Win10.lang('关于','About Us'),function () {Win10.aboutUs()}],
         ]);
@@ -838,15 +839,15 @@ window.Win10 = {
         this._animated_liveness=animated_liveness;
     },
     exit:function () {
-        layer.confirm(Win10.lang('确认要关闭本页吗?','Are you sure you want to close this page?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
+        layer.confirm(Win10.lang('确认退出当前登录吗?','Are you sure you want exit your login?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
             document.body.onbeforeunload = function(){};
-            window.location.href="about:blank";
-            window.close();
-            layer.close(index);
-            layer.alert(Win10.lang('哎呀,好像失败了呢。','Ops...There seems to be a little problem.'), {
-                skin: 'layui-layer-lan'
-                ,closeBtn: 0
-            });
+            window.location.href="/resume/login_out";
+            // window.close();
+            // layer.close(index);
+            // layer.alert(Win10.lang('哎呀,好像失败了呢。','Ops...There seems to be a little problem.'), {
+            //     skin: 'layui-layer-lan'
+            //     ,closeBtn: 0
+            // });
         });
 
     },
@@ -860,13 +861,13 @@ window.Win10 = {
             closeBtn: 1, //不显示关闭按钮
             anim: 2,
             skin: 'layui-layer-molv',
-            title: 'WIN10-UI '+this._version,
+            title: '关于本系统 '+this._version,
             shadeClose: true, //开启遮罩关闭
             area: ['320px', '200px'], //宽高
             content: '<div style="padding: 10px;font-size: 12px">' +
-            '<p>支持组件:layer、jquery、animated.css、font-awesome</p>' +
-            '<p>尤里2号©版权所有</p>' +
-            '<p>作者邮箱:yuri2peter@qq.com</p>' +
+            '<p>使用组件:layui.jquery.fontawesome.win10-ui,jqueryvalidate</p>' +
+            '<p>wells©版权所有</p>' +
+            '<p>作者邮箱:986773071@qq.com</p>' +
             '</div>'
         });
     },

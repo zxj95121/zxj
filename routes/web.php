@@ -23,13 +23,40 @@ Route::get('/poem', 'HomeController@poem')->name('poem');//我的诗集
 Route::get('/shenghong', 'HomeController@shenghong')->name('shenghong');
 Route::get('/dawanzi', 'HomeController@dawanzi')->name('dawanzi');
 Route::get('/my/introduce', 'HomeController@introduce')->name('introduce');
+Route::get('/my/xiaotong', 'HomeController@xiaotong')->name( 'xiaotong');
+
+
+/*网页简历开发系统*/
+Route::group(['prefix' => 'resume', 'middleware' => 'resume_verify'], function () {
+    Route::match(['get', 'post'], '/login', 'Resume\LoginController@home');
+    Route::match(['get'], '/login_out', 'Resume\LoginController@login_out');
+    Route::get('/home', 'Resume\HomeController@home');
+    
+    /* 资料相关 */
+    Route::match(['get', 'post'], '/message/index', 'Resume\MessageController@index');
+    
+     /* 用户管理 */
+    Route::get( '/user/index', 'Resume\UserController@index');
+    Route::post( '/user/list', 'Resume\UserController@_list');
+    Route::match(['get', 'post'],  '/user/edit', 'Resume\UserController@edit');
+
+    /* VIP等级管理 */
+    Route::get('/vip/index', 'Resume\VipController@index');
+    Route::post('/vip/list', 'Resume\VipController@_list');
+    Route::match(['get', 'post'],  '/vip/edit', 'Resume\VipController@edit');
+
+    /* 简历类型管理 */
+    Route::get( '/block/index', 'Resume\BlockController@index');
+    Route::post( '/block/list', 'Resume\BlockController@_list');
+    Route::match(['get', 'post'],  '/block/edit', 'Resume\BlockController@edit');
+});
 
 
 /*说说这块*/
 Route::get('/image', 'ImagesController@index')->name('images');
 
 
-Route::get('/a', function () {
+Route::get('/phpinfo', function () {
     echo phpinfo();
 });
 

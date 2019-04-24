@@ -61,4 +61,8 @@ class HomeController extends Controller
     {
         return view('dawanzi');
     }
+    public function xiaotong()
+    {
+        return view('xiaotong');
+    }
 }
