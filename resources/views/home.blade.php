@@ -39,6 +39,8 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="/all/home/css/home.css">
+	<script src="/all/home/js/mouse.js"> </script>
+    <link type="text/css" rel="styleSheet" href="/all/home/css/mouse.css">
 	</head>
 	<body>
 		
@@ -55,7 +57,6 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<div class="profile-thumb" style=""><img src="/all/home/images/user-4.jpg" alt="张贤健" style="height: 100%;border-radius: 50%;"></div>
-
 							<h1><span>Wells 张贤健</span></h1>
 							<h3><span>安师大那么大，有志青年何其多，只是大多未尝一见！</span></h3>
 							<br>
@@ -83,7 +84,57 @@
 		<a href="http://www.zhangxianjian.com/resume" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
 		background: #1f5242;color: #FFF;z-index: 333;letter-spacing: 20px;position: absolute;bottom: 0;left: 0;">张贤健的个人简历</a>
 	</header>
+	<div style="background: #FF9000;height: 640px;">
+		<div class="wrap" style="margin-top: 200px auto;top: 250px;">
+	        <!--部署内外层图片-->
+	        <div class="cube">
+	            <!--前面图片 -->
+	            <div class="out_front">
+	                <img src="https://admin.zxjxj.com/uploads/20190814/0784e13dde2ccd3efeac4d487768aef9.jpg" class="pic" alt="张贤健">
+	            </div>
+	            <!--后面图片 -->
+	            <div class="out_back">
+	                <img src="https://admin.zxjxj.com/uploads/20190704/c5bc21b8a2d06a9ece56f1ec9da50d4b.gif" class="pic"  alt="张贤健">
+	            </div>
+	            <!--左面图片 -->
+	            <div class="out_left">
+	                <img src="https://admin.zxjxj.com/uploads/20190704/c082ddb2b9daee46f527982f11a0e812.jpg" class="pic" alt="张贤健">
+	            </div>
+	            <!--右面图片 -->
+	            <div class="out_right">
+	                <img src="https://admin.zxjxj.com/uploads/20190531/2bf41bbff3fb68086c1d11c58c8d6793.jpg" class="pic" alt="张贤健">
+	            </div>
+	            <!--上面图片 -->
+	            <div class="out_top">
+	                <img src="https://admin.zxjxj.com/uploads/20190531/09588448feb02d936fd7f3dcbf51ed6d.jpg" class="pic" alt="张贤健">
+	            </div>
+	            <!--下面图片 -->
+	            <div class="out_bottom">
+	                <img src="https://admin.zxjxj.com/uploads/20190408/a715cf8d52507367870afd0972cb9ba4.png" class="pic" alt="张贤健">
+	            </div>
 
+	            <!--小正方体 -->
+	            <span class="in_front">
+	                    <img src="https://admin.zxjxj.com/uploads/20190309/81730ccb00bb1ee7784c8a742808f6ea.jpg" class="in_pic" alt="张贤健">
+	                </span>
+	            <span class="in_back">
+	                    <img src="https://admin.zxjxj.com/uploads/20190309/6ff3427b1d0adba8975483ad4eddc2e1.jpg" class="in_pic" alt="张贤健">
+	                </span>
+	            <span class="in_left">
+	                    <img src="https://admin.zxjxj.com/uploads/20190309/03150c0b8ab7644ba464aece34eca37b.jpg" class="in_pic" alt="张贤健">
+	                </span>
+	            <span class="in_right">
+	                    <img src="https://admin.zxjxj.com/uploads/20190309/eb6abf06717858f60a61bdec6fcc70b6.jpg" class="in_pic" alt="张贤健">
+	                </span>
+	            <span class="in_top">
+	                    <img src="https://admin.zxjxj.com/uploads/20190305/d02e4a2dccc7f67267194ae4bfb09a10.jpg" class="in_pic" alt="张贤健">
+	                </span>
+	            <span class="in_bottom">
+	                    <img src="https://admin.zxjxj.com/uploads/20181231/663c459738c44032fbb550e725135373.jpg" class="in_pic" alt="张贤健">
+	                </span>
+	        </div>
+	    </div>
+	</div>
 	<div id="fh5co-features" class="animate-box">
 		<div class="container" id="poem">
 			<div class="services-padding">
