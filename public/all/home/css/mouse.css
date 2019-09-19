@@ -1,0 +1,172 @@
+/*body {
+background-color:whitesmoke;
+}
+
+
+#home,#sideBarMain>div,#blog-sidecolumn>div>div,.catListView{
+    background-color:rgba(255,255,255,0);
+}
+*/
+
+
+
+        /*æœ€å¤–å±‚å®¹å™¨æ ·å¼*/
+        .wrap {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /*å¾—åˆ°ç«‹æ–¹ä½“æ•ˆæžœ*/
+        .cube {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            /*è®¾ç½®åŠ¨ç”»æ’­æ”¾æ ·å¼:åŠ¨ç”»å¯¹è±¡ æ’­æ”¾é€Ÿåº¦ æ—¶é—´ æ’­æ”¾æ¬¡æ•°*/
+            animation: rotate linear 20s infinite;
+        }
+
+        /*åŠ¨ç”»æ—‹è½¬çš„æ–¹å¼*/
+        /*å¾—åˆ°åŠ¨ç”»æ•ˆæžœ*/
+        @-moz-keyframes rotate {                     /*firefox*/
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        @-webkit-keyframes rotate {                /*sofari chrome*/
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        @-o-keyframes rotate {                    /*opera*/
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        /*æ¯å¼ å›¾ç‰‡çš„æ ·å¼*/
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+            /*è¿‡æ¸¡æ•ˆæžœ*/
+            transition: all .4s;
+        }
+
+        /*å®šä¹‰æ‰€æœ‰å›¾ç‰‡æ ·å¼*/
+        .pic {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cube .out_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube .out_back {
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+
+        .cube .out_left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube .out_right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube .out_top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .cube .out_bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        /*å®šä¹‰å°æ­£æ–¹ä½“æ ·å¼*/
+        .cube span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .cube .in_pic {
+            width: 100px;
+            height: 100px;
+        }
+
+        .cube .in_front {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+
+        .cube .in_back {
+            transform: translateZ(-50px) rotateY(180deg);
+        }
+
+        .cube .in_left {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .cube .in_right {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        .cube .in_top {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        .cube .in_bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        /*é¼ æ ‡ç§»å…¥åŽæ ·å¼*/
+        .cube:hover .out_front {
+            transform: rotateY(0deg) translateZ(200px);
+        }
+
+        .cube:hover .out_back {
+            transform: translateZ(-200px) rotateY(180deg);
+        }
+
+        .cube:hover .out_left {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        .cube:hover .out_right {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        .cube:hover .out_top {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        .cube:hover .out_bottom {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+
+/* è®¾ç½®ç­¾åæ ¼å¼ */
+/*#MySignature {
+    display: none;
+    background-color: #edefea;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #6B6B6B;
+    padding: 10px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px #FFF;
+    font-size: 16px;
+    font-family: 'Microsoft Yahei';
+}*/
