@@ -1,16 +1,16 @@
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:6Y68IbSFwwXzPMgL32kJtZ612jQJijGJyrFM46mrA+I=
-APP_DEBUG=false
+APP_DEBUG=true
 APP_LOG_LEVEL=debug
 APP_URL=http://www.zhangxianjian.com
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=zxj
-DB_USERNAME=root
-DB_PASSWORD=root
+DB_DATABASE=www_zhangxianjia
+DB_USERNAME=www_zhangxianjia
+DB_PASSWORD=p24bzm7mbw5cTMXe
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
