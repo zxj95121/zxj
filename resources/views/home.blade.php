@@ -90,47 +90,47 @@
 	        <div class="cube">
 	            <!--前面图片 -->
 	            <div class="out_front">
-	                <img src="https://admin.zxjxj.com/uploads/20190814/0784e13dde2ccd3efeac4d487768aef9.jpg" class="pic" alt="张贤健">
+	                <img src="{{$prefix}}{{$poems[0]['url']}}" class="pic" title="张贤健的诗-{{$poems[0]['title']}}" alt="{{$poems[0]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[0]['id']}}';">
 	            </div>
 	            <!--后面图片 -->
 	            <div class="out_back">
-	                <img src="https://admin.zxjxj.com/uploads/20190704/c5bc21b8a2d06a9ece56f1ec9da50d4b.gif" class="pic"  alt="张贤健">
+	                <img src="{{$prefix}}{{$poems[1]['url']}}" class="pic" title="张贤健的诗-{{$poems[1]['title']}}"  alt="{{$poems[1]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[1]['id']}}';">
 	            </div>
 	            <!--左面图片 -->
 	            <div class="out_left">
-	                <img src="https://admin.zxjxj.com/uploads/20190704/c082ddb2b9daee46f527982f11a0e812.jpg" class="pic" alt="张贤健">
+	                <img src="{{$prefix}}{{$poems[2]['url']}}" class="pic" title="张贤健的诗-{{$poems[2]['title']}}" alt="{{$poems[2]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[2]['id']}}';">
 	            </div>
 	            <!--右面图片 -->
 	            <div class="out_right">
-	                <img src="https://admin.zxjxj.com/uploads/20190531/2bf41bbff3fb68086c1d11c58c8d6793.jpg" class="pic" alt="张贤健">
+	                <img src="{{$prefix}}{{$poems[3]['url']}}" class="pic" title="张贤健的诗-{{$poems[3]['title']}}" alt="{{$poems[3]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[3]['id']}}';">
 	            </div>
 	            <!--上面图片 -->
 	            <div class="out_top">
-	                <img src="https://admin.zxjxj.com/uploads/20190531/09588448feb02d936fd7f3dcbf51ed6d.jpg" class="pic" alt="张贤健">
+	                <img src="{{$prefix}}{{$poems[4]['url']}}" class="pic" title="张贤健的诗-{{$poems[4]['title']}}" alt="{{$poems[4]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[4]['id']}}';">
 	            </div>
 	            <!--下面图片 -->
 	            <div class="out_bottom">
-	                <img src="https://admin.zxjxj.com/uploads/20190408/a715cf8d52507367870afd0972cb9ba4.png" class="pic" alt="张贤健">
+	                <img src="{{$prefix}}{{$poems[5]['url']}}" class="pic" title="张贤健的诗-{{$poems[5]['title']}}" alt="{{$poems[5]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[5]['id']}}';">
 	            </div>
 
 	            <!--小正方体 -->
 	            <span class="in_front">
-	                    <img src="https://admin.zxjxj.com/uploads/20190309/81730ccb00bb1ee7784c8a742808f6ea.jpg" class="in_pic" alt="张贤健">
+	                    <img src="{{$prefix}}{{$poems[6]['url']}}" class="in_pic" title="张贤健的诗-{{$poems[6]['title']}}" alt="{{$poems[6]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[6]['id']}}';">
 	                </span>
 	            <span class="in_back">
-	                    <img src="https://admin.zxjxj.com/uploads/20190309/6ff3427b1d0adba8975483ad4eddc2e1.jpg" class="in_pic" alt="张贤健">
+	                    <img src="{{$prefix}}{{$poems[7]['url']}}" class="in_pic" title="张贤健的诗-{{$poems[7]['title']}}" alt="{{$poems[7]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[7]['id']}}';">
 	                </span>
 	            <span class="in_left">
-	                    <img src="https://admin.zxjxj.com/uploads/20190309/03150c0b8ab7644ba464aece34eca37b.jpg" class="in_pic" alt="张贤健">
+	                    <img src="{{$prefix}}{{$poems[8]['url']}}" class="in_pic" title="张贤健的诗-{{$poems[8]['title']}}" alt="{{$poems[8]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[8]['id']}}';">
 	                </span>
 	            <span class="in_right">
-	                    <img src="https://admin.zxjxj.com/uploads/20190309/eb6abf06717858f60a61bdec6fcc70b6.jpg" class="in_pic" alt="张贤健">
+	                    <img src="{{$prefix}}{{$poems[9]['url']}}" class="in_pic" title="张贤健的诗-{{$poems[9]['title']}}" alt="{{$poems[9]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[9]['id']}}';">
 	                </span>
 	            <span class="in_top">
-	                    <img src="https://admin.zxjxj.com/uploads/20190305/d02e4a2dccc7f67267194ae4bfb09a10.jpg" class="in_pic" alt="张贤健">
+	                    <img src="{{$prefix}}{{$poems[10]['url']}}" class="in_pic" title="张贤健的诗-{{$poems[10]['title']}}" alt="{{$poems[10]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[10]['id']}}';">
 	                </span>
 	            <span class="in_bottom">
-	                    <img src="https://admin.zxjxj.com/uploads/20181231/663c459738c44032fbb550e725135373.jpg" class="in_pic" alt="张贤健">
+	                    <img src="{{$prefix}}{{$poems[11]['url']}}" class="in_pic" title="张贤健的诗-{{$poems[11]['title']}}" alt="{{$poems[11]['title']}}" onclick="window.location.href='/poem/poem_single/{{$poems[11]['id']}}';">
 	                </span>
 	        </div>
 	    </div>
@@ -145,7 +145,8 @@
 				</div>
 				
 					<div class="row">
-						@foreach($poems as $value)
+						@foreach($poems as $key => $value)
+						@if ($key < 3)
 						<a href="/poem/poem_single/{{$value['id']}}" target="_blank">
 							<div class="col-md-4 .col-xs-12 col-sm-12 text-center poemcol">
 								<div class="feature-left">
@@ -161,6 +162,8 @@
 								</div>
 							</div>
 						</a>
+						@else
+						@endif
 						@endforeach
 					</div>
 

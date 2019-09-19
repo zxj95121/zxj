@@ -158,6 +158,10 @@ background-color:whitesmoke;
             transform: rotateX(-90deg) translateZ(200px);
         }
 
+        .cube img{
+            cursor: pointer;
+        }
+
 /* è®¾ç½®ç­¾åæ ¼å¼ */
 /*#MySignature {
     display: none;
