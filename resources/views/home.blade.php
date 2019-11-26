@@ -40,8 +40,15 @@
 	<![endif]-->
 	<link rel="stylesheet" href="/all/home/css/home.css">
     <link type="text/css" rel="styleSheet" href="/all/home/css/mouse.css">
+		<style>
+			@media screen and (max-width: 500px) {
+				#fh5co-features {
+					background: #FF9000 !important;
+				}
+			}
+		</style>
 	</head>
-	<body style="background-image: url(/all/home/snow/bg.jpg);background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;">
+	<body>
 		
 	<!-- <div class="fh5co-loader"></div> -->
 	
