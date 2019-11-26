@@ -6,7 +6,7 @@
 	<title>张贤健-溪山行旅</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="张贤健">
-	<meta name="keywords" content="张贤健, wells, php, PHP, laravel, 微信, 小程序, "/>
+	<meta name="keywords" content="张贤健, wells, php, PHP, laravel, 微信, 恨琴文集 "/>
 	<!-- <meta name="baidu-site-verification" content="lX0mR46Fv3" /> -->
 	<meta name="description" content="自己选择的不平凡，所有坎坷都得去挑战。"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -52,6 +52,9 @@
 		background: #9c9e03;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 20px;">诗推荐：今世</a></h2>
 		<div class="overlay"></div>
 		<div class="container">
+			<div class="row" style="z-index: 444;position: relative;top: 91px;">
+				<p style="font-size: 60px;text-align: center;color: red;background-color: #FFF;">我和我的祖国</p>
+			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t js-fullheight">
@@ -140,7 +143,7 @@
 			<div class="services-padding">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 2rem;">
-						<h2>我的诗集</h2>
+						<h2>恨琴文集</h2>
 					</div>
 				</div>
 				

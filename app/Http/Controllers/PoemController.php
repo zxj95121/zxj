@@ -15,6 +15,7 @@ class PoemController extends Controller
     public function poem_single($id, Request $request)
     {
     	$prefix = getenv('ADMINURL');
+    	$prefix = 'https://admin.zxjxj.com';
         $url = $prefix . '/api/poem/poem_single';
 
         $poems = Wechat::curl($url, ['id' => $id], $this->headers);
@@ -29,6 +30,7 @@ class PoemController extends Controller
     public function poem_some($page, Request $request)
     {
         $prefix = getenv('ADMINURL');
+        $prefix = 'https://admin.zxjxj.com';
         $url = $prefix . '/api/poem/allpoems';
 
         $poems = Wechat::curl($url, ['page' => $page, 'pagesize' => 20], $this->headers);

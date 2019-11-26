@@ -15,10 +15,10 @@ class HomeController extends Controller
     public function home()
     {
         $prefix = env('ADMINURL');
+        
+        $prefix = 'https://admin.zxjxj.com';
         $url = $prefix . '/api/poem/managePoem';
-
         $poems = Wechat::curl($url, null, $this->headers);
-
     	return view('home', ['poems' => $poems['data'], 'prefix' => $prefix]);
     }
 
@@ -35,6 +35,7 @@ class HomeController extends Controller
     public function poem(Request $request)
     {
         $prefix = env('ADMINURL');
+        $prefix = 'https://admin.zxjxj.com';
         $url = $prefix . '/api/poem/allpoems?pagesize=20';
 
         $poems = Wechat::curl($url, null, $this->headers);

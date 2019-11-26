@@ -106,7 +106,7 @@
 					<div class="introduce">
 						<div class="introduce-sec">
 							<div class="introduce-wrap">
-								<h2 class="introduce-wrap-item">2016.9-2017.6</h2>
+								<h2 class="introduce-wrap-item">2017.2-2017.6</h2>
 								<h2 class="introduce-wrap-item">杭州新方向网络</h2>
 								<h2 class="introduce-wrap-item">PHP工程师</h2>
 								<div class="clear"></div>
