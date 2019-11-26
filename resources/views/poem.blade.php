@@ -17,7 +17,8 @@
 	<style type="text/css">
 		html, #page{
 			color: #fff;
-    		background: #FF9000;
+    		/*background: #FF9000;*/
+			background: none !important;
 		}
 		h3,.feature-copy p{
 			font-family: "微软雅黑";
@@ -74,6 +75,7 @@
 
 	<!-- jQuery -->
 	<script src="/all/home/js/jquery.min.js"></script>
+	<script src="/all/home/snow/xiaxue.js"></script>
 	<!-- Bootstrap -->
 	<script src="/all/home/js/bootstrap.min.js"></script>
 
