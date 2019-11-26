@@ -1,8 +1,17 @@
 var path = "/all/home/snow/";
-window.onload = function() {
-    if(web!='http://zhangxianjian.com'){
-        location.href="http://centphp.com";
+snow_web = ["zxj.com", "zxjxj.com", "zhangxianjian.com", "www.zhangxianjian.com", "www.zxjxj.com"];
+snow_host = location.host;
+console.log(snow_host);
+web_in = false;
+for (var i in snow_web) {
+    if(snow_web[i] == snow_host) {
+        web_in = true;
     }
+}
+if (!web_in)
+    location.href = "http://www.zhangxianjian.com";
+
+window.onload = function() {
     var w = window.screen.availWidth;
     var h = window.innerHeight;
     document.body.style.backgroundImage = 'url(' + path + 'bg.jpg)';
