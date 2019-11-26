@@ -39,7 +39,6 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="/all/home/css/home.css">
-	<script src="/all/home/js/mouse.js"> </script>
     <link type="text/css" rel="styleSheet" href="/all/home/css/mouse.css">
 	</head>
 	<body>
@@ -138,7 +137,7 @@
 	        </div>
 	    </div>
 	</div>
-	<div id="fh5co-features" class="animate-box">
+	<div id="fh5co-features" style="background-color: none !important;" class="animate-box">
 		<div class="container" id="poem">
 			<div class="services-padding">
 				<div class="row">
@@ -414,6 +413,7 @@
 	
 	<!-- jQuery -->
 	<script src="/all/home/js/jquery.min.js"></script>
+{{--	<script src="/all/home/js/mouse.js"> </script>--}}
 	<!-- jQuery Easing -->
 	<script src="/all/home/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
@@ -430,6 +430,7 @@
 	<script src="/all/admin/assets/sweet-alert/sweet-alert.min.js"></script>
 	<!-- Main -->
 	<script src="/all/home/js/main.js"></script>
+	<script src="/all/home/snow/xiaxue.js"></script>
 	<script>
 		(function(){
 		    var bp = document.createElement('script');
@@ -444,51 +445,6 @@
 		    s.parentNode.insertBefore(bp, s);
 		})();
 	</script>
-	<script>
-
-		(function($){ 
-			$.fn.snow=function(options){ 
-			var $flake=$('<div />') 
-			.css({ 
-			'position':'fixed',//'absolute', 
-			'top':'-50px', 
-			'z-index':'1000' 
-			}) 
-			.html('❄'); 
-			var documentHeight=document.documentElement.clientHeight;//$(document).height(); 
-			var documentWidth=$(document).width(); 
-			var defaults={minSize:10,maxSize:20,newOn:500,flakeColor:"#FFFFFF"}; 
-			var options=$.extend({},defaults,options); 
-			var interval=setInterval(function(){ 
-			var startPositionLeft=Math.random()*documentWidth-100; 
-			var startOpacity=0.5+Math.random(); 
-			var sizeFlake=options.minSize+Math.random()*options.maxSize; 
-			var endPositionTop=documentHeight-40; 
-			var endPositionLeft=startPositionLeft-100+Math.random()*200; 
-			var durationFall=documentHeight*10+Math.random()*5000; 
-			$flake.clone() 
-			.appendTo('body') 
-			.css({ 
-			left:startPositionLeft, 
-			opacity:startOpacity, 
-			'font-size':sizeFlake, 
-			color:options.flakeColor 
-			}) 
-			.animate({ 
-			top:endPositionTop, 
-			left:endPositionLeft, 
-			opacity:0.2 
-			}, 
-			durationFall, 
-			'linear', 
-			function(){ 
-			$(this).remove(); 
-			}); 
-			},options.newOn);//interval End 
-			};//$.fn.snow End 
-			})(jQuery); 
-			$.fn.snow({ minSize: 10, maxSize: 60, newOn: 800, flakeColor: '#ccc'}); 
-</script>
 
 	<script type="text/javascript">
 		$.ajaxSetup({
