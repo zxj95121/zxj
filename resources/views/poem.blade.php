@@ -17,8 +17,8 @@
 	<style type="text/css">
 		html, #page{
 			color: #fff;
-    		/*background: #FF9000;*/
-			background: none !important;
+    		background: #FF9000;
+			/*background: none !important;*/
 		}
 		h3,.feature-copy p{
 			font-family: "微软雅黑";
