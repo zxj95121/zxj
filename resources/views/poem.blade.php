@@ -6,7 +6,7 @@
 	<title>张贤健的诗集之恨琴文集</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<meta name="author" content="张贤健">
-	<meta name="keywords" content="张贤健,恨琴文集, 张贤健的诗集, 安师大张贤健"/>
+	<meta name="keywords" content="张贤健,恨琴文集, 张贤健的诗, 安师大张贤健, 安师大，安徽师范大学"/>
 	<!-- <meta name="baidu-site-verification" content="lX0mR46Fv3" /> -->
 	<meta name="description" content="张贤健的诗集"/>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -75,7 +75,7 @@
 
 	<!-- jQuery -->
 	<script src="/all/home/js/jquery.min.js"></script>
-	<script src="/all/home/snow/xiaxue.js"></script>
+{{--	<script src="/all/home/snow/xiaxue.js"></script>--}}
 	<!-- Bootstrap -->
 	<script src="/all/home/js/bootstrap.min.js"></script>
 
