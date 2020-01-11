@@ -408,7 +408,7 @@
 		
 	</div>
 	<div style="background-color: #FF9000;height: 38px;line-height: 38px;font-size: 16px;text-align: center;width: 100%;float: left;">
-		<a href="http://www.miitbeian.gov.cn/" style="color: #FFF;">皖ICP备17010760号</a>
+		<a href="http://www.beian.miit.gov.cn/" style="color: #FFF;">皖ICP备17018769号</a>
 	</div>
 
 	<!-- <div id="map" class="fh5co-map"></div> -->
@@ -437,7 +437,7 @@
 	<script src="/all/admin/assets/sweet-alert/sweet-alert.min.js"></script>
 	<!-- Main -->
 	<script src="/all/home/js/main.js"></script>
-	<script src="/all/home/snow/xiaxue.js"></script>
+
 	<script>
 		(function(){
 		    var bp = document.createElement('script');
