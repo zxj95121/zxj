@@ -33,7 +33,7 @@ class PoemController extends Controller
         $prefix = 'https://admin.zxjxj.com';
         $url = $prefix . '/api/poem/allpoems';
 
-        $poems = Wechat::curl($url, ['page' => $page, 'pagesize' => 20], $this->headers);
+        $poems = Wechat::curl($url, ['page' => $page, 'pagesize' => 500], $this->headers);
 
         echo json_encode($poems);
         die;
