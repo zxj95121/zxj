@@ -36,7 +36,7 @@ class HomeController extends Controller
     {
         $prefix = env('ADMINURL');
         $prefix = 'https://admin.zxjxj.com';
-        $url = $prefix . '/api/poem/allpoems?pagesize=20';
+        $url = $prefix . '/api/poem/allpoems?pagesize=500';
 
         $poems = Wechat::curl($url, null, $this->headers);
         // var_dump($poems);
