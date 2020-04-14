@@ -54,12 +54,12 @@
 	
 	<div id="page">	
 	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background:#FF9000;position: relative;" data-stellar-background-ratio="0.5">
-		<h2 style="margin: 0;"><a href="https://www.zhangxianjian.com/poem/poem_single/45" target="_blank" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
-		background: #9c9e03;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 20px;">诗推荐：今世</a></h2>
+		<!--<h2 style="margin: 0;"><a href="https://www.zhangxianjian.com/poem/poem_single/301" target="_blank" style="width: 100%;height: 36px;font-size: 20px;line-height: 36px;text-align: center;
+		background: #9c9e03;background-color: #520b28;color: #FFF;position: absolute;top: 0;z-index: 333;letter-spacing: 0px;">你永远不懂我伤悲，像白天不懂夜的黑。</a></h2>-->
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row" style="z-index: 444;position: relative;top: 91px;">
-				<p style="font-size: 60px;text-align: center;color: red;background-color: #FFF;">我和我的祖国</p>
+				<p style="font-size: 33px;text-align: center;color: #FFF;background-color: #101010;">愿逝者安息，生者坚强，祖国昌盛！</p>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
@@ -144,7 +144,7 @@
 	        </div>
 	    </div>
 	</div>
-	<div id="fh5co-features" style="background-color: none !important;" class="animate-box">
+	<div id="fh5co-features" style="background-color: #FF9000 !important;" class="animate-box">
 		<div class="container" id="poem">
 			<div class="services-padding">
 				<div class="row">
@@ -186,7 +186,7 @@
 	</div>
 	
 
-	<div id="fh5co-features" class="animate-box">
+	<div id="fh5co-features"  style="background-color: #FF9000 !important;" class="animate-box">
 		<div class="container">
 			<div class="services-padding">
 				<div class="row">
